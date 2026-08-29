@@ -70,6 +70,12 @@ header{
     display: flex;
     background-color: #c9a84c;
     justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 20rem;
+    height: 5rem;
+    align-items: center;
+    font-size: 2rem;
+    font-color: black;
 }
 
 .hero-buttons-container2{
@@ -132,4 +138,8 @@ header{
     text-align: center;
     font-size: 1rem;
     font-weight: 300;
+}
+.hbutton{
+    text-decoration: none;
+    color: black;
 }
