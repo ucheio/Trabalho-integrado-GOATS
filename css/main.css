@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 header{
     position: absolute;
@@ -12,10 +17,11 @@ header{
 }
 
 .logo-text{
+    font-family: 'Cinzel';
     text-decoration: none;
     font-size: 1.3rem;
     color: #C9A84C;
-    
+    font-weight: 500;
 }
 
 .nav{
@@ -26,11 +32,13 @@ header{
     background-color: transparent;
     padding-top: 1rem;
     background-color: transparent;
-    border-bottom: solid rgb(128, 128, 128, 0.2) 1px ;
-    margin: 0;
+    
     height: 9vh;
+    font-family: 'JetBrains Mono',monospace;
     
 }
+
+
 .nav-contents{
     text-decoration: none;
     font-size: 0.9rem;
@@ -42,6 +50,8 @@ header{
     align-items: center;
 }
 .nav-link a {
+    position: relative;
+   transition: color 0.3s ease;
     text-decoration: none;
     color: gray; 
 }
@@ -49,97 +59,278 @@ header{
     align-items: center;
 }
 
+.nav-link a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #C9A84C;
+    height: 1px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+
+.nav-link a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+    filter: brightness(1), blur(50px);
+}
+.nav-link a:hover{
+    color: #E8DCC8;
+}
+
 .nav-button{
     display: flex;
     background-color: #C9A84C;
     color: black;
     text-decoration: none;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'JetBrains Mono',monospace;
     height: 2.5rem;
     align-items: center;
     width: 8rem;
     justify-content: center;
     font-size: 0.9rem;
-    float: right;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    
+}
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+  background-color: #d4b55a;
 }
 
-.hero-buttons-container{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    display: flex;
-    background-color: #c9a84c;
-    justify-content: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 20rem;
-    height: 5rem;
-    align-items: center;
-    font-size: 2rem;
-    font-color: black;
-}
 
-.hero-buttons-container2{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    display: flex;
-    background-color: transparent;
-}
+
 
 /*-------------------------------------------------------------------------------------------*/
 
 .hero {
-    position: absolute;
+    position: relative;
     background-size: cover;
     background-position: center;
     filter: brightness(100%);
     height: 100vh;
     width: 100%;
-    z-index: -1;
 }
-.hero::before{
-    position: absolute;
-    z-index: -2;
-    content: "";
-    background-image: linear-gradient(to bottom, transparent 50%, #111f11 100%), url('https://images.unsplash.com/photo-1775123438933-459dc532b310?w=1920&h=1080&fit=crop&auto=format');
-    filter: brightness(40%);
-    height: 100%;
-    width: 100%;
-    
-}
+.hero::before {
+  position: absolute;
+  z-index: -2;
+  content: "";
+  background-image: 
+    linear-gradient(
+      to bottom,
+      #1A2E1A 0%,
+      transparent 30%,
+      transparent 70%,
+      #1A2E1A 100%
+    ),
+    url(../assets/heroBG.jpeg);
+  filter: brightness(40%);
+  height: 100%;
+  width: 100%;
+}   
 
 .text-container{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
 }
 
 .texts-1{
+    margin-top: 4rem;
+    
     color: #c9a84c;
     text-align: center;
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    font-family: Cinzel;
-    font-weight: 900;
+    align-items: end;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono',monospace;
+    font-weight: 700;
+    letter-spacing: 0.6em;
 }
 
 .hero-title{
-    font-size: 10rem;
+    font-family: 'Cinzel',serif;
+    font-size: 9rem;
     text-align: center;
     color: white;
-    font-weight: 900;
+    font-weight:900;
+    height: 9rem;
+    letter-spacing: 1rem;
+    padding-top: 2rem;
+    
 }
 
+
 .texts-2{
+    font-family: 'JetBrains Mono',monospace;
     color: white;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
     font-weight: 300;
+    margin-top: -2.56rem;
+    height: 30rem;
 }
+
+.subtitulo{
+    position: relative;
+    top: 5%;
+    color: #C9A84C;
+    font-family: 'Cinzel',serif;
+    font-weight: 500;
+}
+.tetratitulo{
+    position: relative;
+    top: 0%;
+    color: gray;
+    padding: 2rem;
+}
+
+
+.hero-buttons-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    justify-content: center;
+    font-family: 'JetBrains Mono',monospace;
+    width: 100%;
+    height: 2rem;
+    align-items: center;
+    
+    
+}
+
 .hbutton{
     text-decoration: none;
     color: black;
+    height: 3rem;
+    width: 15rem;
+    font-family: 'JetBrains Mono',monospace;
+    font-weight:300;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #C9A84C;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.hbutton:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+  background-color: #d4b55a;
+}
+
+.explore-btn{
+    background-color: transparent;
+    border: solid gray 1px;
+    color: #E8DCC8;
+    font-weight: 300;
+}
+.explore-btn:hover{
+    background-color: transparent;
+}
+
+.line{
+    color: white;
+    margin-top: 8rem;
+    height: 3rem;
+    width: 1px;
+    background: linear-gradient(#C9A84C, transparent);
+    font: weight 1px;
+    animation: blinking 2s infinite ease;
+}
+
+.scroll-txt{
+    margin-top: 5rem;
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    padding: 0;
+    color: #C9A84C;
+    font-family: 'JetBrains Mono',monospace;
+    font-size: 10px;
+    opacity: 0.3;
+    letter-spacing: 3px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+#the-island{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: linear-gradient(#0a140a,#111f11);
+}
+
+.texts-island1{
+    display: flex;
+    color: #c9a84c;
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 3rem;
+}
+.section1-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+}
+.section1-texts h1{
+    color: white;
+    font-family: 'Cinzel',serif;
+    font-size: 4rem;
+}
+.section1-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: #5E7E5E;
+    text-align: start;
+}
+
+.card-container{
+    position: relative;
+    display: flex;
+    align-self: baseline;
+    gap: 8px;
+    background-color: #1A2E1A;
+    padding: 3rem;
+    margin: 3rem;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    height: 18rem;
+    width: 25rem;
+    background-color: #C9A84C;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+@keyframes blinking{
+    0%{
+        opacity: 1;
+        filter: brightness(100%); 
+    }
+    50%{
+        opacity: 0.6;
+        filter: brightness(60%);
+    }
+    100%{
+        opacity: 1;
+        filter: brightness(100%);
+    }
 }
