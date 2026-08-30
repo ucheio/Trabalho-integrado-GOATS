@@ -137,12 +137,15 @@ html{
   background-image: 
     linear-gradient(
       to bottom,
-      #1A2E1A 0%,
+      transparent 0%,
       transparent 30%,
-      transparent 70%,
+      transparent 80%,
       #1A2E1A 100%
     ),
-    url(../assets/heroBG.jpeg);
+    url(../assets/ilha-trexBG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
   filter: brightness(40%);
   height: 100%;
   width: 100%;
@@ -279,11 +282,11 @@ html{
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
-#the-island{
+#A-Ilha{
     position: relative;
     height: auto;
     width: 100%;
-    background: linear-gradient(#0a140a,#111f11);
+    background: linear-gradient(#0a140a)
 }
 
 .texts-island1{
@@ -370,6 +373,175 @@ html{
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
+#Escolha-sua-aventura{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #0a160a;
+}
+.texts-island3{
+    display: flex;
+    color: #c9a84c;
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 10rem;
+}
+.section3-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+}
+.section3-texts h1{
+    color: white;
+    font-family: 'Cinzel',serif;
+    font-size: 4rem;
+}
+.section3-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: #5E7E5E;
+    text-align: start;
+}
+/*------------------------------------------------------------------------------------------------------------------------*/
+#Estadia{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #111f11;
+}
+.texts-island4{
+    display: flex;
+    color: #c9a84c;
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 10rem;
+}
+.section4-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+}
+.section4-texts h1{
+    color: white;
+    font-family: 'Cinzel',serif;
+    font-size: 4rem;
+}
+.section4-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: #5E7E5E;
+    text-align: start;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+#Navegação{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #0a160a;
+}
+.texts-island5{
+    display: flex;
+    color: #c9a84c;
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 10rem;
+}
+.section5-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+}
+.section5-texts h1{
+    color: white;
+    font-family: 'Cinzel',serif;
+    font-size: 4rem;
+}
+.section5-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: #5E7E5E;
+    text-align: start;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+#Guia-de-Visitante{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #111f11;
+}
+.texts-island6{
+    display: flex;
+    color: #c9a84c;
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 10rem;
+}
+.section6-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+}
+.section6-texts h1{
+    color: white;
+    font-family: 'Cinzel',serif;
+    font-size: 4rem;
+}
+.section6-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: #5E7E5E;
+    text-align: start;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+#Reservar{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #0a160a;
+}
+.texts-island7{
+    display: flex;
+    color: #c9a84c;
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 10rem;
+}
+.section7-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+}
+.section7-texts h1{
+    color: white;
+    font-family: 'Cinzel',serif;
+    font-size: 4rem;
+}
+.section7-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: #5E7E5E;
+    text-align: start;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 @keyframes nav-scroll {
   0% {
@@ -405,3 +577,474 @@ html{
         filter: brightness(100%);
     }
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* Aplica estilos se a largura da tela for menor ou igual a 600px */
+@media (max-width: 768px) {
+    .hero::before {
+    position: absolute;
+    z-index: -2;
+    content: "";
+    background-image: 
+        linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 30%,
+        transparent 70%,
+        #1A2E1A 100%
+        ),
+        url(../assets/ilha-trexBG.png);
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%);
+    height: 100vh;
+    width: 100%;
+    } 
+
+    .nav-link a {
+        font-size: 0.8rem;
+    }
+
+    .nav-button{
+    display: flex;
+    background-color: #C9A84C;
+    color: black;
+    text-decoration: none;
+    font-family: 'JetBrains Mono',monospace;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 4rem;
+    font-size: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    
+}
+
+.nav-link a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #C9A84C;
+    height: 1px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+
+.nav-link a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+    filter: brightness(1), blur(50px);
+}
+.nav-link a:hover{
+    color: #E8DCC8;
+}
+    
+    .texts-1{ /*Isla Nublar ate o 1993*/
+    margin-top: 5rem;
+    
+    color: #c9a84c;
+    text-align: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: end;
+    font-size: 0.6rem;
+    font-family: 'JetBrains Mono',monospace;
+    font-weight: 700;
+    letter-spacing: 0.6em;
+}
+
+.hero-title{ /*JURASSIC PARK titulo hero*/
+    font-family: 'Cinzel',serif;
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+    font-weight:900;
+    height: 4rem;
+    letter-spacing: 1rem;
+    padding-top: 2rem;
+    
+}
+
+.logo-text{ /*Jurassic LOGO*/
+    font-family: 'Cinzel';
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #C9A84C;
+    font-weight: 500;
+}
+
+
+.texts-2{ /* Do JURASSIC PARK ate descubra um novo mundo.*/
+    font-family: 'JetBrains Mono',monospace;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    margin-top: -2rem;
+    height: 30rem;
+}
+
+.subtitulo{ /*APENAS sua aventura comeca agora*/
+    position: relative;
+    top: 15%;
+    color: #C9A84C;
+    font-family: 'Cinzel',serif;
+    font-weight: 500;
+}
+.tetratitulo{ /*APENAS descubra um novo mundo*/
+    position: relative;
+    top: 15%;
+    color: gray;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+
+.hero-buttons-container{ /*Botoes reserve sua visita e explore a ilha*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    justify-content: center;
+    font-family: 'JetBrains Mono',monospace;
+    width: 100%;
+    height: 2rem;
+    align-items: center;
+    
+    
+}
+
+.hbutton{ /*Botoes reserve sua visita e explore a ilha*/
+    text-decoration: none;
+    color: black;
+    height: 3rem;
+    width: 15rem;
+    font-family: 'JetBrains Mono',monospace;
+    font-weight:300;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #C9A84C;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.explore-btn{
+    background-color: transparent;
+    border: solid gray 1px;
+    color: #E8DCC8;
+    font-weight: 300;
+}
+.explore-btn:hover{
+    background-color: transparent;
+}
+
+.line{ /*Linha acima do scroll*/
+    color: white;
+    margin-top: 8rem;
+    height: 3rem;
+    width: 1px;
+    background: linear-gradient(#C9A84C, transparent);
+    font: weight 1px;
+    animation: blinking 2s infinite ease;
+}
+
+.scroll-txt{
+    margin-top: 5rem;
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    padding: 0;
+    color: #C9A84C;
+    font-family: 'JetBrains Mono',monospace;
+    font-size: 10px;
+    opacity: 0.3;
+    letter-spacing: 3px;
+}
+
+.card-container{
+
+}
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 426px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .nav {
+        height: 60px;
+        padding: 0 1rem;
+        box-sizing: border-box;
+
+        justify-content: space-between;
+    }
+
+    .logo-text {
+        font-size: 0.65rem;
+        white-space: nowrap;
+    }
+
+    .nav-contents {
+        gap: 0.8rem;
+        font-size: 0.45rem;
+        padding: 0;
+        margin: 0;
+
+        align-items: center;
+    }
+
+    .nav-link a {
+        font-size: 0.45rem;
+        white-space: nowrap;
+    }
+
+    .nav-button {
+        width: 4.5rem;
+        height: 1.6rem;
+
+        font-size: 0.45rem;
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        height: 100svh;
+        min-height: 600px;
+
+        overflow: hidden;
+    }
+
+    .hero::before {
+        position: absolute;
+        z-index: -2;
+        content: "";
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                transparent 45%,
+                rgba(26, 46, 26, 0.2) 75%,
+                #1A2E1A 100%
+            ),
+            url("../assets/ilha-trexBG.png");
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        filter: brightness(40%);
+
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* =========================
+       CONTEÚDO DO HERO
+    ========================= */
+
+    .text-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        top: 46%;
+        left: 50%;
+
+        padding: 0 1.2rem;
+    }
+
+
+    .texts-1 {
+        margin-top: 4rem;
+
+        font-size: 0.38rem;
+        letter-spacing: 0.35em;
+
+        gap: 0.6rem;
+
+        white-space: nowrap;
+    }
+
+
+    .hero-title {
+        font-size: clamp(2.2rem, 12vw, 3rem);
+
+        letter-spacing: 0.35rem;
+
+        height: auto;
+        padding-top: 1.2rem;
+
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+
+    .texts-2 {
+        font-size: 0.65rem;
+
+        letter-spacing: 0.12rem;
+
+        margin-top: 1.2rem;
+
+        height: auto;
+
+        line-height: 1.6;
+    }
+
+
+    .subtitulo {
+        top: 0;
+
+        font-size: 0.8rem;
+
+        margin-top: 2rem;
+    }
+
+
+    .tetratitulo {
+        top: 0;
+
+        padding: 0.8rem 0;
+
+        font-size: 0.55rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .hero-buttons-container {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.7rem;
+
+        height: auto;
+
+        margin-top: 2rem;
+    }
+
+    .hbutton {
+        width: min(80vw, 15rem);
+        height: 3rem;
+
+        font-size: 0.6rem;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       SCROLL
+    ========================= */
+
+    .line {
+        margin-top: 1rem;
+
+        height: 2.5rem;
+    }
+
+    .scroll-txt {
+        position: relative;
+
+        margin-top: 1rem;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* =========================
+       ILHA
+    ========================= */
+
+    #A-Ilha {
+        overflow: hidden;
+    }
+
+    .texts-island1,
+    .texts-island2 {
+        padding-left: 1.5rem;
+
+        font-size: 0.45rem;
+        letter-spacing: 0.25rem;
+
+        gap: 0.5rem;
+    }
+
+    .section1-texts,
+    .section2-texts {
+        margin: 2rem 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+
+    .section1-texts h1,
+    .section2-texts h1 {
+        font-size: 2.3rem;
+
+        line-height: 1.1;
+    }
+
+    .section1-texts p,
+    .section2-texts p {
+        margin-bottom: 0;
+
+        font-size: 0.8rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .card-container {
+        padding: 1rem;
+
+        margin: 1rem 0;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 22rem;
+
+        height: 15rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
