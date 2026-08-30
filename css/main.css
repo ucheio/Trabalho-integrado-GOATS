@@ -6,36 +6,51 @@ html{
     scroll-behavior: smooth;
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
-header{
-    position: absolute;
-    width: 100%;
-    height: 10vh;
-    z-index: 1;
-    
+.page{
+    position: relative;
 }
 
 .logo-text{
     font-family: 'Cinzel';
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: #C9A84C;
     font-weight: 500;
 }
 
-.nav{
-    position: relative;
+
+
+.nav {
+    pointer-events: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    height: 9vh;
+    padding-top: 1rem;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: transparent;
-    padding-top: 1rem;
-    background-color: transparent;
-    
-    height: 9vh;
-    font-family: 'JetBrains Mono',monospace;
-    
+
+    background: transparent;
+
+    transition:
+        background-color 500ms ease,
+        backdrop-filter 500ms ease,
+        -webkit-backdrop-filter 500ms ease;
+}
+
+.nav.scrolled {
+    background: rgb(10 20 10 / 90%);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 
@@ -277,7 +292,7 @@ header{
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
-    padding-left: 3rem;
+    padding-left: 9rem;
 }
 .section1-texts{
     display: flex;
@@ -303,9 +318,10 @@ header{
     display: flex;
     align-self: baseline;
     gap: 8px;
-    background-color: #1A2E1A;
+
     padding: 3rem;
     margin: 3rem;
+    margin-bottom: 0;
     flex-wrap: wrap;
     height: auto;
     width: auto;
@@ -319,6 +335,61 @@ header{
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
+#dinossauros-section{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #111f11;
+}
+
+.texts-island2{
+    display: flex;
+    color: #c9a84c;
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 10rem;
+}
+.section2-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+}
+.section2-texts h1{
+    color: white;
+    font-family: 'Cinzel',serif;
+    font-size: 4rem;
+}
+.section2-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: #5E7E5E;
+    text-align: start;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+@keyframes nav-scroll {
+  0% {
+    background: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+  }
+
+  50% {
+    background: rgb(20 20 20 / 20%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  100% {
+    background: rgb(20 20 20 / 90%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
 
 @keyframes blinking{
     0%{
