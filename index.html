@@ -16,11 +16,16 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    
+
+    
     <!--REGRAS: em caminho de arquivos, usar "../pasta" e não o caminho original "/pasta/...."-->
   </head>
   <body>
     <div class="page">
       
+     
       
         <nav class="nav">
           <a class="logo-text" href="#">JURASSIC PARK</a>
@@ -94,12 +99,25 @@
         </article>
 
         <div class="card-container">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
+          <div class="card">
+            <img src="./assets/dinossaur-valley.avif" alt="">
+            <p>O coração do parque onde os gigantes vagam livremente entre as matas.</p>
+          </div>
+          <div class="card"><img src="./assets/rain-forest.avif" alt="">
+          <p>Uma floresta primária densa cobrindo todo o interior norte da ilha.</p>
+          </div>
+          <div class="card"><img src="./assets/lagoon.avif" alt="">
+          <p>Ecossistema marinho que abriga espécies aquáticas pré-históricas. Shows programados.</p>
+          </div>
+          <div class="card"><img src="./assets/laboratorio.jpeg" alt="">
+          <p>O coração científico da NewGen — onde 65 milhões de anos de evolução foram reescritos.</p>
+          </div>
+          <div class="card"><img src="./assets/observatorio.jpeg" alt="">
+          <p>Vistas elevadas de 120m de todo o ecossistema vivo a partir de um único ponto.</p>
+          </div>
+          <div class="card"><img src="./assets/adventure-trail.avif" alt="">
+          <p>Rotas de trekking guiadas que passam por corredores selvagens designados.</p>
+        </div>
         </div>
       </section>
       <!-------------------------------------------------------------------------------------------------->
@@ -112,30 +130,30 @@
 
         <article class="section2-texts">
           <h1>
-            CONHEÇA <br> AS ESPÉCIES
+            ENTENDA <br> A BIOLOGIA
           </h1>
           <p>
-            Quinze espécies habitam atualmente a Isla Nublar — cada <br> uma representando milhões de anos de história evolutiva, <br> reconstruída e viva.
+            <!-- Quinze espécies habitam atualmente a Isla Nublar — cada <br> uma representando milhões de anos de história evolutiva, <br> reconstruída e viva. -->
           </p>
         </article>
 
-        <div class="card-container">
-          <div class="card">Ronaldo</div>
-          <div class="card">que que ele disse?</div>
-          <div class="card">Uh! </div>
-          <div class="card">Uh! </div>
-          <div class="card">ANTETEGEMON</div>
-          <div class="card">BAAAAAAAAANAGGGG!!!</div>
-        </div>
-        <div class="hero-buttons-container">
+       <div class="trex-container">
+          <img
+              class="trex-head"
+              src="./assets/trex-watching.jpeg"
+              alt="Cabeça de T-Rex"
+          >
+      </div>
 
-          <a class="hbutton explore-btn" href="#A-Ilha">
-                <p>EXPLORE A ILHA</p>
-              </a>
-        </div>
+        <div class="section-dark"></div>
+        
       </section>
 
     </div>
+      <!-------------------------------------------------------------------------------------------------->
+      <section id="dna-section">
+
+      </section>
       <!-------------------------------------------------------------------------------------------------->
     <section id="Escolha-sua-aventura">
       <div class="texts-island3">
@@ -251,7 +269,11 @@
           <div class="card"></div>
           <div class="card"></div>
           </section>
-      <!-------------------------------------------------------------------------------------------------->
-  </body>
-  <script src="./js/main.js"></script>
+      
+          <!-------------------------------------------------------------------------------------------------->
+          <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+        <script src="./js/main.js"></script>
+        </body>
+  
 </html>

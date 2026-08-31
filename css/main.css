@@ -13,6 +13,8 @@ html{
     position: relative;
 }
 
+
+
 .logo-text{
     font-family: 'Cinzel';
     text-decoration: none;
@@ -321,7 +323,7 @@ html{
     display: flex;
     align-self: baseline;
     gap: 8px;
-
+    overflow: hidden;
     padding: 3rem;
     margin: 3rem;
     margin-bottom: 0;
@@ -330,17 +332,62 @@ html{
     width: auto;
     justify-content: center;
 }
+.card-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
 .card{
+    display: flex;
     position: relative;
     height: 18rem;
     width: 25rem;
     background-color: #C9A84C;
+    overflow: hidden;
+   
+    transition: transform 0.5s ease;
 }
+.card p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.9)
+    );
+
+    transform: translateY(100%);
+    opacity: 0;
+
+    transition: 
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+.card:hover img{
+    transform: scale( 1.1);
+}
+.card:hover p{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 #dinossauros-section{
     position: relative;
-    height: auto;
+    height: 100vh;
     width: 100%;
     background-color: #111f11;
 }
@@ -352,24 +399,67 @@ html{
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
     padding-left: 10rem;
+    padding-top: 5rem;
 }
 .section2-texts{
     display: flex;
     position: relative;
-    margin: 3rem;
+    
     justify-content: space-around;
 }
 .section2-texts h1{
     color: white;
     font-family: 'Cinzel',serif;
     font-size: 4rem;
+    position: absolute;
+    margin-top: 5rem;
+    left: 5%;
 }
 .section2-texts p{
-    display: flex;
+    
     align-items: last baseline;
+    justify-content: left;
     margin-bottom: 1rem;
     color: #5E7E5E;
     text-align: start;
+}
+
+
+#dna-section{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.trex-container {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    overflow: hidden;
+    z-index: -1;
+}
+
+.trex-head {
+    width: 200rem;
+    transform-origin: 50% 40%;
+    
+}
+
+.section-dark {
+    position: absolute;
+
+    inset: 0;
+
+    background: black;
+
+    opacity: 0;
+
+    pointer-events: none;
+    z-index: 3;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -771,9 +861,6 @@ html{
     letter-spacing: 3px;
 }
 
-.card-container{
-
-}
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -1046,5 +1133,7 @@ html{
         height: 15rem;
     }
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------------------------------------------------*/
