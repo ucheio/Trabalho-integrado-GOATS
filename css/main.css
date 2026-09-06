@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
-html{
+html,body{
     scroll-behavior: smooth;
+    background: #090d09;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 .page{
     position: relative;
@@ -270,10 +270,11 @@ html{
 }
 
 .scroll-txt{
-    margin-top: 5rem;
+    margin-top: 10rem;
     position: absolute;
     display: flex;
     justify-self: center;
+
     padding: 0;
     color: #C9A84C;
     font-family: 'JetBrains Mono',monospace;
@@ -288,7 +289,13 @@ html{
     position: relative;
     height: auto;
     width: 100%;
-    background: linear-gradient(#0a140a)
+    #A-Ilha {
+  background: linear-gradient(
+    to bottom,
+    #0a140a,
+    #111f11
+  );
+}
 }
 
 .texts-island1{
@@ -389,7 +396,7 @@ html{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #111f11;
+    background-color: #020608;
 }
 
 .texts-island2{
@@ -425,11 +432,7 @@ html{
 }
 
 
-#dna-section{
-    height: 100vh;
-    width: 100%;
-    background-color: black;
-}
+
 
 .trex-container {
     position: absolute;
@@ -449,18 +452,130 @@ html{
     
 }
 
-.section-dark {
-    position: absolute;
-
-    inset: 0;
-
-    background: black;
-
-    opacity: 0;
-
-    pointer-events: none;
-    z-index: 3;
+#dna-section {
+    
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #020608;
 }
+
+/* Gradiente superior: faz o DNA desaparecer suavemente. */
+#dna-section::before,
+#dna-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 24%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Fade no topo */
+#dna-section::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    #020608 0%,
+    rgba(2, 6, 8, 0.92) 20%,
+    rgba(2, 6, 8, 0.45) 55%,
+    transparent 100%
+  );
+}
+
+/* Fade na parte de baixo */
+#dna-section::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    #020608 0%,
+    rgba(2, 6, 8, 0.92) 20%,
+    rgba(2, 6, 8, 0.45) 55%,
+    transparent 100%
+  );
+}
+
+.dna-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Canvas muito maior que a antiga div, para o DNA “vazar” pela tela. */
+.dna-model {
+  position: absolute;
+  z-index: 1;
+
+  width: 85vw;
+  height: 120vh;
+
+  top: -10vh;
+  left: -18vw;
+
+  margin: 0;
+  pointer-events: none;
+  
+}
+
+.dna-model canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  filter:
+    drop-shadow(0 0 8px rgba(110, 240, 255, 0.95))
+    drop-shadow(0 0 22px rgba(178, 90, 255, 0.72))
+    drop-shadow(0 0 50px rgba(56, 160, 255, 0.45));
+}
+
+
+.species-info {
+  position: absolute;
+  z-index: 2;
+  margin-left: auto;
+  margin-left: 65vw;
+}
+
+.species {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    background: rgba(255, 255, 255, 0.1);
+  
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.species-text {
+    position: absolute;
+    height: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+.trex-img{
+    position: absolute;
+}
+.species-2 {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.species-number{
+    color: white;
+}
+
+
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Escolha-sua-aventura{
