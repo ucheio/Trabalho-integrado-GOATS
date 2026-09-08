@@ -1,4 +1,88 @@
 
+const speciesList = [
+  {
+    number: "01",
+    name: "T-REX",
+    image: "./assets/dinossauros/trex.png"
+    
+  },
+  {
+    number: "02",
+    name: "VELOCIRAPTOR",
+    image: "./assets/dinossauros/velociraptor.png"
+  
+  },
+  {
+    number: "03",
+    name: "TRICERÁTOPS",
+    image: "./assets/dinossauros/triceratops.png"
+    
+  },
+  {
+    number: "04",
+    name: "DILOFOSSAURO",
+    image: "./assets/dinossauros/dilofossauro.png"
+  },
+  {
+    number: "05",
+    name: "PROCOMPSÓGNATO",
+    image: "./assets/dinossauros/miguelssauros.png"
+  },
+  {
+    number: "06",
+    name: "ESTEGOSSAURO",
+    image: "./assets/dinossauros/estegossauros.png"
+  },
+  {
+    number: "07",
+    name: "APATOSSAURO",
+    image: "./assets/dinossauros/apatossauro.png"
+  },
+  {
+    number: "08",
+    name: "HADROSSAURO",
+    image: "./assets/dinossauros/triceratops.jpg"
+  },
+  {
+    number: "09",
+    name: "MAIASSAURO",
+    image: "./assets/dinossauros/triceratops.jpg"
+  },
+  {
+    number: "010",
+    name: "HIPSILOFODONTE",
+    image: "./assets/dinossauros/triceratops.jpg"
+  },
+  {
+    number: "011",
+    name: "OTHNIELIA",
+    image: "./assets/dinossauros/triceratops.jpg"
+  },
+  {
+    number: "012",
+    name: "EUOPLOCÉFALO",
+    image: "./assets/dinossauros/triceratops.jpg"
+  },
+  {
+    number: "013",
+    name: "ESTIRACOSSAURO",
+    image: "./assets/dinossauros/triceratops.jpg"
+  },
+  {
+    number: "014",
+    name: "MICROCERÁTOPS",
+    image: "./assets/dinossauros/triceratops.jpg"
+  },
+  {
+    number: "015",
+    name: "CEARADÁCTILO",
+    image: "./assets/dinossauros/triceratops.jpg"
+  }
+
+  // Continue até a espécie 15.
+];
+
+
 //-----------------------------SEÇÃO THREE.JS----------------------------------------------
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
@@ -60,7 +144,7 @@ scene.add(greenLight);
 
 // Carregamento do modelo
 const loader = new GLTFLoader();
-
+const dnaMaterials = [];
 
 loader.load(
   "./3dmodel/dna_hologram.glb",
@@ -82,6 +166,10 @@ loader.load(
     model.scale.setScalar(scale);
 
    dnaSpinGroup.add(model);
+
+   model.traverse((object) => {
+  if (!object.isMesh && !object.isPoints) return;
+});
 
    // Grupo externo: somente posicionamento/inclinação visual.
 dnaTiltGroup.rotation.set(
@@ -105,6 +193,8 @@ dnaSpinGroup.rotation.set(0, 0, 0);
     console.error("Erro ao carregar o DNA:", error);
   }
 );
+
+
 
 // Responsividade
 function resizeThree() {
@@ -134,13 +224,70 @@ window.dna3D = {
   camera,
   scene
 };
+//-----------------------------SEÇÃO DADOS DOS DINOSSAUROS----------------------------------------------
+
+
+const speciesCard = document.querySelector(".species");
+const speciesNumber = document.querySelector(".species-number");
+const speciesName = document.querySelector(".species-text");
+const speciesImage = document.querySelector(".species-img");
+
+let currentSpecies = -1;
+
+function changeSpecies(index, immediate = false) {
+  if (index === currentSpecies) return;
+
+  currentSpecies = index;
+
+  const species = speciesList[index];
+
+  const updateContent = () => {
+  speciesNumber.textContent = species.number;
+  speciesName.textContent = species.name;
+  speciesImage.src = species.image;
+  speciesImage.alt = species.name;
+
+
+};
+
+  if (immediate) {
+    updateContent();
+    gsap.set(speciesCard, { autoAlpha: 1, y: 0 });
+    return;
+  }
+
+  gsap.killTweensOf(speciesCard);
+
+  gsap.to(speciesCard, {
+    autoAlpha: 0,
+    y: -20,
+    duration: 0.2,
+    ease: "power2.in",
+    onComplete: () => {
+      updateContent();
+
+      gsap.set(speciesCard, { y: 20 });
+
+      gsap.to(speciesCard, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.35,
+        ease: "power2.out"
+      });
+    }
+  });
+}
+
+changeSpecies(0, true);
+
+
 //-----------------------------SEÇÃO GSAP----------------------------------------------
 //----------------------------FAVOR NÃO FAZER ALTERAÇÕES-------------------------------
 gsap.registerPlugin(ScrollTrigger);
 
 //smooth scroll na página
 const lenis = new Lenis({
-  lerp:0.045,
+  lerp:0.067,
   smoothWheel: true
 });
 
@@ -158,7 +305,7 @@ const tl = gsap.timeline({
     scrollTrigger: {
         trigger: "#dinossauros-section",
         start: "top top",
-        end: "+=1400",
+        end: "+=500",
         scrub: true,
         pin: true
     }
@@ -187,34 +334,67 @@ const dnaTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: "#dna-section",
     start: "top top",
-    end: "+=5000",
+    end: "+=9000",
     pin: true,
-    scrub: 1.5
+    scrub: 1.5,
+
+    onUpdate: (self) => {
+      const index = Math.round(
+        self.progress * (speciesList.length - 1)
+      );
+
+      changeSpecies(index);
+    },
+
+    snap: {
+      snapTo: 1 / (speciesList.length - 1),
+      duration: { min: 0.15, max: 0.45 },
+      ease: "power2.out"
+    }
   }
 });
 
-dnaTimeline
-  .to(dnaSpinGroup.rotation, {
-    x: Math.PI * 6,
-    duration: 3,
-    ease: "none"
-  }, 0)
-
-  .to(".species-1", {
-    opacity: 0,
-    y: -30,
-    duration: 0.5
-  }, 1)
-
-  .to(".species-2", {
-    opacity: 1,
-    y: 0,
-    duration: 0.5
-  }, 1.2);
+dnaTimeline.to(dnaSpinGroup.rotation, {
+  x: Math.PI * 6,
+  duration: 3,
+  ease: "none"
+}, 0);
 //-------------------Animação da nav-------------------------------------------------
 const nav = document.querySelector(".nav");
+const dnaSection = document.querySelector("#dna-section");
 
+let insideDna = false;
+
+// Regra normal da NAV
 window.addEventListener("scroll", () => {
+    // Se estiver dentro da DNA, o observer manda
+    if (insideDna) return;
+
     nav.classList.toggle("scrolled", window.scrollY > 50);
 });
+
+// Observer da DNA
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+            // Entrou na DNA
+            insideDna = true;
+            nav.classList.remove("scrolled");
+
+        } else {
+            // Saiu da DNA
+            insideDna = false;
+
+            // Volta a obedecer a regra dos 50px
+            nav.classList.toggle("scrolled", window.scrollY > 50);
+        }
+
+    });
+}, {
+    rootMargin: "0px 0px -50% 0px",
+    threshold: 0
+});
+
+observer.observe(dnaSection);
 //---------------------------------------------------------------------------------
