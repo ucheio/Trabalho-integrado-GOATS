@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    scroll-behavior: smooth;
+    background: #090d09;
+}
+
+.page{
+    position: relative;
+}
+
+
+:root{
+
+    /*============CORES===========*/
+    --destaque: #C9A84C;
+    --destaque-claro: #d4b55a;
+
+    --texto-verdinho: #5E7E5E;
+    --texto-hover-amarelinho: #E8DCC8;
+
+    --verde-medio: #111f11;
+    --verde-escuro: #0a160a;
+
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --cinza: #808080;
+    /*============================*/
+
+    /*===========FONTES===========*/
+    --fonte-principal: 'cinzel', serif;
+    --fonte-secundaria: 'JetBrains Mono',monospace;
+
+    /*============================*/
+}

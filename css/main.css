@@ -1,25 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-}
-html,body{
-    scroll-behavior: smooth;
-    background: #090d09;
-}
-
-.page{
-    position: relative;
-}
-
-
 
 .logo-text{
-    font-family: 'Cinzel';
+    font-family: var(--fonte-principal);
     text-decoration: none;
     font-size: 1.8rem;
-    color: #C9A84C;
+    color: var(--destaque);
     font-weight: 500;
 }
 
@@ -62,7 +46,7 @@ html,body{
     list-style: none;
     display: flex;
     justify-content: space-around;
-    color: black;
+    color: var(--preto);
     gap: 3rem;
     align-items: center;
 }
@@ -70,7 +54,7 @@ html,body{
     position: relative;
    transition: color 0.3s ease;
     text-decoration: none;
-    color: gray; 
+    color: var(--cinza); 
     padding: 5px;
 }
 .nav-link{
@@ -83,7 +67,7 @@ html,body{
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #C9A84C;
+    background-color: var(--destaque);
     height: 1px;
     transition: transform 0.3s ease-in-out;
     transform: scaleX(0);
@@ -97,15 +81,15 @@ html,body{
     filter: brightness(1), blur(50px);
 }
 .nav-link a:hover{
-    color: #E8DCC8;
+    color: var(--texto-hover-amarelinho);
 }
 
 .nav-button{
     display: flex;
-    background-color: #C9A84C;
-    color: black;
+    background-color: var(--destaque);
+    color: var(--preto);
     text-decoration: none;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     height: 2.5rem;
     align-items: center;
     width: 8rem;
@@ -117,7 +101,7 @@ html,body{
 .nav-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
-  background-color: #d4b55a;
+  background-color: var(--destaque-claro);
 }
 
 
@@ -165,23 +149,23 @@ html,body{
 .texts-1{
     margin-top: 4rem;
     
-    color: #c9a84c;
+    color: var(--destaque);
     text-align: center;
     display: flex;
     gap: 1.5rem;
     justify-content: center;
     align-items: end;
     font-size: 0.7rem;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
     letter-spacing: 0.6em;
 }
 
 .hero-title{
-    font-family: 'Cinzel',serif;
+    font-family: var(--fonte-principal),serif;
     font-size: 9rem;
     text-align: center;
-    color: white;
+    color: var(--branco);
     font-weight:900;
     height: 9rem;
     letter-spacing: 1rem;
@@ -191,8 +175,8 @@ html,body{
 
 
 .texts-2{
-    font-family: 'JetBrains Mono',monospace;
-    color: white;
+    font-family: var(--fonte-secundaria);
+    color: var(--branco);
     text-align: center;
     font-size: 1.3rem;
     letter-spacing: 0.2rem;
@@ -204,14 +188,14 @@ html,body{
 .subtitulo{
     position: relative;
     top: 5%;
-    color: #C9A84C;
-    font-family: 'Cinzel',serif;
+    color: var(--destaque);
+    font-family: var(--fonte-principal),serif;
     font-weight: 500;
 }
 .tetratitulo{
     position: relative;
     top: 0%;
-    color: gray;
+    color: var(--cinza);
     padding: 2rem;
 }
 
@@ -223,7 +207,7 @@ html,body{
     gap: 0.5rem;
     
     justify-content: center;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     width: 100%;
     height: 2rem;
     align-items: center;
@@ -233,27 +217,27 @@ html,body{
 
 .hbutton{
     text-decoration: none;
-    color: black;
+    color: var(--preto);
     height: 3rem;
     width: 15rem;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     font-weight:300;
     justify-content: center;
     display: flex;
     align-items: center;
-    background-color: #C9A84C;
+    background-color: var(--destaque);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 .hbutton:hover{
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
-  background-color: #d4b55a;
+  background-color: var(--destaque-claro);
 }
 
 .explore-btn{
     background-color: transparent;
-    border: solid gray 1px;
-    color: #E8DCC8;
+    border: solid var(--cinza) 1px;
+    color: var(--texto-hover-amarelinho);
     font-weight: 300;
 }
 .explore-btn:hover{
@@ -261,11 +245,11 @@ html,body{
 }
 
 .line{
-    color: white;
+    color: var(--branco);
     margin-top: 8rem;
     height: 3rem;
     width: 1px;
-    background: linear-gradient(#C9A84C, transparent);
+    background: linear-gradient(var(--destaque), transparent);
     font: weight 1px;
     animation: blinking 2s infinite ease;
 }
@@ -277,8 +261,8 @@ html,body{
     justify-self: center;
 
     padding: 0;
-    color: #C9A84C;
-    font-family: 'JetBrains Mono',monospace;
+    color: var(--destaque);
+    font-family: var(--fonte-secundaria);
     font-size: 10px;
     opacity: 0.3;
     letter-spacing: 3px;
@@ -301,7 +285,7 @@ html,body{
 
 .texts-island1{
     display: flex;
-    color: #c9a84c;
+    color: var(--destaque);
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
@@ -314,15 +298,15 @@ html,body{
     justify-content: space-around;
 }
 .section1-texts h1{
-    color: white;
-    font-family: 'Cinzel',serif;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
     font-size: 4rem;
 }
 .section1-texts p{
     display: flex;
     align-items: last baseline;
     margin-bottom: 1rem;
-    color: #5E7E5E;
+    color: var(--texto-verdinho);
     text-align: start;
 }
 
@@ -353,7 +337,7 @@ html,body{
     position: relative;
     height: 18rem;
     width: 25rem;
-    background-color: #C9A84C;
+    background-color: var(--destaque);
     overflow: hidden;
    
     transition: transform 0.5s ease;
@@ -368,7 +352,7 @@ html,body{
 
     box-sizing: border-box;
 
-    color: white;
+    color: var(--branco);
 
     background: linear-gradient(
         transparent,
@@ -402,7 +386,7 @@ html,body{
 
 .texts-island2{
     display: flex;
-    color: #c9a84c;
+    color: var(--destaque);
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
@@ -416,8 +400,8 @@ html,body{
     justify-content: space-around;
 }
 .section2-texts h1{
-    color: white;
-    font-family: 'Cinzel',serif;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
     font-size: 4rem;
     position: absolute;
     margin-top: 5rem;
@@ -428,7 +412,7 @@ html,body{
     align-items: last baseline;
     justify-content: left;
     margin-bottom: 1rem;
-    color: #5E7E5E;
+    color: var(--texto-verdinho);
     text-align: start;
 }
 
@@ -566,7 +550,7 @@ html,body{
     width: 100%;
     margin-top: 1rem;
     border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-    color: white;
+    color: var(--branco);
 }
 .species-img{
     position: absolute;
@@ -585,7 +569,7 @@ html,body{
     
     height: 2rem;
     width: 2rem;
-    color: white;
+    color: var(--branco);
     display: flex;
     left: 0;
     
@@ -603,7 +587,7 @@ html,body{
 }
 .texts-island3{
     display: flex;
-    color: #c9a84c;
+    color: var(--destaque);
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
@@ -616,15 +600,15 @@ html,body{
     justify-content: space-around;
 }
 .section3-texts h1{
-    color: white;
-    font-family: 'Cinzel',serif;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
     font-size: 4rem;
 }
 .section3-texts p{
     display: flex;
     align-items: last baseline;
     margin-bottom: 1rem;
-    color: #5E7E5E;
+    color: var(--texto-verdinho);
     text-align: start;
 }
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -636,7 +620,7 @@ html,body{
 }
 .texts-island4{
     display: flex;
-    color: #c9a84c;
+    color: var(--destaque);
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
@@ -649,15 +633,15 @@ html,body{
     justify-content: space-around;
 }
 .section4-texts h1{
-    color: white;
-    font-family: 'Cinzel',serif;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
     font-size: 4rem;
 }
 .section4-texts p{
     display: flex;
     align-items: last baseline;
     margin-bottom: 1rem;
-    color: #5E7E5E;
+    color: var(--texto-verdinho);
     text-align: start;
 }
 
@@ -670,7 +654,7 @@ html,body{
 }
 .texts-island5{
     display: flex;
-    color: #c9a84c;
+    color: var(--destaque);
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
@@ -683,15 +667,15 @@ html,body{
     justify-content: space-around;
 }
 .section5-texts h1{
-    color: white;
-    font-family: 'Cinzel',serif;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
     font-size: 4rem;
 }
 .section5-texts p{
     display: flex;
     align-items: last baseline;
     margin-bottom: 1rem;
-    color: #5E7E5E;
+    color: var(--texto-verdinho);
     text-align: start;
 }
 
@@ -704,7 +688,7 @@ html,body{
 }
 .texts-island6{
     display: flex;
-    color: #c9a84c;
+    color: var(--destaque);
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
@@ -717,15 +701,15 @@ html,body{
     justify-content: space-around;
 }
 .section6-texts h1{
-    color: white;
-    font-family: 'Cinzel',serif;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
     font-size: 4rem;
 }
 .section6-texts p{
     display: flex;
     align-items: last baseline;
     margin-bottom: 1rem;
-    color: #5E7E5E;
+    color: var(--texto-verdinho);
     text-align: start;
 }
 
@@ -738,7 +722,7 @@ html,body{
 }
 .texts-island7{
     display: flex;
-    color: #c9a84c;
+    color: var(--destaque);
     gap: 1rem;
     letter-spacing: 0.5rem;
     font-size: 0.6rem;
@@ -751,15 +735,15 @@ html,body{
     justify-content: space-around;
 }
 .section7-texts h1{
-    color: white;
-    font-family: 'Cinzel',serif;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
     font-size: 4rem;
 }
 .section7-texts p{
     display: flex;
     align-items: last baseline;
     margin-bottom: 1rem;
-    color: #5E7E5E;
+    color: var(--texto-verdinho);
     text-align: start;
 }
 
@@ -831,10 +815,10 @@ html,body{
 
     .nav-button{
     display: flex;
-    background-color: #C9A84C;
-    color: black;
+    background-color: var(--destaque);
+    color: var(--preto);
     text-decoration: none;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     align-items: center;
     justify-content: center;
     height: 1.5rem;
@@ -850,7 +834,7 @@ html,body{
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #C9A84C;
+    background-color: var(--destaque);
     height: 1px;
     transition: transform 0.3s ease-in-out;
     transform: scaleX(0);
@@ -864,29 +848,29 @@ html,body{
     filter: brightness(1), blur(50px);
 }
 .nav-link a:hover{
-    color: #E8DCC8;
+    color: var(--texto-hover-amarelinho);
 }
     
     .texts-1{ /*Isla Nublar ate o 1993*/
     margin-top: 5rem;
     
-    color: #c9a84c;
+    color: var(--destaque);
     text-align: center;
     display: flex;
     gap: 1.5rem;
     justify-content: center;
     align-items: end;
     font-size: 0.6rem;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
     letter-spacing: 0.6em;
 }
 
 .hero-title{ /*JURASSIC PARK titulo hero*/
-    font-family: 'Cinzel',serif;
+    font-family: var(--fonte-principal),serif;
     font-size: 5rem;
     text-align: center;
-    color: white;
+    color: var(--branco);
     font-weight:900;
     height: 4rem;
     letter-spacing: 1rem;
@@ -895,18 +879,18 @@ html,body{
 }
 
 .logo-text{ /*Jurassic LOGO*/
-    font-family: 'Cinzel';
+    font-family: var(--fonte-principal);
     text-decoration: none;
     font-size: 0.8rem;
-    color: #C9A84C;
+    color: var(--destaque);
     font-weight: 500;
 }
 
 
 .texts-2{ /* Do JURASSIC PARK ate descubra um novo mundo.*/
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     position: relative;
-    color: white;
+    color: var(--branco);
     text-align: center;
     font-size: 1.3rem;
     letter-spacing: 0.2rem;
@@ -918,14 +902,14 @@ html,body{
 .subtitulo{ /*APENAS sua aventura comeca agora*/
     position: relative;
     top: 15%;
-    color: #C9A84C;
-    font-family: 'Cinzel',serif;
+    color: var(--destaque);
+    font-family: var(--fonte-principal),serif;
     font-weight: 500;
 }
 .tetratitulo{ /*APENAS descubra um novo mundo*/
     position: relative;
     top: 15%;
-    color: gray;
+    color: var(--cinza);
     padding: 2rem;
     font-size: 1rem;
 }
@@ -938,7 +922,7 @@ html,body{
     gap: 0.5rem;
     
     justify-content: center;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     width: 100%;
     height: 2rem;
     align-items: center;
@@ -948,22 +932,22 @@ html,body{
 
 .hbutton{ /*Botoes reserve sua visita e explore a ilha*/
     text-decoration: none;
-    color: black;
+    color: var(--preto);
     height: 3rem;
     width: 15rem;
-    font-family: 'JetBrains Mono',monospace;
+    font-family: var(--fonte-secundaria);
     font-weight:300;
     justify-content: center;
     display: flex;
     align-items: center;
-    background-color: #C9A84C;
+    background-color: var(--destaque);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .explore-btn{
     background-color: transparent;
-    border: solid gray 1px;
-    color: #E8DCC8;
+    border: solid var(--cinza) 1px;
+    color: var(--texto-hover-amarelinho);
     font-weight: 300;
 }
 .explore-btn:hover{
@@ -971,11 +955,11 @@ html,body{
 }
 
 .line{ /*Linha acima do scroll*/
-    color: white;
+    color: var(--branco);
     margin-top: 8rem;
     height: 3rem;
     width: 1px;
-    background: linear-gradient(#C9A84C, transparent);
+    background: linear-gradient(var(--destaque), transparent);
     font: weight 1px;
     animation: blinking 2s infinite ease;
 }
@@ -986,8 +970,8 @@ html,body{
     display: flex;
     justify-self: center;
     padding: 0;
-    color: #C9A84C;
-    font-family: 'JetBrains Mono',monospace;
+    color: var(--destaque);
+    font-family: var(--fonte-secundaria);
     font-size: 10px;
     opacity: 0.3;
     letter-spacing: 3px;
