@@ -3,80 +3,95 @@ const speciesList = [
   {
     number: "01",
     name: "T-REX",
-    image: "./assets/dinossauros/trex.png"
+    image: "./assets/dinossauros/trex.png",
+    description: "INSIRA A DESCRIÇÃO DO T-REX AQUI."
     
   },
   {
     number: "02",
     name: "VELOCIRAPTOR",
-    image: "./assets/dinossauros/velociraptor.png"
+    image: "./assets/dinossauros/velociraptor.png",
+    description: "INSIRA A DESCRIÇÃO DO VELOCIRAPTOR AQUI."
   
   },
   {
     number: "03",
     name: "TRICERÁTOPS",
-    image: "./assets/dinossauros/triceratops.png"
+    image: "./assets/dinossauros/triceratops.png",
+    description: "INSIRA A DESCRIÇÃO DO TRICERÁTOPS AQUI."
     
   },
   {
     number: "04",
     name: "DILOFOSSAURO",
-    image: "./assets/dinossauros/dilofossauro.png"
+    image: "./assets/dinossauros/dilofossauro.png",
+    description: "INSIRA A DESCRIÇÃO DO DILOFOSSAURO AQUI."
   },
   {
     number: "05",
     name: "PROCOMPSÓGNATO",
-    image: "./assets/dinossauros/miguelssauros.png"
+    image: "./assets/dinossauros/miguelssauros.png",
+    description: "INSIRA A DESCRIÇÃO DO PROCOMPSÓGNATO AQUI."
   },
   {
     number: "06",
     name: "ESTEGOSSAURO",
-    image: "./assets/dinossauros/estegossauros.png"
+    image: "./assets/dinossauros/estegossauros.png",
+    description: "INSIRA A DESCRIÇÃO DO ESTEGOSSAURO AQUI."
   },
   {
     number: "07",
     name: "APATOSSAURO",
-    image: "./assets/dinossauros/apatossauro.png"
+    image: "./assets/dinossauros/apatossauro.png",
+    description: "INSIRA A DESCRIÇÃO DO APATOSSAURO AQUI."
   },
   {
     number: "08",
     name: "HADROSSAURO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DO HADROSSAURO AQUI."
   },
   {
     number: "09",
     name: "MAIASSAURO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DO MAIASSAURO AQUI."
   },
   {
     number: "010",
     name: "HIPSILOFODONTE",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DO HIPSILOFODONTE AQUI."
   },
   {
     number: "011",
     name: "OTHNIELIA",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DA OTHNIELIA AQUI."
   },
   {
     number: "012",
     name: "EUOPLOCÉFALO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DO EUOPLOCÉFALO AQUI."
   },
   {
     number: "013",
     name: "ESTIRACOSSAURO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DO ESTIRACOSSAURO AQUI."
   },
   {
     number: "014",
     name: "MICROCERÁTOPS",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DO MICROCERÁTOPS AQUI."
   },
   {
     number: "015",
     name: "CEARADÁCTILO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/triceratops.jpg",
+    description: "INSIRA A DESCRIÇÃO DO CEARADÁCTILO AQUI."
   }
 
   // Continue até a espécie 15.
