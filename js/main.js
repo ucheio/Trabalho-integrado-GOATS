@@ -30,7 +30,7 @@ const speciesList = [
   {
     number: "05",
     name: "PROCOMPSÓGNATO",
-    image: "./assets/dinossauros/miguelssauros.png",
+    image: "./assets/dinossauros/procompsognato.png",
     description: "INSIRA A DESCRIÇÃO DO PROCOMPSÓGNATO AQUI."
   },
   {
@@ -48,49 +48,49 @@ const speciesList = [
   {
     number: "08",
     name: "HADROSSAURO",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/hadrossauro.png",
     description: "INSIRA A DESCRIÇÃO DO HADROSSAURO AQUI."
   },
   {
     number: "09",
     name: "MAIASSAURO",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/maiassauro.png",
     description: "INSIRA A DESCRIÇÃO DO MAIASSAURO AQUI."
   },
   {
     number: "010",
     name: "HIPSILOFODONTE",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/HIPSILOFODONTE.png",
     description: "INSIRA A DESCRIÇÃO DO HIPSILOFODONTE AQUI."
   },
   {
     number: "011",
     name: "OTHNIELIA",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/OTHNIELIA.png",
     description: "INSIRA A DESCRIÇÃO DA OTHNIELIA AQUI."
   },
   {
     number: "012",
     name: "EUOPLOCÉFALO",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/EUOPLOCÉFALO.png",
     description: "INSIRA A DESCRIÇÃO DO EUOPLOCÉFALO AQUI."
   },
   {
     number: "013",
     name: "ESTIRACOSSAURO",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/ESTIRACOSSAURO.png",
     description: "INSIRA A DESCRIÇÃO DO ESTIRACOSSAURO AQUI."
   },
   {
     number: "014",
     name: "MICROCERÁTOPS",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/MICROCERÁTOPS.png",
     description: "INSIRA A DESCRIÇÃO DO MICROCERÁTOPS AQUI."
   },
   {
     number: "015",
     name: "CEARADÁCTILO",
-    image: "./assets/dinossauros/triceratops.jpg",
+    image: "./assets/dinossauros/CEARADÁCTILO.png",
     description: "INSIRA A DESCRIÇÃO DO CEARADÁCTILO AQUI."
   }
 
