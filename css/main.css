@@ -748,7 +748,61 @@
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
+#Sobre-Nos {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a160a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  box-sizing: border-box;
+  gap: 2rem;
+}
 
+/* Coluna da Esquerda */
+.texts-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px; /* Limita a largura dos textos */
+  gap: 1.5rem;
+}
+
+.texts-island8 {
+  display: flex;
+  align-items: center;
+  color: #c9a55c; /* Ou var(--destaque) */
+  gap: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.section8-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section8-texts h1 {
+  color: #ffffff; /* Ou var(--branco) */
+  font-family: serif; /* Substiua pela sua fonte (ex: var(--fonte-principal)) */
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0;
+}
+
+.section8-texts p {
+  color: #a0b0a0; /* Ou var(--texto-verdinho) */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */
 @keyframes nav-scroll {
   0% {
     background: transparent;
