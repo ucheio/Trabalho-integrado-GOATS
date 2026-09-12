@@ -169,7 +169,15 @@
     padding-top: 2rem;
     
 }
-
+.texts-island{
+    display: flex;
+    color: var(--destaque);
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 3.5rem;
+    padding-top: 2rem;
+}
 
 .texts-2{
     font-family: var(--fonte-secundaria);
@@ -201,7 +209,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    padding: 1rem 0 0;
+    gap: 10px;
     
     justify-content: center;
     font-family: var(--fonte-secundaria);
@@ -280,26 +289,41 @@
 }
 }
 
-.texts-island1{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 9rem;
-}
+
 .section1-texts{
     display: flex;
     position: relative;
     margin: 3rem;
     justify-content: space-around;
+    align-items: flex-end;
 }
+
 .section1-texts h1{
     color: var(--branco);
     font-family: var(--fonte-principal),serif;
     font-size: 4rem;
 }
 .section1-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: var(--texto-verdinho);
+    text-align: start;
+}
+.section-texts{
+    display: flex;
+    position: relative;
+    margin: 3rem;
+    justify-content: space-around;
+    color: var(--branco);
+}
+
+.section-texts h1{
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
+    font-size: 4rem;
+}
+.section-texts p{
     display: flex;
     align-items: last baseline;
     margin-bottom: 1rem;
@@ -320,6 +344,7 @@
     height: auto;
     width: auto;
     justify-content: center;
+    box-sizing: border-box;
 }
 .card-container img{
     width: 100%;
@@ -337,7 +362,6 @@
     background-color: var(--destaque);
     overflow: hidden;
    
-    transition: transform 0.5s ease;
 }
 .card p{
     position: absolute;
@@ -379,39 +403,6 @@
     height: 100vh;
     width: 100%;
     background-color: #020608;
-}
-
-.texts-island2{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-    padding-top: 5rem;
-}
-.section2-texts{
-    display: flex;
-    position: relative;
-    
-    justify-content: space-around;
-}
-.section2-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-    position: absolute;
-    margin-top: 5rem;
-    left: 5%;
-}
-
-.section2-texts p{
-    
-    align-items: last baseline;
-    justify-content: left;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
 }
 
 .trex-container {
@@ -508,6 +499,7 @@
     drop-shadow(0 0 22px rgba(136, 0, 255, 0.72))
     drop-shadow(0 0 50px rgba(56, 160, 255, 0.45));
 }
+/*----------------------------------------------------------------------------*/
 
 .species-info {
     margin-left: 65vw;
@@ -560,6 +552,12 @@
     transition: opacity 0.2s ease-in-out;
 }
 
+.species-description {
+    color: lightgrey;
+    font: 0.9rem var(--fonte-principal);
+    line-height: 1.45;
+}
+
 .species-details h2,
 .species-details h3,
 .species-details p { margin: 0; }
@@ -595,76 +593,30 @@
     .species-img { filter: blur(7px); transform: scale(1.08); }
 }
 
-
-
-
+botao-subir{
+    display: grid;
+    justify-content: center;
+    color: var(--destaque);
+    gap: 1rem;
+    padding-top: 3.5rem;
+}
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Escolha-sua-aventura{
     position: relative;
-    height: auto;
+    height: auto ;
     width: 100%;
     background: linear-gradient(to top, #0a160a, #020608);
 }
-.texts-island3{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section3-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section3-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section3-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
+
+
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Estadia{
     position: relative;
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     background-color: #111f11;
+    
 }
-.texts-island4{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section4-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section4-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section4-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Navegação{
     position: relative;
@@ -672,33 +624,6 @@
     width: 100%;
     background-color: #0a160a;
 }
-.texts-island5{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section5-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section5-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section5-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Guia-de-Visitante{
     position: relative;
@@ -706,33 +631,6 @@
     width: 100%;
     background-color: #111f11;
 }
-.texts-island6{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section6-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section6-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section6-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Reservar{
     position: relative;
@@ -740,69 +638,8 @@
     width: 100%;
     background-color: #0a160a;
 }
-.texts-island7{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section7-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section7-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section7-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
 
-@keyframes nav-scroll {
-  0% {
-    background: transparent;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-  }
-
-  50% {
-    background: rgb(20 20 20 / 20%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  100% {
-    background: rgb(20 20 20 / 90%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-}
-
-@keyframes blinking{
-    0%{
-        opacity: 1;
-        filter: brightness(100%); 
-    }
-    50%{
-        opacity: 0.6;
-        filter: brightness(60%);
-    }
-    100%{
-        opacity: 1;
-        filter: brightness(100%);
-    }
-}
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
@@ -1250,17 +1087,6 @@
        CARDS
     ========================= */
 
-    .card-container {
-        padding: 1rem;
-
-        margin: 1rem 0;
-
-        width: 100%;
-
-        box-sizing: border-box;
-
-        gap: 1rem;
-    }
 
     .card {
         width: 100%;

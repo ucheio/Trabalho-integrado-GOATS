@@ -1,97 +1,97 @@
 
 const speciesList = [
   {
-    number: "01",
+    number: "01 - Carnívoro",
     name: "T-REX",
     image: "./assets/dinossauros/trex.png",
-    description: "INSIRA A DESCRIÇÃO DO T-REX AQUI."
+    description: "O grande predador da ilha, com enorme cabeça, dentes afiados e mandíbulas poderosas."
     
   },
   {
-    number: "02",
+    number: "02 - Carnívoro",
     name: "VELOCIRAPTOR",
     image: "./assets/dinossauros/velociraptor.png",
-    description: "INSIRA A DESCRIÇÃO DO VELOCIRAPTOR AQUI."
+    description: "Predador ágil e inteligente, conhecido por suas garras e capacidade de caçar em grupo."
   
   },
   {
-    number: "03",
+    number: "03 - Herbívoro",
     name: "TRICERÁTOPS",
     image: "./assets/dinossauros/triceratops.png",
-    description: "INSIRA A DESCRIÇÃO DO TRICERÁTOPS AQUI."
+    description: "Grande herbívoro com três chifres e uma enorme estrutura óssea atrás da cabeça."
     
   },
   {
-    number: "04",
+    number: "04 - Carnívoro",
     name: "DILOFOSSAURO",
     image: "./assets/dinossauros/dilofossauro.png",
-    description: "INSIRA A DESCRIÇÃO DO DILOFOSSAURO AQUI."
+    description: "Predador de duas cristas na cabeça, conhecido por sua capacidade de lançar veneno."
   },
   {
-    number: "05",
+    number: "05 - Carnívoro",
     name: "PROCOMPSÓGNATO",
     image: "./assets/dinossauros/procompsognato.png",
-    description: "INSIRA A DESCRIÇÃO DO PROCOMPSÓGNATO AQUI."
+    description: "Pequeno predador ágil que, apesar do tamanho, apresenta comportamento perigoso."
   },
   {
-    number: "06",
+    number: "06 - Herbívoro",
     name: "ESTEGOSSAURO",
     image: "./assets/dinossauros/estegossauros.png",
-    description: "INSIRA A DESCRIÇÃO DO ESTEGOSSAURO AQUI."
+    description: "Herbívoro de corpo pesado, marcado pelas placas nas costas e estruturas na cauda."
   },
   {
-    number: "07",
+    number: "07 - Herbívoro",
     name: "APATOSSAURO",
     image: "./assets/dinossauros/apatossauro.png",
-    description: "INSIRA A DESCRIÇÃO DO APATOSSAURO AQUI."
+    description: "Grande herbívoro de pescoço e cauda longos, alimentando-se da vegetação da ilha."
   },
   {
-    number: "08",
+    number: "08 - Herbívoro",
     name: "HADROSSAURO",
     image: "./assets/dinossauros/hadrossauro.png",
-    description: "INSIRA A DESCRIÇÃO DO HADROSSAURO AQUI."
+    description: "Dinossauro herbívoro que se alimentava de vegetação e fazia parte das espécies presentes na ilha."
   },
   {
-    number: "09",
+    number: "09 - Herbívoro",
     name: "MAIASSAURO",
     image: "./assets/dinossauros/maiassauro.png",
-    description: "INSIRA A DESCRIÇÃO DO MAIASSAURO AQUI."
+    description: "Herbívoro conhecido pelo comportamento de grupo e pelo cuidado com seus filhotes."
   },
   {
-    number: "010",
+    number: "10 - Herbívro",
     name: "HIPSILOFODONTE",
     image: "./assets/dinossauros/HIPSILOFODONTE.png",
-    description: "INSIRA A DESCRIÇÃO DO HIPSILOFODONTE AQUI."
+    description: "Pequeno herbívoro de corpo leve, muito menor que os gigantes da ilha."
   },
   {
-    number: "011",
+    number: "11 - Herbívoro",
     name: "OTHNIELIA",
     image: "./assets/dinossauros/OTHNIELIA.png",
-    description: "INSIRA A DESCRIÇÃO DA OTHNIELIA AQUI."
+    description: "Pequeno dinossauro herbívoro que contrasta com os gigantes do parque."
   },
   {
-    number: "012",
+    number: "12 - Herbívoro",
     name: "EUOPLOCÉFALO",
     image: "./assets/dinossauros/EUOPLOCÉFALO.png",
-    description: "INSIRA A DESCRIÇÃO DO EUOPLOCÉFALO AQUI."
+    description: "Herbívoro robusto, protegido por uma forte armadura natural."
   },
   {
-    number: "013",
+    number: "13 - Herbívoro",
     name: "ESTIRACOSSAURO",
     image: "./assets/dinossauros/ESTIRACOSSAURO.png",
-    description: "INSIRA A DESCRIÇÃO DO ESTIRACOSSAURO AQUI."
+    description: "Grande herbívoro com uma estrutura óssea na cabeça e vários chifres, dando ao animal uma aparência bastante imponente."
   },
   {
-    number: "014",
+    number: "14 - Herbívoro",
     name: "MICROCERÁTOPS",
     image: "./assets/dinossauros/MICROCERÁTOPS.png",
-    description: "INSIRA A DESCRIÇÃO DO MICROCERÁTOPS AQUI."
+    description: "Pequeno dinossauro herbívoro, de corpo compacto e aparência delicada, que se alimentava da vegetação da ilha."
   },
   {
-    number: "015",
-    name: "CEARADÁCTILO",
+    number: "15 - Herbívoro",
+    name: "Pterossauro",
     image: "./assets/dinossauros/CEARADÁCTILO.png",
-    description: "INSIRA A DESCRIÇÃO DO CEARADÁCTILO AQUI."
+    description: "Réptil voador que habitava a ilha. Diferente dos dinossauros terrestres, possuía asas e podia se deslocar pelo ar."
   }
 
   // Continue até a espécie 15.
@@ -246,6 +246,7 @@ const speciesCard = document.querySelector(".species");
 const speciesNumber = document.querySelector(".species-number");
 const speciesName = document.querySelector(".species-text");
 const speciesImage = document.querySelector(".species-img");
+const speciesDescription = document.querySelector(".species-description");
 
 let currentSpecies = -1;
 
@@ -261,6 +262,7 @@ function changeSpecies(index, immediate = false) {
   speciesName.textContent = species.name;
   speciesImage.src = species.image;
   speciesImage.alt = species.name;
+  speciesDescription.textContent = species.description;
 
 
 };
