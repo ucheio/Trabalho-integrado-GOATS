@@ -1,0 +1,185 @@
+
+
+.linha-tempo {
+    position: relative;
+    width: 80%;
+    padding: 20px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.linha {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--linha-cor);
+    z-index: 1;
+}
+
+
+.pontos-linha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.ponto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.ponto-container .ponto {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--ponto-inativo);
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.ponto-container .ano {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--texto-verdinho);
+    font-family: var(--fonte-principal);
+    transition: color 0.3s ease;
+}
+.ponto-container.ativo .ponto {
+    width: 18px;
+    height: 18px;
+    background-color: var(--ponto-ativo);
+    box-shadow: 0 0 12px var(--ponto-ativo), 
+                0 0 0 4px rgba(229, 205, 150, 0.25);
+    border: none;
+}
+
+.ponto-container:hover .ponto {
+    transform: scale(1.2);
+}
+
+.page {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background: #05121f;
+    margin: 0;
+    
+}
+
+.slideshow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20vh;
+    padding: 0 20px;
+}
+
+/* Fundo */
+.page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("/assets/mountains-bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.3;
+    filter: blur(3px);
+
+    z-index: 0;
+}
+
+/* Conteúdo fica por cima */
+.page > * {
+    position: relative;
+    z-index: 1;
+}
+
+.botao-seta {
+    background: transparent;
+    border: 3px solid var(--destaque);
+    border-radius: 50%;
+    color: var(--destaque);
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+
+}
+.buttons-container{
+    position: relative;
+    display: flex;
+
+    width: 100%;
+}
+
+.icone-seta {
+    color: var(--branco);
+}
+
+.texto-slideshow {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.texto-slideshow h1{
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    font-size: 4rem;
+}
+
+.texto-slideshow p{
+    color: var(--texto-verdinho);
+    text-align: start;
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    width: 500px;
+}
+
+.imagem-slideshow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slideshow-tema{
+    color: var(--destaque);
+}
+/*------------------------------------------------------------------------------------------------------------------------*/
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--destaque);
+    font-weight: 500;
+}
+/*------------------------------------------------------------------------------------------------------------------------*/
