@@ -223,9 +223,9 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 .hbutton:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
-  background-color: var(--destaque-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+    background-color: var(--destaque-claro);
 }
 
 .explore-btn{
