@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jurassic Park</title>
+  <title>GENÉTIS</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="./css/global.css" />
+
+  <link rel="icon" type="image/jpeg" href="./assets/genetis.jpeg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,14 +27,18 @@
   <div class="page">
 
     <nav class="nav">
-      <a class="logo-text" href="#">JURASSIC PARK</a>
+      <div class="logo-container">
+        <img src="./assets/genetis.jpeg" class="logo-img">
+        <a href="#hero" class="logo-text">GENÉTIS</a>
+      </div>
       <ul class="nav-contents">
         <li class="nav-link"><a href="#A-Ilha">A ILHA</a></li>
         <li class="nav-link"><a href="#trex-eye-point">DINOSSAUROS </a></li>
         <li class="nav-link"><a href="#Guia-de-Visitante">PLANEJE</a></li>
         <li class="nav-link"><a href="#Estadia">ESTADIA</a></li>
+
         <li class="nav-link"><a href="#Restrito" id="link-restrito">RESTRITO</a></li>
-        <li class="nav-link"><a href="#Reservar">RESERVE</a></li>
+        <li class="nav-link"><a href="#Sobre-Nos">SOBRE NOS</a></li>
       </ul>
 
       <a class="nav-button" href="#Reservar">
@@ -41,7 +47,7 @@
     </nav>
 
 
-    <main class="hero">
+    <main id="hero" class="hero">
       <div class="text-container">
         <div class="texts-1">
           <p class="text-1">ISLA NUBLAR</p>
@@ -52,7 +58,7 @@
         </div>
 
         <div class="texts-2">
-          <h1 class="hero-title">JURASSIC</h1>
+          <h1 class="hero-title">GENÉTIS</h1>
           <h1 class="hero-title">PARK</h1>
           <h5 class="subtitulo">SUA AVENTURA COMECA AGORA</h5>
           <h5 class="tetratitulo">
@@ -145,36 +151,40 @@
 
     <!-------------------------------------------------------------------------------------------------->
     <section id="dna-section">
-      <div class="dna-content">
+  <div class="dna-content">
 
-        <div class="botoes-navegacao">
-          <button class="botao-navegacao botao-subir">
-            <i class="fa-solid fa-circle-arrow-up"></i>
-          </button>
+    <div class="botoes-navegacao">
+      <button class="botao-navegacao botao-subir">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+      </button>
 
-          <button class="botao-navegacao botao-descer">
-            <i class="fa-solid fa-circle-arrow-down"></i>
-          </button>
-        </div>
-        <div class="dna-model">
+      <button class="botao-navegacao botao-descer">
+        <i class="fa-solid fa-circle-arrow-down"></i>
+      </button>
+    </div>
 
-        </div>
+    <img class="species-art" src="./assets/trex-lineart.png" alt="">
 
-        <div class="species-info">
+    <div class="dna-model"></div>
 
-          <div class="species">
-            <img src="./assets/trex.jpg" class="species-img" alt="T-Rex">
-            <p class="species-number"></p>
-            <div class="species-details">
-              <h2 class="species-text"></h2>
-              <h3>Descrição:</h3>
-              <p class="species-description"></p>
-            </div>
-          </div>
+    <div class="species-info">
+      <div class="species">
+
+        <img src="./assets/trex.jpg" class="species-img" alt="T-Rex">
+
+        <p class="species-number"></p>
+
+        <div class="species-details">
+          <h2 class="species-text"></h2>
+          <h3>Descrição:</h3>
+          <p class="species-description"></p>
         </div>
 
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
 
     <!-------------------------------------------------------------------------------------------------->
 
@@ -512,6 +522,39 @@
         </div>
     </section>
 
+    <!-- ------------------------------------------------------------- -->
+    <section id="Sobre-Nos">
+      <div class="texts-left">
+        <!-- <div class="texts-island8">
+          <span>07</span>
+          <span>•</span>
+          <span>Sobre Nós</span>
+        </div> -->
+        <div class="section8-texts">
+
+          <h1>A CIÊNCIA POR TRÁS<br> <span>DO PARQUE</span></h1>
+          <p>
+            Por trás de cada espécie, existe um trabalho <br> de anos, tecnologia de ponta e uma equipe de <br>
+            cientistas dedicados a tornar tudo isso possível.
+          </p>
+
+
+          <div class="hero-buttons-container sobreNos-Btn-sct8">
+            <a class="hbutton" href="sobreNos.html">
+              <span>SAIBA MAIS</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card-container cardCtn-sobreNos">
+        <div class="card card-sobreNos">
+          <img src="./assets/laboratorio-sobreNos.jpeg" alt="laboratorio-InGenuos">
+          <p>Técnologia Avançada</p>
+          <p>Pesquisas que tornam o impossível, possível</p>
+        </div>
+      </div>
+
+    </section>
     <!-------------------------------------------------------------------------------------------------->
     <footer>
       <section class="main">

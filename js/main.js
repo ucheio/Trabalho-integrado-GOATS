@@ -4,97 +4,107 @@ const speciesList = [
     number: "01 - Carnívoro",
     name: "T-REX",
     image: "./assets/dinossauros/trex.png",
-    description: "O grande predador da ilha, com enorme cabeça, dentes afiados e mandíbulas poderosas."
-    
+    description: "O grande predador da ilha, com enorme cabeça, dentes afiados e mandíbulas poderosas.",
+    arteFundo: "./assets/dino-linearts/trex-lineart.png"
   },
   {
     number: "02 - Carnívoro",
     name: "VELOCIRAPTOR",
     image: "./assets/dinossauros/velociraptor.png",
-    description: "Predador ágil e inteligente, conhecido por suas garras e capacidade de caçar em grupo."
-  
+    description: "Predador ágil e inteligente, conhecido por suas garras e capacidade de caçar em grupo.",
+    arteFundo: "./assets/dino-linearts/velociraptor-lineart.png"
   },
   {
     number: "03 - Herbívoro",
     name: "TRICERÁTOPS",
     image: "./assets/dinossauros/triceratops.png",
-    description: "Grande herbívoro com três chifres e uma enorme estrutura óssea atrás da cabeça."
-    
+    description: "Grande herbívoro com três chifres e uma enorme estrutura óssea atrás da cabeça.",
+    arteFundo: "./assets/dino-linearts/triceratops-lineart.png"
   },
   {
     number: "04 - Carnívoro",
     name: "DILOFOSSAURO",
     image: "./assets/dinossauros/dilofossauro.png",
-    description: "Predador de duas cristas na cabeça, conhecido por sua capacidade de lançar veneno."
+    description: "Predador de duas cristas na cabeça, conhecido por sua capacidade de lançar veneno.",
+    arteFundo: "./assets/dino-linearts/dilofossauro-lineart.png"
   },
   {
     number: "05 - Carnívoro",
     name: "PROCOMPSÓGNATO",
     image: "./assets/dinossauros/procompsognato.png",
-    description: "Pequeno predador ágil que, apesar do tamanho, apresenta comportamento perigoso."
+    description: "Pequeno predador ágil que, apesar do tamanho, apresenta comportamento perigoso.",
+    arteFundo: "./assets/dino-linearts/procompsognato-lineart.png"
   },
   {
     number: "06 - Herbívoro",
     name: "ESTEGOSSAURO",
     image: "./assets/dinossauros/estegossauros.png",
-    description: "Herbívoro de corpo pesado, marcado pelas placas nas costas e estruturas na cauda."
+    description: "Herbívoro de corpo pesado, marcado pelas placas nas costas e estruturas na cauda.",
+    arteFundo: "./assets/dino-linearts/estegossauro-lineart.png"
   },
   {
     number: "07 - Herbívoro",
     name: "APATOSSAURO",
     image: "./assets/dinossauros/apatossauro.png",
-    description: "Grande herbívoro de pescoço e cauda longos, alimentando-se da vegetação da ilha."
+    description: "Grande herbívoro de pescoço e cauda longos, alimentando-se da vegetação da ilha.",
+    arteFundo: "./assets/dino-linearts/apatossauro-lineart.png"
   },
   {
     number: "08 - Herbívoro",
     name: "HADROSSAURO",
     image: "./assets/dinossauros/hadrossauro.png",
-    description: "Dinossauro herbívoro que se alimentava de vegetação e fazia parte das espécies presentes na ilha."
+    description: "Dinossauro herbívoro que se alimentava de vegetação e fazia parte das espécies presentes na ilha.",
+    arteFundo: "./assets/dino-linearts/hadrossauro-lineart.png"
   },
   {
     number: "09 - Herbívoro",
     name: "MAIASSAURO",
     image: "./assets/dinossauros/maiassauro.png",
-    description: "Herbívoro conhecido pelo comportamento de grupo e pelo cuidado com seus filhotes."
+    description: "Herbívoro conhecido pelo comportamento de grupo e pelo cuidado com seus filhotes.",
+    arteFundo: "./assets/dino-linearts/maiassauro-lineart.png"
   },
   {
-    number: "10 - Herbívro",
+    number: "10 - Herbívoro",
     name: "HIPSILOFODONTE",
     image: "./assets/dinossauros/HIPSILOFODONTE.png",
-    description: "Pequeno herbívoro de corpo leve, muito menor que os gigantes da ilha."
+    description: "Pequeno herbívoro de corpo leve, muito menor que os gigantes da ilha.",
+    arteFundo: "./assets/dino-linearts/hipsolofodonte-lineart.png"
   },
   {
     number: "11 - Herbívoro",
     name: "OTHNIELIA",
     image: "./assets/dinossauros/OTHNIELIA.png",
-    description: "Pequeno dinossauro herbívoro que contrasta com os gigantes do parque."
+    description: "Pequeno dinossauro herbívoro que contrasta com os gigantes do parque.",
+    arteFundo: "./assets/dino-linearts/OTHNIELIA-lineart.png"
   },
   {
     number: "12 - Herbívoro",
     name: "EUOPLOCÉFALO",
     image: "./assets/dinossauros/EUOPLOCÉFALO.png",
-    description: "Herbívoro robusto, protegido por uma forte armadura natural."
+    description: "Herbívoro robusto, protegido por uma forte armadura natural.",
+    arteFundo: "./assets/dino-linearts/EUOPLOCEFALO-lineart.png"
   },
   {
     number: "13 - Herbívoro",
     name: "ESTIRACOSSAURO",
     image: "./assets/dinossauros/ESTIRACOSSAURO.png",
-    description: "Grande herbívoro com uma estrutura óssea na cabeça e vários chifres, dando ao animal uma aparência bastante imponente."
+    description: "Grande herbívoro com uma estrutura óssea na cabeça e vários chifres, dando ao animal uma aparência bastante imponente.",
+    arteFundo: "./assets/dino-linearts/ESTIRACOSSAURO-lineart.png"
   },
   {
     number: "14 - Herbívoro",
     name: "MICROCERÁTOPS",
     image: "./assets/dinossauros/MICROCERÁTOPS.png",
-    description: "Pequeno dinossauro herbívoro, de corpo compacto e aparência delicada, que se alimentava da vegetação da ilha."
+    description: "Pequeno dinossauro herbívoro, de corpo compacto e aparência delicada, que se alimentava da vegetação da ilha.",
+    arteFundo: "./assets/dino-linearts/MICROCERÁTOPS-lineart.png"
   },
   {
-    number: "15 - Herbívoro",
-    name: "Pterossauro",
+    number: "15 - Voador",
+    name: "PTEROSSAURO",
     image: "./assets/dinossauros/CEARADÁCTILO.png",
-    description: "Réptil voador que habitava a ilha. Diferente dos dinossauros terrestres, possuía asas e podia se deslocar pelo ar."
+    description: "Réptil voador que habitava a ilha. Diferente dos dinossauros terrestres, possuía asas e podia se deslocar pelo ar.",
+    arteFundo: "./assets/dino-linearts/CEARADÁCTILO-lineart.png"
   }
-
-  // Continue até a espécie 15.
 ];
 
 //botao subir descer
@@ -298,54 +308,88 @@ const speciesNumber = document.querySelector(".species-number");
 const speciesName = document.querySelector(".species-text");
 const speciesImage = document.querySelector(".species-img");
 const speciesDescription = document.querySelector(".species-description");
+const speciesArt = document.querySelector(".species-art");
+
 
 let currentSpecies = -1;
 
 function changeSpecies(index, immediate = false) {
-  if (index === currentSpecies) return;
+    if (index === currentSpecies) return;
 
-  currentSpecies = index;
+    const species = speciesList[index];
+    currentSpecies = index;
 
-  const species = speciesList[index];
+    const updateContent = () => {
+        speciesNumber.textContent = species.number;
+        speciesName.textContent = species.name;
+        speciesImage.src = species.image;
+        speciesImage.alt = species.name;
+        speciesDescription.textContent = species.description;
 
-  const updateContent = () => {
-  speciesNumber.textContent = species.number;
-  speciesName.textContent = species.name;
-  speciesImage.src = species.image;
-  speciesImage.alt = species.name;
-  speciesDescription.textContent = species.description;
+        speciesArt.src = species.arteFundo;
 
+        speciesArt.style.filter = `
+            brightness(1.35)
+            saturate(1.4)
+            drop-shadow(0 0 8px rgba(255,255,255,.35))
+            drop-shadow(0 0 18px ${species.glow})
+            drop-shadow(0 0 45px ${species.glow})
+        `;
+    };
 
-};
-
-  if (immediate) {
-    updateContent();
-    gsap.set(speciesCard, { autoAlpha: 1, y: 0 });
-    return;
-  }
-
-  gsap.killTweensOf(speciesCard);
-
-  gsap.to(speciesCard, {
-    autoAlpha: 0,
-    y: -20,
-    duration: 0.2,
-    ease: "power2.in",
-    onComplete: () => {
-      updateContent();
-
-      gsap.set(speciesCard, { y: 20 });
-
-      gsap.to(speciesCard, {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.35,
-        ease: "power2.out"
-      });
+    if (immediate) {
+        updateContent();
+        gsap.set([speciesCard, speciesArt], { autoAlpha: 1 });
+        return;
     }
-  });
-}
 
+    gsap.killTweensOf([speciesCard, speciesArt]);
+
+    const tl = gsap.timeline();
+
+    tl.to(speciesCard, {
+        autoAlpha: 0,
+        x: 40,
+        duration: 0.2,
+        ease: "power2.in"
+    })
+
+    .to(speciesArt, {
+        autoAlpha: 0,
+        x: -50,
+        scale: 0.95,
+        duration: 0.2,
+        ease: "power2.in"
+    }, "<")
+
+    .add(() => {
+        updateContent();
+    })
+
+    .set(speciesCard, {
+        x: -40
+    })
+
+    .set(speciesArt, {
+        x: 50,
+        scale: 0.95
+    })
+
+    .to(speciesCard, {
+        autoAlpha: 1,
+        x: 0,
+        duration: 0.4,
+        ease: "power2.out"
+    })
+
+    .to(speciesArt, {
+        autoAlpha: 0.75,
+        x: 0,
+        scale: 1,
+        duration: 0.6,
+        ease: "power2.out"
+    }, "<");
+}
 changeSpecies(0, true);
 
 
