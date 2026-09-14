@@ -1,0 +1,127 @@
+.nav {
+    pointer-events: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    height: 9vh;
+    padding-top: 1rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: transparent;
+
+    transition:
+        background-color 500ms ease,
+        backdrop-filter 500ms ease,
+        -webkit-backdrop-filter 500ms ease;
+}
+
+.nav.scrolled {
+    background: rgb(10 20 10 / 90%);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+.nav-contents{
+    text-decoration: none;
+    font-size: 0.9rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: var(--preto);
+    gap: 3rem;
+    align-items: center;
+}
+.nav-link a {
+    position: relative;
+   transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--cinza); 
+    padding: 5px;
+}
+.nav-link{
+    text-decoration: n;
+    align-items: center;
+}
+
+.nav-link a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: var(--destaque);
+    height: 1px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.nav-link a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+    filter: brightness(1), blur(50px);
+}
+.nav-link a:hover{
+    color: var(--texto-hover-amarelinho);
+}
+/*=======================================================*/
+
+
+/*
+ NIVEL 5
+MOSAICO DE FILMES
+desafio da prof
+ */
+
+
+.desafio-5 p 
+{
+    margin-bottom: 15px;
+}
+
+.grade-modular-desafio
+{
+    display: grid;
+
+
+    /* 4 colunas x 3 linhas de 160px de altura(cada linha) */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,160px);
+
+    gap: 15px;
+}
+
+.grade-modular-desafio .filme
+{
+    display: grid;
+
+    grid-template-rows: 1fr auto;
+
+}
+
+.grade-modular-desafio .filme img
+{
+    width: 100%;
+
+    height: 100%;
+    min-height: 0;
+
+    object-fit: cover;
+}
+.grade-modular-desafio .filme:nth-child(1)
+{
+    /* span 3 -> quantas células naquela direção(row/linha) o item vai ocupar */
+    grid-row: span 2;
+    grid-column: span 2;    
+
+}
+
+/*================================================================*/
