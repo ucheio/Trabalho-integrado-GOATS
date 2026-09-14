@@ -1,14 +1,3 @@
-
-.logo-text{
-    font-family: var(--fonte-principal);
-    text-decoration: none;
-    font-size: 1.8rem;
-    color: var(--destaque);
-    font-weight: 500;
-}
-
-
-
 .nav {
     pointer-events: auto;
     position: fixed;
@@ -19,6 +8,8 @@
 
     height: 9vh;
     padding-top: 1rem;
+/* só usar margin: 0 e dps margin top: 5rem +/- */
+
 
     display: flex;
     justify-content: space-around;
@@ -39,7 +30,6 @@
     -webkit-backdrop-filter: blur(12px);
 }
 
-
 .nav-contents{
     text-decoration: none;
     font-size: 0.9rem;
@@ -50,6 +40,7 @@
     gap: 3rem;
     align-items: center;
 }
+
 .nav-link a {
     position: relative;
    transition: color 0.3s ease;
@@ -57,6 +48,7 @@
     color: var(--cinza); 
     padding: 5px;
 }
+
 .nav-link{
     align-items: center;
 }
@@ -73,7 +65,6 @@
     transform: scaleX(0);
     transform-origin: center;
 }
-
 
 .nav-link a:hover::after{
     width: 100%;
@@ -104,9 +95,6 @@
   background-color: var(--destaque-claro);
 }
 
-
-
-
 /*-------------------------------------------------------------------------------------------*/
 
 .hero {
@@ -129,7 +117,7 @@
       transparent 80%,
       #1A2E1A 100%
     ),
-    url(../assets/ilha-trexBG.png);
+    url(../assets/imagem-fundoHero.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -172,7 +160,15 @@
     padding-top: 2rem;
     
 }
-
+.texts-island{
+    display: flex;
+    color: var(--destaque);
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 3.5rem;
+    padding-top: 2rem;
+}
 
 .texts-2{
     font-family: var(--fonte-secundaria);
@@ -204,7 +200,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    padding: 1rem 0 0;
+    gap: 10px;
     
     justify-content: center;
     font-family: var(--fonte-secundaria);
@@ -229,9 +226,9 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 .hbutton:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
-  background-color: var(--destaque-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+    background-color: var(--destaque-claro);
 }
 
 .explore-btn{
@@ -283,20 +280,14 @@
 }
 }
 
-.texts-island1{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 9rem;
-}
 .section1-texts{
     display: flex;
     position: relative;
     margin: 3rem;
     justify-content: space-around;
+    align-items: flex-end;
 }
+
 .section1-texts h1{
     color: var(--branco);
     font-family: var(--fonte-principal),serif;
@@ -309,6 +300,457 @@
     color: var(--texto-verdinho);
     text-align: start;
 }
+.section-texts{
+    display: flex;
+    margin: 3rem;
+    justify-content: space-around;
+    color: var(--branco);
+}
+
+.section-texts h1{
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
+    font-size: 4rem;
+}
+
+.section-texts p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: var(--texto-verdinho);
+    text-align: start;
+}
+
+.section-texts-mapa p{
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: var(--texto-verdinho);
+    text-align: start;
+}
+
+.leg-mapa {
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+
+    background: #0A160A;
+    border: 2px solid #C9A43B;
+    border-radius: 5px;
+
+    color: #fff;
+    overflow: hidden;
+}
+
+/* TÍTULO */
+.leg-mapa h3 {
+    margin: 0;
+    padding: 10px 18px;
+
+    color: #C9A43B;
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    border-bottom: 1px solid rgba(201, 164, 59, 0.35);
+}
+
+/* TABELA */
+.leg-mapa-pontos {
+    width: 100%;
+    border-collapse: collapse;
+
+    font-family: "Cinzel", serif;
+}
+
+/* CÉLULAS */
+.leg-mapa-pontos td {
+    width: 50%;
+    padding: 10px 18px;
+
+    color: #E8E5D8;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+
+    border-bottom: 1px solid rgba(201, 164, 59, 0.18);
+}
+
+/* DIVISÃO ENTRE AS COLUNAS */
+.leg-mapa-pontos td + td {
+    border-left: 1px solid rgba(201, 164, 59, 0.18);
+}
+
+/* REMOVE A LINHA DA ÚLTIMA LINHA */
+.leg-mapa-pontos tr:last-child td {
+    border-bottom: none;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.leg-mapa-pontos tr:hover td {
+    background: rgba(201, 164, 59, 0.06);
+    color: #fff;
+}
+
+.section-texts-mapa {
+    display: flex;
+    
+    justify-content: space-around;
+    color: var(--branco);
+}
+
+.mapa {
+    position: relative;
+    width: 40%;
+}
+
+.mapa img {
+    width: 100%;
+    display: block;
+}
+
+.ponto {
+    position: absolute;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    border: 1px solid white;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.ponto-1:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(116, 166, 226);
+
+    box-shadow:
+        0 0 0 5px rgba(90, 129, 179, 0.2),
+        0 0 15px rgba(90, 129, 179, 0.8);
+}
+
+.ponto-2:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(206, 131, 70);
+
+    box-shadow:
+        0 0 0 5px rgba(199, 116, 49, 0.2),
+        0 0 15px rgba(199, 116, 49, 0.8);
+}
+
+.ponto-3:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(206, 131, 70);
+
+    box-shadow:
+        0 0 0 5px rgba(199, 116, 49, 0.2),
+        0 0 15px rgba(199, 116, 49, 0.8);
+}
+
+.ponto-4:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(100, 204, 108);
+
+    box-shadow:
+        0 0 0 5px rgb(78, 177, 86, 0.2),
+        0 0 15px rgb(61, 143, 68, 0.8);
+}
+
+.ponto-5:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(100, 204, 108);
+
+    box-shadow:
+        0 0 0 5px rgb(78, 177, 86, 0.2),
+        0 0 15px rgb(61, 143, 68, 0.8);
+}
+
+.ponto-6:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(100, 204, 108);
+
+    box-shadow:
+        0 0 0 5px rgb(78, 177, 86, 0.2),
+        0 0 15px rgb(61, 143, 68, 0.8);
+}
+
+.ponto-1 {
+    left: 50%;
+    top: 52%;
+    background-color: rgb(90, 129, 179);
+}
+
+.ponto-2 {
+    left: 55%;
+    top: 38%;
+    background-color: rgb(199, 116, 49);
+}
+
+.ponto-3 {
+    left: 27%;
+    top: 37%;
+    background-color: rgb(199, 116, 49);
+}
+
+.ponto-4 {
+    left: 67%;
+    top: 45%;
+    background-color: rgb(78, 177, 86);
+}
+
+.ponto-5 {
+    left: 39%;
+    top: 45%;
+    background-color: rgb(78, 177, 86);
+}
+
+.ponto-6 {
+    left: 78%;
+    top: 25%;
+    background-color: rgb(78, 177, 86);
+}
+
+.modal-mapa {
+    width: 320px;
+    padding: 25px;
+
+    margin: 10px 0 0 65px;
+
+    border-radius: 8px;
+
+    color: white;
+}
+
+.azul {
+    border: 2px solid rgb(90, 129, 179);
+    background-color: rgb(11, 31, 39);
+}
+
+.azul .modal-numero {
+    color: rgb(90, 129, 179);
+}
+
+.azul .modal-titulo {
+    color: rgb(140, 190, 230);
+}
+
+.laranja {
+    border: 2px solid rgb(199, 116, 49);
+    background-color: rgb(46, 29, 17);
+}
+
+.laranja .modal-numero {
+    color: rgb(199, 116, 49);
+}
+
+.laranja .modal-titulo {
+    color: rgb(206, 131, 70);
+}
+
+.verde {
+    border: 2px solid rgb(78, 177, 86);
+    background-color: rgb(16, 42, 24);
+}
+
+.verde .modal-numero {
+    color: rgb(78, 177, 86);
+}
+
+.verde .modal-titulo {
+    color: rgb(100, 204, 108);
+}
+
+.modal-mapa::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-local {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.7rem;
+    color: #aaa;
+
+    letter-spacing: 2px;
+}
+
+.modal-numero {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.modal-titulo {
+    margin: 0 0 15px 0;
+
+    font-size: 1.4rem;
+}
+
+.modal-texto {
+    margin: 0 0 15px 0;
+
+    line-height: 1.5;
+}
+
+.modal-fechar {
+    float: right;
+
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 1.4rem;
+
+    cursor: pointer;
+}
+
+/*-------------------------------- MODAL RESTRITO -------------------------------*/
+
+.modal-restrito {
+    width: 360px;
+    padding: 25px;
+
+    margin: auto;
+
+    border: 2px solid var(--destaque);
+    border-radius: 8px;
+    background-color: var(--verde-escuro);
+
+    color: var(--branco);
+}
+
+.modal-restrito::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-restrito .modal-titulo {
+    font-family: var(--fonte-principal);
+    color: var(--destaque);
+}
+
+.restrito-abas {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid var(--cinza);
+}
+
+.aba {
+    padding: 8px 4px;
+
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+
+    color: var(--cinza);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.aba:hover {
+    color: var(--texto-hover-amarelinho);
+}
+
+.aba.ativa {
+    border-bottom-color: var(--destaque);
+    color: var(--destaque);
+}
+
+.restrito-form {
+    display: none;
+}
+
+.restrito-form.ativa {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.restrito-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    font-family: var(--fonte-secundaria);
+    font-size: 0.7rem;
+    color: #aaa;
+
+    letter-spacing: 2px;
+}
+
+.restrito-form input {
+    padding: 10px;
+
+    border: 1px solid var(--cinza);
+    background: transparent;
+
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+
+    transition: border-color 0.2s ease;
+}
+
+.restrito-form input:focus {
+    outline: none;
+    border-color: var(--destaque);
+}
+
+.restrito-submit {
+    height: 2.5rem;
+
+    margin-top: 8px;
+
+    border: none;
+    background-color: var(--destaque);
+
+    color: var(--preto);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.restrito-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+    background-color: var(--destaque-claro);
+}
+
+/*-------------------------------------------------------------------------------*/
 
 .card-container{
     position: relative;
@@ -323,6 +765,7 @@
     height: auto;
     width: auto;
     justify-content: center;
+    box-sizing: border-box;
 }
 .card-container img{
     width: 100%;
@@ -339,8 +782,6 @@
     width: 25rem;
     background-color: var(--destaque);
     overflow: hidden;
-   
-    transition: transform 0.5s ease;
 }
 .card p{
     position: absolute;
@@ -366,15 +807,15 @@
         transform 0.4s ease,
         opacity 0.4s ease;
 }
+
 .card:hover img{
     transform: scale( 1.1);
 }
+
 .card:hover p{
     opacity: 1;
     transform: translateY(0);
 }
-
-
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 #dinossauros-section{
@@ -383,41 +824,6 @@
     width: 100%;
     background-color: #020608;
 }
-
-.texts-island2{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-    padding-top: 5rem;
-}
-.section2-texts{
-    display: flex;
-    position: relative;
-    
-    justify-content: space-around;
-}
-.section2-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-    position: absolute;
-    margin-top: 5rem;
-    left: 5%;
-}
-.section2-texts p{
-    
-    align-items: last baseline;
-    justify-content: left;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
-
-
 
 .trex-container {
     position: absolute;
@@ -434,7 +840,6 @@
 .trex-head {
     width: 200rem;
     transform-origin: 50% 40%;
-    
 }
 
 #dna-section {
@@ -514,171 +919,214 @@
     drop-shadow(0 0 22px rgba(136, 0, 255, 0.72))
     drop-shadow(0 0 50px rgba(56, 160, 255, 0.45));
 }
-
+/*----------------------------------------------------------------------------*/
 
 .species-info {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  margin-left: 65vw;
+    position: relative;
+    z-index: 3;
+    margin-left: 65vw;
 }
 
 .species {
-    position: absolute;
-    height: 25rem;
-    width: 20rem;
-    background: rgba(255, 255, 255, 0.1);
-  
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    
-    border-radius: 12px;
-
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
+    position: relative;
+    width: 280px;
+    height: 370px;
+    overflow: hidden;
+    border: 1px solid rgba(180, 200, 150, 0.25);
+    border-radius: 20px;
+    background: #111f11;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    color: var(--branco);
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.species-text {
-    font-family: 'Inter';
-    position: absolute;
+
+.species-number {
+    position: relative;
     z-index: 2;
-    height: 2rem;
-    width: 100%;
-    margin-top: 1rem;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-    color: var(--branco);
-}
-.species-img{
-    position: absolute;
-    bottom: 0;
-    height: 87%;
-    width: 100%;
-    z-index: 1;
-}
-.species-2 {
-    opacity: 0;
-    transform: translateY(50px);
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 1.5rem;
+    color: lightgrey;
+    font: 700 0.75rem var(--fonte-secundaria);
 }
 
-.species-number{
+.species-img {
     position: absolute;
-    
-    height: 2rem;
-    width: 2rem;
-    color: var(--branco);
+    inset: 72px 1.5rem 1.5rem;
+    width: calc(100% - 3rem);
+    height: calc(100% - 96px);
+    object-fit: contain;
+    transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.species-details {
+    position: absolute;
+    inset: 70px 1.25rem 1.25rem;
+    z-index: 3;
     display: flex;
-    left: 0;
-    
-    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
 }
 
+.species-description {
+    color: lightgrey;
+    font: 0.9rem var(--fonte-principal);
+    line-height: 1.45;
+}
 
+.species-details h2,
+.species-details h3,
+.species-details p { margin: 0; }
 
+.species-details h2 {
+    position: static;
+    width: auto;
+    height: auto;
+    border: 0;
+    color: var(--branco);
+    font: 700 1.25rem var(--fonte-secundaria);
+}
+
+.species-details h3 { font: 700 0.95rem var(--fonte-secundaria); }
+
+.species-description {
+    color: lightgrey;
+    font: 0.9rem var(--fonte-principal);
+    line-height: 1.45;
+}
+
+.species:hover {
+    transform: scale(1.04);
+    border-color: var(--destaque);
+    box-shadow: 10px 5px 18px rgba(0, 0, 0, 0.65);
+}
+
+.species:hover .species-details { opacity: 1; }
+.species:hover .species-img { filter: blur(7px); transform: scale(1.08); }
+
+@media (hover: none) {
+    .species-details { opacity: 1; }
+    .species-img { filter: blur(7px); transform: scale(1.08); }
+
+    /* sem :hover na tela de toque, a legenda do card nunca apareceria */
+    .card p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.botoes-navegacao {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    z-index: 20;
+}
+
+.botao-navegacao {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.botao-subir {
+    display: grid;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: var(--texto-verdinho);
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.2s ease;
+}
+
+.botao-navegacao.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.botao-navegacao:hover {
+    transform: scale(1.15);
+    color:var(--destaque-claro);
+}
+
+.botao-acao:hover {
+    color: var(--destaque-claro);
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+.species-art {
+    position: absolute;
+    width: 55vw;
+    max-width: 900px;
+
+    left: 30vw;
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+
+    object-fit: contain;
+
+    
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.6s ease;
+}
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Escolha-sua-aventura{
     position: relative;
-    height: auto;
+    height: auto ;
     width: 100%;
     background: linear-gradient(to top, #0a160a, #020608);
 }
-.texts-island3{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section3-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section3-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section3-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
+
+
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Estadia{
     position: relative;
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     background-color: #111f11;
+    
 }
-.texts-island4{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section4-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section4-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section4-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
-#Navegação{
+#Navegacao{
     position: relative;
     height: auto;
     width: 100%;
     background-color: #0a160a;
 }
-.texts-island5{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section5-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section5-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section5-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Guia-de-Visitante{
     position: relative;
@@ -686,33 +1134,6 @@
     width: 100%;
     background-color: #111f11;
 }
-.texts-island6{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section6-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section6-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section6-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Reservar{
     position: relative;
@@ -720,35 +1141,91 @@
     width: 100%;
     background-color: #0a160a;
 }
-.texts-island7{
-    display: flex;
-    color: var(--destaque);
-    gap: 1rem;
-    letter-spacing: 0.5rem;
-    font-size: 0.6rem;
-    padding-left: 10rem;
-}
-.section7-texts{
-    display: flex;
-    position: relative;
-    margin: 3rem;
-    justify-content: space-around;
-}
-.section7-texts h1{
-    color: var(--branco);
-    font-family: var(--fonte-principal),serif;
-    font-size: 4rem;
-}
-.section7-texts p{
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: 1rem;
-    color: var(--texto-verdinho);
-    text-align: start;
-}
-
 /*------------------------------------------------------------------------------------------------------------------------*/
+#Sobre-Nos {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a160a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  box-sizing: border-box;
+  gap: 2rem;
+}
 
+/* Coluna da Esquerda */
+.texts-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  gap: 1.5rem;
+}
+
+.texts-island8 {
+  display: flex;
+  align-items: center;
+  color: var(--destaque); 
+  gap: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.section8-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.section8-texts h1 {
+  color: var(--branco); 
+  font-family: var(--fonte-principal); 
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+}
+.section8-texts span {
+    color: var(--destaque)
+}
+
+.section8-texts p {
+  color: var(--texto-verdinho);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+.sobreNos-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.sobreNos-Btn-sct8{
+    position: relative;
+    width: 15vw;
+}
+.sobreNos-Btn-sct8 span{
+    color: var(--preto)
+}
+.card-sobreNos{
+    height: 60vh;
+    width: 70vw;
+    margin: 0;
+    padding: 0;
+}
+.cardCtn-sobreNos{
+    margin: 0;
+    margin-top: 3rem;
+    padding: 0;
+    padding-top: 3rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
 @keyframes nav-scroll {
   0% {
     background: transparent;
@@ -977,6 +1454,217 @@
     letter-spacing: 3px;
 }
 
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .nav {
+        box-sizing: border-box;
+
+        height: auto;
+        padding: 0.5rem 1rem;
+
+        flex-wrap: wrap;
+        row-gap: 0.3rem;
+        justify-content: space-between;
+    }
+
+    /* logo e botao na primeira linha, links na segunda */
+    .nav-contents {
+        order: 3;
+
+        width: 100%;
+        gap: 0.5rem;
+        justify-content: space-between;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    /* =========================
+       TEXTOS DE SECAO
+    ========================= */
+
+    .section-texts {
+        flex-direction: column;
+        gap: 1rem;
+
+        margin: 2rem 1.5rem;
+    }
+
+    .section-texts h1 {
+        font-size: 2.6rem;
+
+        line-height: 1.15;
+    }
+
+    .section-texts p,
+    .section-texts-mapa p {
+        font-size: 0.85rem;
+    }
+
+    .texts-island {
+        margin-left: 1.5rem;
+
+        font-size: 0.75rem;
+    }
+
+    /* =========================
+       DINOSSAUROS
+    ========================= */
+
+    .trex-head {
+        width: 90rem;
+    }
+
+    /* =========================
+       DNA / ESPECIES
+    ========================= */
+
+    .species-info {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dna-model {
+        width: 130vw;
+        left: -15vw;
+    }
+
+    .species {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .card-container {
+        padding: 1.5rem;
+        margin: 1.5rem 0 0;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 25rem;
+
+        height: 16rem;
+    }
+
+    /* =========================
+       MAPA
+    ========================= */
+
+    .section-texts-mapa {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        padding: 0 1.5rem;
+    }
+
+    .mapa {
+        width: 100%;
+        max-width: 32rem;
+    }
+
+    .modal-mapa {
+        box-sizing: border-box;
+
+        width: min(320px, 90vw);
+
+        margin: auto;
+    }
+
+    .leg-mapa {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .leg-mapa-pontos td {
+        padding: 0.4em 0.6em;
+
+        font-size: 0.8rem;
+    }
+
+    /* =========================
+       MODAL RESTRITO
+    ========================= */
+
+    .modal-restrito {
+        box-sizing: border-box;
+
+        width: min(360px, 92vw);
+    }
+/* =========================================================
+   RESPONSIVIDADE — SEÇÃO SOBRE NÓS
+   ========================================================= */
+
+#Sobre-Nos {
+        min-height: 100vh;
+
+        padding: 95px 5% 50px;
+
+        gap: 2rem;
+    }
+
+    .texts-left {
+        flex: 0 1 44%;
+        max-width: 44%;
+
+        gap: 1.2rem;
+    }
+
+    .texts-island8 {
+        font-size: 0.7rem;
+        letter-spacing: 0.16rem;
+    }
+
+    .section8-texts {
+        gap: 1.2rem;
+    }
+
+    .section8-texts h1 {
+        font-size: clamp(2.4rem, 5vw, 3.2rem);
+
+        line-height: 1;
+    }
+
+    .section8-texts p {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    
+    .section8-texts p br {
+        display: none;
+    }
+
+    .sobreNos-Btn-sct8 {
+        width: 170px;
+    }
+
+    .cardCtn-sobreNos {
+        flex: 0 1 56%;
+        width: 56%;
+
+        margin: 0;
+        margin-top: 3rem;
+        padding: 0;
+        padding-top: 3rem;
+    }
+
+    .card-sobreNos {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1.35 / 1;
+    }
+
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -987,10 +1675,20 @@
     ========================= */
 
     .nav {
-        height: 60px;
-        padding: 0 1rem;
+        height: auto;
+        padding: 0.5rem 1rem;
         box-sizing: border-box;
 
+        flex-wrap: wrap;
+        row-gap: 0.4rem;
+        justify-content: space-between;
+    }
+
+    /* logo e botao na primeira linha, links na segunda */
+    .nav-contents {
+        order: 3;
+
+        width: 100%;
         justify-content: space-between;
     }
 
@@ -1230,17 +1928,6 @@
        CARDS
     ========================= */
 
-    .card-container {
-        padding: 1rem;
-
-        margin: 1rem 0;
-
-        width: 100%;
-
-        box-sizing: border-box;
-
-        gap: 1rem;
-    }
 
     .card {
         width: 100%;
@@ -1248,8 +1935,503 @@
 
         height: 15rem;
     }
+
+    .card-container {
+        gap: 1rem;
+
+        padding: 0;
+        margin: 1rem 0 0;
+    }
+
+    /* =========================
+       TEXTOS DE SECAO
+    ========================= */
+
+    .section-texts h1 {
+        font-size: 2rem;
+    }
+
+    .texts-island {
+        gap: 0.5rem;
+
+        font-size: 0.65rem;
+    }
+
+    /* =========================
+       DINOSSAUROS / ESPECIES
+    ========================= */
+
+    .trex-head {
+        width: 60rem;
+    }
+
+    .species {
+        width: min(280px, 82vw);
+        height: 340px;
+    }
+
+    /* =========================
+       MAPA
+    ========================= */
+
+    .ponto {
+        width: 26px;
+        height: 26px;
+
+        font-size: 0.75rem;
+    }
+
+    .leg-mapa-pontos,
+    .leg-mapa-pontos tbody,
+    .leg-mapa-pontos tr,
+    .leg-mapa-pontos td {
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+/* =========================================================
+   RESPONSIVIDADE — SEÇÃO SOBRE NÓS
+   ========================================================= */
+
+    #Sobre-Nos {
+
+        min-height: auto;
+
+        width: 100%;
+
+        padding-top: 100px;
+
+        padding-right: 24px;
+        padding-left: 24px;
+
+        padding-bottom: 70px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 2.5rem;
+    }
+
+
+    /* -------------------------
+       TEXTO
+       ------------------------- */
+
+    .texts-left {
+
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+
+        gap: 1.5rem;
+    }
+
+
+    .texts-island8 {
+
+        font-size: 0.65rem;
+
+        letter-spacing: 0.14rem;
+
+        gap: 0.4rem;
+    }
+
+
+    .section8-texts {
+
+        width: 100%;
+
+        gap: 1.4rem;
+    }
+
+
+    .section8-texts h1 {
+
+        font-size: clamp(2.6rem, 11vw, 3.2rem);
+
+        line-height: 0.98;
+
+        letter-spacing: -0.03em;
+    }
+
+
+    .section8-texts p {
+
+        width: 100%;
+
+        font-size: 0.85rem;
+
+        line-height: 1.65;
+    }
+
+
+    /*
+     * No mobile não precisamos das quebras
+     * artificiais do HTML.
+     */
+    .section8-texts p br {
+        display: none;
+    }
+
+
+    /* -------------------------
+       BOTÃO
+       ------------------------- */
+
+    .sobreNos-Btn-sct8 {
+
+        width: 100%;
+
+        max-width: 190px;
+    }
+
+    .sobreNos-Btn-sct8 .hbutton {
+
+        width: 100%;
+    }
+    .sobreNos-Btn-sct8 .hbutton span{
+        font-size: 0.7rem;
+        letter-spacing: 0.3rem;
+    }
+
+
+    /* -------------------------
+       IMAGEM
+       ------------------------- */
+
+    .cardCtn-sobreNos {
+
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .card-sobreNos {
+
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1.2 / 1;
+    }
+
+}
+
+
+@media (max-width: 375px) {
+
+    #Sobre-Nos {
+
+        padding-top: 95px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        padding-bottom: 60px;
+
+        gap: 2rem;
+    }
+
+
+    .texts-island8 {
+
+        font-size: 0.6rem;
+
+        letter-spacing: 0.12rem;
+    }
+
+
+    .section8-texts {
+
+        gap: 1.15rem;
+    }
+
+
+    .section8-texts h1 {
+
+        font-size: 2.45rem;
+
+        line-height: 0.98;
+    }
+
+
+    .section8-texts p {
+
+        font-size: 0.8rem;
+
+        line-height: 1.6;
+    }
+
+
+    .sobreNos-Btn-sct8 {
+
+        max-width: 175px;
+    }
+
+
+    .card-sobreNos {
+
+        aspect-ratio: 1.15 / 1;
+    }
+
+}
+
+
+@media (max-width: 320px) {
+
+    #Sobre-Nos {
+
+        padding-top: 90px;
+
+        padding-left: 16px;
+        padding-right: 16px;
+
+        padding-bottom: 50px;
+
+        gap: 1.7rem;
+    }
+
+
+    .texts-island8 {
+
+        font-size: 0.55rem;
+
+        letter-spacing: 0.09rem;
+
+        gap: 0.3rem;
+    }
+
+
+    .section8-texts {
+
+        gap: 1rem;
+    }
+
+
+    .section8-texts h1 {
+
+        font-size: 2.15rem;
+
+        letter-spacing: -0.02em;
+
+        line-height: 1;
+    }
+
+
+    .section8-texts p {
+
+        font-size: 0.75rem;
+
+        line-height: 1.55;
+    }
+
+
+    .sobreNos-Btn-sct8 {
+
+        width: 100%;
+
+        max-width: 160px;
+    }
+
+
+    .card-sobreNos {
+
+        aspect-ratio: 1 / 1;
+    }
+
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
+/* ===== SCROLLBAR PERSONALIZADA ===== */
+
+    footer{
+    background-color: #0D1C12;
+    color: var(--branco);
+    padding: 50px 60px 15px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.main i{
+    color: var(--branco);
+}
+
+.nav-link-a {
+    position: relative;
+   transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--cinza); 
+    padding: 5px;
+}
+
+.nav-link-a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: var(--destaque);
+    height: 1px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+
+.nav-link-a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+    filter: brightness(1), blur(50px);
+}
+.nav-link-a:hover{
+    color: var(--texto-hover-amarelinho);
+}
+
+.rodape-logos {
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape-informacoes {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.nav-footer  {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-footer p {
+    color: var(--destaque);
+    margin-bottom: 20px;
+
+}
+
+.rodape-icones {
+    display: flex;
+    gap: 20px;
+}
+
+footer span {
+    display: flex;
+    margin: 30px 0;
+    background-color: var(--destaque);
+    height: 1px;
+    width: 100%;
+}
+
+.footer-inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.rodape-informacoes p {
+    color: var(--destaque);
+    width: 100%;
+}
+
+.footer-inferior {
+    display: flex;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* Rodape responsivo. Precisa vir depois das regras globais do footer acima,
+   que sao mais adiante no arquivo e venceriam por ordem. */
+@media (max-width: 768px) {
+
+    footer {
+        padding: 2.5rem 1.5rem 1rem;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .rodape-informacoes {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-inferior,
+    .footer {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #07140f;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c5a85c;
+
+    /* Ícone no centro da barra */
+    background-image: url("../assets/dino-barraLateral.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+
+    border-radius: 10px;
+    border: 2px solid #07140f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #d6bd72;
+}
+/*------------------------------------------------------------------------------------------------------------------------*/
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--destaque);
+    font-weight: 500;
+}
 /*------------------------------------------------------------------------------------------------------------------------*/

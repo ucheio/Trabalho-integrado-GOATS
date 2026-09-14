@@ -7,11 +7,22 @@
 html,body{
     scroll-behavior: smooth;
     background: #090d09;
+    overflow-x: hidden;
 }
 
 .page{
     position: relative;
 }
+
+.logo-text{
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--destaque);
+    font-weight: 500;
+}
+
+
 
 
 :root{
@@ -25,6 +36,10 @@ html,body{
 
     --verde-medio: #111f11;
     --verde-escuro: #0a160a;
+
+    --ponto-inativo: #9b9a89;
+    --ponto-ativo: #e5cd96;
+    --linha-cor: #FFF3;
 
     --branco: #FFFFFF;
     --preto: #000000;

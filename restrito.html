@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restrito</title>
+    <link rel="stylesheet" href="./css/restrito.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="page">
+        <nav class="nav">
+            <a class="logo-text" href="./index.html">JURASSIC PARK</a>
+            <ul class="nav-contents">
+                <li class="nav-link"><a href="#Manejo">MANEJO</a></li>
+                <li class="nav-link"><a href="#Cameras">CÂMERAS</a></li>
+                <li class="nav-link"><a href="#Operacao">OPERAÇÃO</a></li>
+            </ul>
+        </nav>
+
+        <main class="conteudo">
+            <div id="topo"></div>
+
+            <!-- MANEJO -->
+            <section id="Manejo" class="manejo">
+                <div class="texts-island">
+                    <p>01</p>
+                    <p>•</p>
+                    <p>PROTOCOLOS DE MANEJO</p>
+                </div>
+
+                <article class="section-texts">
+                    <h1>MANEJO DAS ESPÉCIES</h1>
+                </article>
+
+                <div class="carrossel">
+                    <button class="carrossel-seta" data-passo="-1" aria-label="Página anterior">‹</button>
+
+                    <div class="carrossel-janela">
+                        <div class="carrossel-trilha">
+                            <button class="carrossel-pagina" popovertarget="modal-herbivoros"
+                                style="background-image: url('./assets/manejo/herbivoros.jpg')">
+                                <span class="carrossel-numero">01</span>
+                                <h2 class="carrossel-titulo">HERBÍVOROS</h2>
+                            </button>
+                            <button class="carrossel-pagina" popovertarget="modal-carnivoros"
+                                style="background-image: url('./assets/manejo/carnivoros.jpg')">
+                                <span class="carrossel-numero">02</span>
+                                <h2 class="carrossel-titulo">CARNÍVOROS</h2>
+                            </button>
+                            <button class="carrossel-pagina" popovertarget="modal-velociraptor"
+                                style="background-image: url('./assets/manejo/velociraptor.jpg')">
+                                <span class="carrossel-numero">03</span>
+                                <h2 class="carrossel-titulo">VELOCIRAPTORES</h2>
+                            </button>
+                            <button class="carrossel-pagina" popovertarget="modal-trex"
+                                style="background-image: url('./assets/manejo/trex.jpg')">
+                                <span class="carrossel-numero">04</span>
+                                <h2 class="carrossel-titulo">TIRANOSSAURO REX</h2>
+                            </button>
+                            <button class="carrossel-pagina" popovertarget="modal-procompsognato"
+                                style="background-image: url('./assets/manejo/procompsognato.jpg')">
+                                <span class="carrossel-numero">05</span>
+                                <h2 class="carrossel-titulo">PROCOMPSOGNATO</h2>
+                            </button>
+                            <button class="carrossel-pagina" popovertarget="modal-geral"
+                                style="background-image: url('./assets/dinoMorto.jfif')">
+                                <span class="carrossel-numero">06</span>
+                                <h2 class="carrossel-titulo">CONTROLE GERAL</h2>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="carrossel-seta" data-passo="1" aria-label="Próxima página">›</button>
+                </div>
+
+                <div class="carrossel-bolinhas">
+                    <button class="bolinha ativa" data-ir="0" aria-label="Ir para a página 1"></button>
+                    <button class="bolinha" data-ir="1" aria-label="Ir para a página 2"></button>
+                    <button class="bolinha" data-ir="2" aria-label="Ir para a página 3"></button>
+                    <button class="bolinha" data-ir="3" aria-label="Ir para a página 4"></button>
+                    <button class="bolinha" data-ir="4" aria-label="Ir para a página 5"></button>
+                    <button class="bolinha" data-ir="5" aria-label="Ir para a página 6"></button>
+                </div>
+            </section>
+
+
+            <!-- CÂMERAS -->
+            <section id="Cameras" class="em-construcao">
+                <div class="texts-island">
+                    <p>02</p>
+                    <p>•</p>
+                    <p>MONITORAMENTO</p>
+                </div>
+
+                <article class="section-texts">
+                    <h1>CÂMERAS</h1>
+                </article>
+                <!-- conteúdo pendente -->
+            </section>
+
+            <section class="desafio-5">
+
+                <div class="grade-modular-desafio">
+                    <article class="filme">
+                        <img src="./assets/cameras/cam1.jpeg" alt="">
+                        <h3>Câmera 1</h3>
+                    </article>
+
+                    <article class="filme">
+                        <img src="./assets/Camera-Desativada.jpg" alt="">
+                        <h3>Câmera 2</h3>
+                    </article>
+
+                    <article class="filme">
+                        <img src="./assets/cameras/cam3.jpeg" alt="">
+                        <h3>Câmera 3</h3>
+                    </article>
+
+                    <article class="filme">
+                        <img src="./assets/cameras/cam4.jpeg" alt="">
+                        <h3>Câmera 4</h3>
+                    </article>
+
+                    <article class="filme">
+                        <img src="./assets/Camera-Desativada.jpg" alt="">
+                        <h3>Câmera 5</h3>
+                    </article>
+
+                    <article class="filme">
+                        <img src="./assets/cameras/cam6.jpeg" alt="">
+                        <h3>Câmera 6</h3>
+                    </article>
+
+                    <article class="filme">
+                        <img src="./assets/Camera-Desativada.jpg" alt="">
+                        <h3>Câmera 7</h3>
+                    </article>
+
+                    <article class="filme">
+                        <img src="./assets/cameras/cam8.jpeg" alt="">
+                        <h3>Câmera 8</h3>
+                    </article>
+                    <article class="filme">
+                        <img src="./assets/cameras/cam9.jpeg" alt="">
+                        <h3>Câmera 9</h3>
+                    </article>
+                </div>
+            </section>
+
+
+
+            <!-- OPERAÇÃO -->
+            <section id="Operacao" class="em-construcao">
+                <div class="texts-island">
+                    <p>03</p>
+                    <p>•</p>
+                    <p>ROTINA DO PARQUE</p>
+                </div>
+
+                <article class="section-texts">
+                    <h1>OPERAÇÃO</h1>
+                </article>
+
+                <article class="section-texts-mapa">
+
+                    <div class="mapa">
+                        <img src="./assets/mapa.png" alt="Mapa da Isla Nublar">
+
+                        <div class="radar">
+                            <div class="radar-sweep"></div>
+                        </div>
+
+                        <button class="ponto ponto-1" popovertarget="modal-1">1</button>
+                        <button class="ponto ponto-2" popovertarget="modal-2">2</button>
+                        <button class="ponto ponto-3" popovertarget="modal-3">3</button>
+                        <button class="ponto ponto-4" popovertarget="modal-4">4</button>
+                        <button class="ponto ponto-5" popovertarget="modal-5">5</button>
+                        <button class="ponto ponto-6" popovertarget="modal-6">6</button>
+                        <button class="ponto ponto-7" popovertarget="modal-7">7</button>
+                        <button class="ponto ponto-8" popovertarget="modal-8">8</button>
+                    </div>
+
+                    <!-- Modais -->
+                    <div id="modal-1" popover class="modal-mapa azul">
+
+                        <button class="modal-fechar" popovertarget="modal-1" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">01</span>
+
+                        <h2 class="modal-titulo">
+                            Centro de Visitantes
+                        </h2>
+
+                        <p class="modal-texto">
+                            Principal núcleo administrativo e operacional do Jurassic Park.
+                            A região reúne importantes instalações usadas pelos funcionários
+                            e visitantes do parque.
+                        </p>
+
+                    </div>
+
+
+                    <div id="modal-2" popover class="modal-mapa laranja">
+
+                        <button class="modal-fechar" popovertarget="modal-2" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">02</span>
+
+                        <h2 class="modal-titulo">
+                            Vale dos Velociraptores
+                        </h2>
+
+                        <p class="modal-texto">
+                            Área do parque destinada aos velociraptores.
+                            No romance, esses animais são considerados extremamente
+                            inteligentes, agressivos e difíceis de controlar.
+                        </p>
+
+                    </div>
+
+
+                    <div id="modal-3" popover class="modal-mapa laranja">
+
+                        <button class="modal-fechar" popovertarget="modal-3" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">03</span>
+
+                        <h2 class="modal-titulo">
+                            Região dos Carnívoros
+                        </h2>
+
+                        <p class="modal-texto">
+                            Setor destinado aos grandes dinossauros carnívoros do parque.
+                            É uma das regiões que exigem maior segurança e controle.
+                        </p>
+
+                    </div>
+
+
+                    <div id="modal-4" popover class="modal-mapa verde">
+
+                        <button class="modal-fechar" popovertarget="modal-4" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">04</span>
+
+                        <h2 class="modal-titulo">
+                            Pântano dos Saurópodes
+                        </h2>
+
+                        <p class="modal-texto">
+                            Região úmida destinada aos grandes saurópodes.
+                            Sua vegetação e áreas alagadas compõem um dos ambientes
+                            naturais utilizados no parque.
+                        </p>
+
+                    </div>
+
+
+                    <div id="modal-5" popover class="modal-mapa verde">
+
+                        <button class="modal-fechar" popovertarget="modal-5" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">05</span>
+
+                        <h2 class="modal-titulo">
+                            Território dos Tricerátops
+                        </h2>
+
+                        <p class="modal-texto">
+                            Área destinada aos tricerátops e planejada para permitir
+                            que os visitantes observassem esses grandes herbívoros
+                            durante o passeio pelo parque.
+                        </p>
+
+                    </div>
+
+
+                    <div id="modal-6" popover class="modal-mapa verde">
+
+                        <button class="modal-fechar" popovertarget="modal-6" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">06</span>
+
+                        <h2 class="modal-titulo">
+                            Pico dos Pterossauros
+                        </h2>
+
+                        <p class="modal-texto">
+                            Região associada aos pterossauros e às instalações destinadas
+                            a mantê-los isolados dos visitantes e das demais áreas do parque.
+                        </p>
+
+                    </div>
+
+                    <div id="modal-7" popover class="modal-mapa azul">
+
+                        <button class="modal-fechar" popovertarget="modal-7" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">07</span>
+
+                        <h2 class="modal-titulo">
+                            Porto Leste
+                        </h2>
+
+                        <p class="modal-texto">
+                            Área de embarque e desembarque da ilha, usada para transporte de suprimentos, equipamentos e
+                            funcionários entre Isla Nublar e o continente.
+                        </p>
+
+                    </div>
+
+                    <div id="modal-8" popover class="modal-mapa azul">
+
+                        <button class="modal-fechar" popovertarget="modal-8" popovertargetaction="hide">
+                            ×
+                        </button>
+
+                        <span class="modal-local">
+                            LOCALIZAÇÃO // ISLA NUBLAR
+                        </span>
+
+                        <span class="modal-numero">08</span>
+
+                        <h2 class="modal-titulo">
+                            Abrigo dos Saurópodes
+                        </h2>
+
+                        <p class="modal-texto">
+                            Pequeno galpão localizado na área dos saurópodes, onde Grant, Tim e Lex descansam por
+                            algumas horas antes de seguir rumo ao Centro de Visitantes.
+                        </p>
+
+                    </div>
+                </article>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modais do manejo -->
+    <div id="modal-herbivoros" popover class="modal-manejo">
+
+        <button class="modal-fechar" popovertarget="modal-herbivoros" popovertargetaction="hide">×</button>
+
+        <header class="modal-manejo-topo" style="background-image: url('./assets/manejo/herbivoros.jpg')">
+            <span class="modal-local">MANEJO // ISLA NUBLAR</span>
+            <span class="modal-numero">01</span>
+            <h2 class="modal-titulo">HERBÍVOROS</h2>
+        </header>
+
+        <div class="modal-manejo-corpo">
+            <h3>Alimentação e manutenção</h3>
+            <ul>
+                <li>Manter disponibilidade de vegetação compatível com as espécies presentes na área.</li>
+                <li>Observar alterações no comportamento alimentar e na condição física dos indivíduos.</li>
+                <li>Registrar alterações relevantes na alimentação ou no comportamento.</li>
+            </ul>
+            <p>O acompanhamento deve considerar também a disponibilidade de alimento dentro da área ocupada pelos
+                animais.</p>
+
+            <h3>Monitoramento populacional</h3>
+            <ul>
+                <li>Realizar contagem dos indivíduos presentes nas áreas de contenção.</li>
+                <li>Comparar o número observado com os registros mantidos pela administração.</li>
+                <li>Investigar divergências entre a população registrada e a população efetivamente observada.</li>
+            </ul>
+            <p>A reprodução deve ser considerada durante o controle populacional, uma vez que o livro demonstra que a
+                população não permaneceu necessariamente estática.</p>
+
+            <h3>Contenção</h3>
+            <ul>
+                <li>Manter os indivíduos dentro das áreas determinadas para cada grupo.</li>
+                <li>Verificar regularmente as condições das barreiras e dos sistemas de contenção.</li>
+                <li>Restringir o acesso humano às áreas ocupadas pelos animais.</li>
+            </ul>
+
+            <h3>Observação comportamental</h3>
+            <ul>
+                <li>Registrar alterações de comportamento.</li>
+                <li>Observar movimentação dos grupos e mudanças na distribuição dos animais.</li>
+                <li>Qualquer comportamento considerado anormal deve ser comunicado à equipe responsável.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="modal-carnivoros" popover class="modal-manejo">
+
+        <button class="modal-fechar" popovertarget="modal-carnivoros" popovertargetaction="hide">×</button>
+
+        <header class="modal-manejo-topo" style="background-image: url('./assets/manejo/carnivoros.jpg')">
+            <span class="modal-local">MANEJO // ISLA NUBLAR</span>
+            <span class="modal-numero">02</span>
+            <h2 class="modal-titulo">CARNÍVOROS</h2>
+        </header>
+
+        <div class="modal-manejo-corpo">
+            <p>Os velociraptores são tratados em protocolo separado, porque o livro deixa claro que eles representam um
+                problema de manejo diferente dos outros predadores.</p>
+
+            <h3>Alimentação</h3>
+            <ul>
+                <li>Manter os animais dentro de áreas de contenção específicas.</li>
+                <li>O fornecimento de alimento deve ser realizado sem contato direto desnecessário entre funcionários e
+                    animais.</li>
+                <li>Registrar alterações relevantes no comportamento alimentar.</li>
+            </ul>
+
+            <h3>Contenção</h3>
+            <ul>
+                <li>Manter os predadores permanentemente em áreas destinadas à espécie.</li>
+                <li>Verificar as barreiras e sistemas responsáveis pela contenção.</li>
+                <li>Restringir rigorosamente o acesso às áreas dos animais.</li>
+            </ul>
+
+            <h3>Monitoramento</h3>
+            <ul>
+                <li>Acompanhar comportamento, movimentação e número de indivíduos.</li>
+                <li>Conferir os registros populacionais.</li>
+                <li>Investigar imediatamente qualquer divergência nos registros.</li>
+            </ul>
+
+            <h3>Segurança operacional</h3>
+            <ul>
+                <li>O manejo de predadores deve ser realizado considerando o risco de ataque.</li>
+                <li>Funcionários não devem entrar nas áreas de contenção sem os procedimentos de segurança
+                    estabelecidos.</li>
+                <li>Falhas nos sistemas de contenção devem ser tratadas como ocorrências críticas.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="modal-velociraptor" popover class="modal-manejo">
+
+        <button class="modal-fechar" popovertarget="modal-velociraptor" popovertargetaction="hide">×</button>
+
+        <header class="modal-manejo-topo" style="background-image: url('./assets/manejo/velociraptor.jpg')">
+            <span class="modal-local">MANEJO // ISLA NUBLAR</span>
+            <span class="modal-numero">03</span>
+            <h2 class="modal-titulo">VELOCIRAPTORES</h2>
+        </header>
+
+        <div class="modal-manejo-corpo">
+            <h3>Classificação de risco</h3>
+            <p class="modal-alerta">Nível de risco: extremamente elevado</p>
+            <p>Os velociraptores devem receber protocolos específicos devido às características comportamentais
+                observadas no livro.</p>
+
+            <h3>Comportamento</h3>
+            <ul>
+                <li>Demonstram elevada capacidade de aprendizado.</li>
+                <li>Apresentam comportamento social e capacidade de atuação coordenada.</li>
+                <li>São capazes de explorar vulnerabilidades nos sistemas de contenção.</li>
+            </ul>
+            <p>O comportamento do grupo deve ser considerado durante qualquer procedimento de manejo.</p>
+
+            <h3>Contenção</h3>
+            <ul>
+                <li>Manter os indivíduos em área isolada.</li>
+                <li>Evitar procedimentos que dependam exclusivamente da previsibilidade do comportamento dos animais.
+                </li>
+                <li>Inspecionar continuamente as condições da área de contenção.</li>
+            </ul>
+
+            <h3>Controle populacional</h3>
+            <ul>
+                <li>Manter registros individuais e populacionais.</li>
+                <li>Investigar imediatamente qualquer diferença entre o número esperado e o número observado.</li>
+                <li>A possibilidade de reprodução deve ser considerada no controle da população.</li>
+            </ul>
+
+            <h3>Regra operacional</h3>
+            <p class="modal-alerta">Contato direto com velociraptores: não autorizado.</p>
+        </div>
+
+    </div>
+
+    <div id="modal-trex" popover class="modal-manejo">
+
+        <button class="modal-fechar" popovertarget="modal-trex" popovertargetaction="hide">×</button>
+
+        <header class="modal-manejo-topo" style="background-image: url('./assets/manejo/trex.jpg')">
+            <span class="modal-local">MANEJO // ISLA NUBLAR</span>
+            <span class="modal-numero">04</span>
+            <h2 class="modal-titulo">TIRANOSSAURO REX</h2>
+        </header>
+
+        <div class="modal-manejo-corpo">
+            <h3>Classificação de risco</h3>
+            <p class="modal-alerta">Predador de grande porte — risco crítico</p>
+
+            <h3>Contenção</h3>
+            <ul>
+                <li>Manter o animal em área de contenção própria.</li>
+                <li>A separação física entre o animal e as áreas humanas constitui elemento essencial da segurança.</li>
+                <li>Os sistemas responsáveis pela contenção devem permanecer operacionais.</li>
+            </ul>
+
+            <h3>Monitoramento</h3>
+            <ul>
+                <li>Observar movimentação e comportamento do animal.</li>
+                <li>Registrar alterações significativas.</li>
+                <li>Verificar a integridade dos sistemas de contenção associados ao recinto.</li>
+            </ul>
+
+            <h3>Alimentação</h3>
+            <ul>
+                <li>O fornecimento de alimento deve ocorrer dentro da estrutura destinada ao animal.</li>
+                <li>Evitar situações que exijam aproximação desnecessária de funcionários.</li>
+            </ul>
+
+            <h3>Emergência</h3>
+            <p class="modal-alerta">Em caso de falha dos sistemas de contenção, a prioridade passa a ser impedir o
+                contato entre o animal e pessoas e restabelecer a separação física.</p>
+        </div>
+
+    </div>
+
+    <div id="modal-procompsognato" popover class="modal-manejo">
+
+        <button class="modal-fechar" popovertarget="modal-procompsognato" popovertargetaction="hide">×</button>
+
+        <header class="modal-manejo-topo" style="background-image: url('./assets/manejo/procompsognato.jpg')">
+            <span class="modal-local">MANEJO // ISLA NUBLAR</span>
+            <span class="modal-numero">05</span>
+            <h2 class="modal-titulo">PROCOMPSOGNATO</h2>
+        </header>
+
+        <div class="modal-manejo-corpo">
+            <h3>Classificação</h3>
+            <p>Pequeno predador.</p>
+            <p>Apesar do porte reduzido, o Procompsognathus não deve ser tratado como uma espécie inofensiva
+                simplesmente por seu tamanho.</p>
+
+            <h3>Monitoramento</h3>
+            <ul>
+                <li>Registrar presença e quantidade de indivíduos.</li>
+                <li>Observar movimentação fora das áreas esperadas.</li>
+                <li>Considerar a possibilidade de existência de indivíduos não contabilizados.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="modal-geral" popover class="modal-manejo">
+
+        <button class="modal-fechar" popovertarget="modal-geral" popovertargetaction="hide">×</button>
+
+        <header class="modal-manejo-topo" style="background-image: url('./assets/mapa.png')">
+            <span class="modal-local">MANEJO // ISLA NUBLAR</span>
+            <span class="modal-numero">06</span>
+            <h2 class="modal-titulo">CONTROLE GERAL DAS ESPÉCIES</h2>
+        </header>
+
+        <div class="modal-manejo-corpo">
+            <h3>Registro populacional</h3>
+            <p>Cada espécie deve possuir registros referentes à população conhecida na ilha.</p>
+
+            <h3>Reprodução</h3>
+            <p>A reprodução representa um ponto crítico do sistema de manejo. A administração acreditava possuir
+                controle sobre esse aspecto, mas os acontecimentos do livro demonstram que essa premissa estava
+                incorreta.</p>
+
+            <h3>Sistemas de segurança</h3>
+            <p>A contenção dos animais depende dos sistemas instalados pelo parque. A indisponibilidade desses sistemas
+                compromete diretamente a segurança.</p>
+
+            <h3>Inspeção</h3>
+            <p>As áreas de contenção devem ser verificadas quanto à integridade das barreiras e ao funcionamento dos
+                sistemas responsáveis pelo controle dos animais.</p>
+
+            <h3>Acesso restrito</h3>
+            <p>O acesso às áreas de manejo deve ser limitado aos funcionários responsáveis pelas operações
+                correspondentes.</p>
+        </div>
+
+    </div>
+
+    <script src="./js/restrito.js" defer></script>
+</body>
+
+</html>
