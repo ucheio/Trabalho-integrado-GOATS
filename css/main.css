@@ -28,7 +28,6 @@
     -webkit-backdrop-filter: blur(12px);
 }
 
-
 .nav-contents{
     text-decoration: none;
     font-size: 0.9rem;
@@ -39,6 +38,7 @@
     gap: 3rem;
     align-items: center;
 }
+
 .nav-link a {
     position: relative;
    transition: color 0.3s ease;
@@ -46,6 +46,7 @@
     color: var(--cinza); 
     padding: 5px;
 }
+
 .nav-link{
     align-items: center;
 }
@@ -327,25 +328,67 @@
 }
 
 .leg-mapa {
-    border: 0.2em solid var(--destaque);
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+
+    background: #0A160A;
+    border: 2px solid #C9A43B;
     border-radius: 5px;
+
+    color: #fff;
+    overflow: hidden;
 }
 
+/* TÍTULO */
 .leg-mapa h3 {
-    color: var(--branco);
-    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 10px 18px;
+
+    color: #C9A43B;
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    border-bottom: 1px solid rgba(201, 164, 59, 0.35);
 }
 
+/* TABELA */
 .leg-mapa-pontos {
-    
     width: 100%;
     border-collapse: collapse;
+
+    font-family: "Cinzel", serif;
 }
 
+/* CÉLULAS */
 .leg-mapa-pontos td {
-    padding: 0.5em 1em;
-    vertical-align: top;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    width: 50%;
+    padding: 10px 18px;
+
+    color: #E8E5D8;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+
+    border-bottom: 1px solid rgba(201, 164, 59, 0.18);
+}
+
+/* DIVISÃO ENTRE AS COLUNAS */
+.leg-mapa-pontos td + td {
+    border-left: 1px solid rgba(201, 164, 59, 0.18);
+}
+
+/* REMOVE A LINHA DA ÚLTIMA LINHA */
+.leg-mapa-pontos tr:last-child td {
+    border-bottom: none;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.leg-mapa-pontos tr:hover td {
+    background: rgba(201, 164, 59, 0.06);
+    color: #fff;
 }
 
 .section-texts-mapa {
@@ -584,6 +627,128 @@
 
     cursor: pointer;
 }
+
+/*-------------------------------- MODAL RESTRITO -------------------------------*/
+
+.modal-restrito {
+    width: 360px;
+    padding: 25px;
+
+    margin: auto;
+
+    border: 2px solid var(--destaque);
+    border-radius: 8px;
+    background-color: var(--verde-escuro);
+
+    color: var(--branco);
+}
+
+.modal-restrito::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-restrito .modal-titulo {
+    font-family: var(--fonte-principal);
+    color: var(--destaque);
+}
+
+.restrito-abas {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid var(--cinza);
+}
+
+.aba {
+    padding: 8px 4px;
+
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+
+    color: var(--cinza);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.aba:hover {
+    color: var(--texto-hover-amarelinho);
+}
+
+.aba.ativa {
+    border-bottom-color: var(--destaque);
+    color: var(--destaque);
+}
+
+.restrito-form {
+    display: none;
+}
+
+.restrito-form.ativa {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.restrito-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    font-family: var(--fonte-secundaria);
+    font-size: 0.7rem;
+    color: #aaa;
+
+    letter-spacing: 2px;
+}
+
+.restrito-form input {
+    padding: 10px;
+
+    border: 1px solid var(--cinza);
+    background: transparent;
+
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+
+    transition: border-color 0.2s ease;
+}
+
+.restrito-form input:focus {
+    outline: none;
+    border-color: var(--destaque);
+}
+
+.restrito-submit {
+    height: 2.5rem;
+
+    margin-top: 8px;
+
+    border: none;
+    background-color: var(--destaque);
+
+    color: var(--preto);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.restrito-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+    background-color: var(--destaque-claro);
+}
+
+/*-------------------------------------------------------------------------------*/
 
 .card-container{
     position: relative;
@@ -844,6 +1009,12 @@
 @media (hover: none) {
     .species-details { opacity: 1; }
     .species-img { filter: blur(7px); transform: scale(1.08); }
+
+    /* sem :hover na tela de toque, a legenda do card nunca apareceria */
+    .card p {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .botoes-navegacao {
@@ -1136,6 +1307,152 @@
     letter-spacing: 3px;
 }
 
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .nav {
+        box-sizing: border-box;
+
+        height: auto;
+        padding: 0.5rem 1rem;
+
+        flex-wrap: wrap;
+        row-gap: 0.3rem;
+        justify-content: space-between;
+    }
+
+    /* logo e botao na primeira linha, links na segunda */
+    .nav-contents {
+        order: 3;
+
+        width: 100%;
+        gap: 0.5rem;
+        justify-content: space-between;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    /* =========================
+       TEXTOS DE SECAO
+    ========================= */
+
+    .section-texts {
+        flex-direction: column;
+        gap: 1rem;
+
+        margin: 2rem 1.5rem;
+    }
+
+    .section-texts h1 {
+        font-size: 2.6rem;
+
+        line-height: 1.15;
+    }
+
+    .section-texts p,
+    .section-texts-mapa p {
+        font-size: 0.85rem;
+    }
+
+    .texts-island {
+        margin-left: 1.5rem;
+
+        font-size: 0.75rem;
+    }
+
+    /* =========================
+       DINOSSAUROS
+    ========================= */
+
+    .trex-head {
+        width: 90rem;
+    }
+
+    /* =========================
+       DNA / ESPECIES
+    ========================= */
+
+    .species-info {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dna-model {
+        width: 130vw;
+        left: -15vw;
+    }
+
+    .species {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .card-container {
+        padding: 1.5rem;
+        margin: 1.5rem 0 0;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 25rem;
+
+        height: 16rem;
+    }
+
+    /* =========================
+       MAPA
+    ========================= */
+
+    .section-texts-mapa {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        padding: 0 1.5rem;
+    }
+
+    .mapa {
+        width: 100%;
+        max-width: 32rem;
+    }
+
+    .modal-mapa {
+        box-sizing: border-box;
+
+        width: min(320px, 90vw);
+
+        margin: auto;
+    }
+
+    .leg-mapa {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .leg-mapa-pontos td {
+        padding: 0.4em 0.6em;
+
+        font-size: 0.8rem;
+    }
+
+    /* =========================
+       MODAL RESTRITO
+    ========================= */
+
+    .modal-restrito {
+        box-sizing: border-box;
+
+        width: min(360px, 92vw);
+    }
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -1146,10 +1463,20 @@
     ========================= */
 
     .nav {
-        height: 60px;
-        padding: 0 1rem;
+        height: auto;
+        padding: 0.5rem 1rem;
         box-sizing: border-box;
 
+        flex-wrap: wrap;
+        row-gap: 0.4rem;
+        justify-content: space-between;
+    }
+
+    /* logo e botao na primeira linha, links na segunda */
+    .nav-contents {
+        order: 3;
+
+        width: 100%;
         justify-content: space-between;
     }
 
@@ -1396,6 +1723,62 @@
 
         height: 15rem;
     }
+
+    .card-container {
+        gap: 1rem;
+
+        padding: 0;
+        margin: 1rem 0 0;
+    }
+
+    /* =========================
+       TEXTOS DE SECAO
+    ========================= */
+
+    .section-texts h1 {
+        font-size: 2rem;
+    }
+
+    .texts-island {
+        gap: 0.5rem;
+
+        font-size: 0.65rem;
+    }
+
+    /* =========================
+       DINOSSAUROS / ESPECIES
+    ========================= */
+
+    .trex-head {
+        width: 60rem;
+    }
+
+    .species {
+        width: min(280px, 82vw);
+        height: 340px;
+    }
+
+    /* =========================
+       MAPA
+    ========================= */
+
+    .ponto {
+        width: 26px;
+        height: 26px;
+
+        font-size: 0.75rem;
+    }
+
+    .leg-mapa-pontos,
+    .leg-mapa-pontos tbody,
+    .leg-mapa-pontos tr,
+    .leg-mapa-pontos td {
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -1504,3 +1887,29 @@ footer span {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* Rodape responsivo. Precisa vir depois das regras globais do footer acima,
+   que sao mais adiante no arquivo e venceriam por ordem. */
+@media (max-width: 768px) {
+
+    footer {
+        padding: 2.5rem 1.5rem 1rem;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .rodape-informacoes {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-inferior,
+    .footer {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
