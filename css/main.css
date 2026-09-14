@@ -757,6 +757,8 @@
 /*----------------------------------------------------------------------------*/
 
 .species-info {
+    position: relative;
+    z-index: 3;
     margin-left: 65vw;
 }
 
@@ -867,6 +869,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+} 
+.botao-subir {
+    display: grid;
+    justify-content: center;
 
     width: 50px;
     height: 50px;
@@ -903,6 +909,28 @@
     color: var(--destaque-claro);
     transform: translateY(-1px);
     cursor: pointer;
+}
+
+.species-art {
+    position: absolute;
+    width: 55vw;
+    max-width: 900px;
+
+    left: 30vw;
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+
+    object-fit: contain;
+
+    
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.6s ease;
 }
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Escolha-sua-aventura{
