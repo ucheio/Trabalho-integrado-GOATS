@@ -97,6 +97,57 @@ const speciesList = [
   // Continue até a espécie 15.
 ];
 
+//botao subir descer
+const dnaSectionBotoes = document.querySelector("#dna-section");
+
+const botaoSubir = document.querySelector(".botao-subir");
+const botaoDescer = document.querySelector(".botao-descer");
+
+let ultimaPosicao = window.scrollY;
+
+function atualizarBotaoNavegacao() {
+    const rect = dnaSectionBotoes.getBoundingClientRect();
+
+    const dentroDaSection =
+        rect.top <= window.innerHeight &&
+        rect.bottom >= 0;
+
+    if (!dentroDaSection) {
+        botaoSubir.classList.remove("ativo");
+        botaoDescer.classList.remove("ativo");
+        return;
+    }
+
+    const posicaoAtual = window.scrollY;
+
+    if (posicaoAtual < ultimaPosicao) {
+        // Subindo
+        botaoSubir.classList.add("ativo");
+        botaoDescer.classList.remove("ativo");
+    }
+
+    if (posicaoAtual > ultimaPosicao) {
+        // Descendo
+        botaoDescer.classList.add("ativo");
+        botaoSubir.classList.remove("ativo");
+    }
+
+    ultimaPosicao = posicaoAtual;
+}
+
+window.addEventListener("scroll", atualizarBotaoNavegacao);
+
+botaoSubir.addEventListener("click", () => {
+    document.querySelector("#dinossauros-section").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+botaoDescer.addEventListener("click", () => {
+    document.querySelector("#Estadia").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
 //-----------------------------SEÇÃO THREE.JS----------------------------------------------
 import * as THREE from "three";

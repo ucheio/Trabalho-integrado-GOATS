@@ -1,0 +1,285 @@
+.app-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 15vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5rem;
+
+    z-index: 20;
+}
+
+/* JURASSIC PARK + APLICATIVO */
+
+.logo-app {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-decoration: none;
+
+    line-height: 1;
+}
+
+.logo-main {
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+    font-weight: 500;
+
+    letter-spacing: 0.04rem;
+
+    color: var(--destaque);
+}
+
+.logo-sub {
+    margin-top: 0.35rem;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+
+    letter-spacing: 0.22rem;
+
+    color: var(--destaque);
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   FUNDO
+========================= */
+
+.fundo {
+    min-height: 100vh;
+    width: 100%;
+
+    background-image:
+        linear-gradient(rgba(5, 15, 5, 0.45),
+            rgba(5, 15, 5, 0.45)),
+        url("../assets/fundo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin-top: 1rem;
+
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   MINI TÍTULO
+========================= */
+
+.mini-titulo {
+    margin: 0 0 1.2rem 0;
+
+    color: var(--destaque);
+
+    letter-spacing: 0.35rem;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.42rem;
+
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.section-text h1 {
+    margin: 0;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 2.8rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.02em;
+
+    line-height: 1.05;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.section-text .descricao {
+    margin: 0.8rem 0 1rem 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.17rem;
+
+    text-transform: uppercase;
+
+    color: var(--destaque);
+}
+
+
+/* =========================
+   QR CODE
+========================= */
+
+.qr-area {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 0.3rem;
+}
+
+.qr-frame {
+    width: 75%;
+    height: 75%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.section-text img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TEXTO DO QR
+========================= */
+
+.qr-text {
+    margin: 0.65rem 0 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 0.16rem;
+
+    text-transform: uppercase;
+
+    line-height: 1.6;
+
+    color: var(--destaque);
+}
+
+
+/* =========================
+   ÍCONES
+========================= */
+
+.icone-install {
+    display: flex;
+
+    gap: 1rem;
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 0.6rem;
+}
+
+.icone-install i {
+    color: var(--destaque);
+
+    font-size: 1.5rem;
+
+    opacity: 0.9;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px)
+{
+    .app-nav {
+        padding: 0 1.2rem;
+    }
+
+    .logo-main {
+        font-size: 1rem;
+    }
+
+    .logo-sub {
+        font-size: 0.35rem;
+    }
+
+    .section-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .descricao {
+        font-size: 0.4rem;
+    }
+
+    .qr-frame {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section-text img {
+        width: 200px;
+        height: 200px;
+    }
+}
