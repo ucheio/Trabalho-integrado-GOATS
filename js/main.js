@@ -1,87 +1,153 @@
 
 const speciesList = [
   {
-    number: "01",
+    number: "01 - Carnívoro",
     name: "T-REX",
-    image: "./assets/dinossauros/trex.png"
+    image: "./assets/dinossauros/trex.png",
+    description: "O grande predador da ilha, com enorme cabeça, dentes afiados e mandíbulas poderosas."
     
   },
   {
-    number: "02",
+    number: "02 - Carnívoro",
     name: "VELOCIRAPTOR",
-    image: "./assets/dinossauros/velociraptor.png"
+    image: "./assets/dinossauros/velociraptor.png",
+    description: "Predador ágil e inteligente, conhecido por suas garras e capacidade de caçar em grupo."
   
   },
   {
-    number: "03",
+    number: "03 - Herbívoro",
     name: "TRICERÁTOPS",
-    image: "./assets/dinossauros/triceratops.png"
+    image: "./assets/dinossauros/triceratops.png",
+    description: "Grande herbívoro com três chifres e uma enorme estrutura óssea atrás da cabeça."
     
   },
   {
-    number: "04",
+    number: "04 - Carnívoro",
     name: "DILOFOSSAURO",
-    image: "./assets/dinossauros/dilofossauro.png"
+    image: "./assets/dinossauros/dilofossauro.png",
+    description: "Predador de duas cristas na cabeça, conhecido por sua capacidade de lançar veneno."
   },
   {
-    number: "05",
+    number: "05 - Carnívoro",
     name: "PROCOMPSÓGNATO",
-    image: "./assets/dinossauros/miguelssauros.png"
+    image: "./assets/dinossauros/procompsognato.png",
+    description: "Pequeno predador ágil que, apesar do tamanho, apresenta comportamento perigoso."
   },
   {
-    number: "06",
+    number: "06 - Herbívoro",
     name: "ESTEGOSSAURO",
-    image: "./assets/dinossauros/estegossauros.png"
+    image: "./assets/dinossauros/estegossauros.png",
+    description: "Herbívoro de corpo pesado, marcado pelas placas nas costas e estruturas na cauda."
   },
   {
-    number: "07",
+    number: "07 - Herbívoro",
     name: "APATOSSAURO",
-    image: "./assets/dinossauros/apatossauro.png"
+    image: "./assets/dinossauros/apatossauro.png",
+    description: "Grande herbívoro de pescoço e cauda longos, alimentando-se da vegetação da ilha."
   },
   {
-    number: "08",
+    number: "08 - Herbívoro",
     name: "HADROSSAURO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/hadrossauro.png",
+    description: "Dinossauro herbívoro que se alimentava de vegetação e fazia parte das espécies presentes na ilha."
   },
   {
-    number: "09",
+    number: "09 - Herbívoro",
     name: "MAIASSAURO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/maiassauro.png",
+    description: "Herbívoro conhecido pelo comportamento de grupo e pelo cuidado com seus filhotes."
   },
   {
-    number: "010",
+    number: "10 - Herbívro",
     name: "HIPSILOFODONTE",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/HIPSILOFODONTE.png",
+    description: "Pequeno herbívoro de corpo leve, muito menor que os gigantes da ilha."
   },
   {
-    number: "011",
+    number: "11 - Herbívoro",
     name: "OTHNIELIA",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/OTHNIELIA.png",
+    description: "Pequeno dinossauro herbívoro que contrasta com os gigantes do parque."
   },
   {
-    number: "012",
+    number: "12 - Herbívoro",
     name: "EUOPLOCÉFALO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/EUOPLOCÉFALO.png",
+    description: "Herbívoro robusto, protegido por uma forte armadura natural."
   },
   {
-    number: "013",
+    number: "13 - Herbívoro",
     name: "ESTIRACOSSAURO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/ESTIRACOSSAURO.png",
+    description: "Grande herbívoro com uma estrutura óssea na cabeça e vários chifres, dando ao animal uma aparência bastante imponente."
   },
   {
-    number: "014",
+    number: "14 - Herbívoro",
     name: "MICROCERÁTOPS",
-    image: "./assets/dinossauros/triceratops.jpg"
+    image: "./assets/dinossauros/MICROCERÁTOPS.png",
+    description: "Pequeno dinossauro herbívoro, de corpo compacto e aparência delicada, que se alimentava da vegetação da ilha."
   },
   {
-    number: "015",
-    name: "CEARADÁCTILO",
-    image: "./assets/dinossauros/triceratops.jpg"
+    number: "15 - Herbívoro",
+    name: "Pterossauro",
+    image: "./assets/dinossauros/CEARADÁCTILO.png",
+    description: "Réptil voador que habitava a ilha. Diferente dos dinossauros terrestres, possuía asas e podia se deslocar pelo ar."
   }
 
   // Continue até a espécie 15.
 ];
 
+//botao subir descer
+const dnaSectionBotoes = document.querySelector("#dna-section");
+
+const botaoSubir = document.querySelector(".botao-subir");
+const botaoDescer = document.querySelector(".botao-descer");
+
+let ultimaPosicao = window.scrollY;
+
+function atualizarBotaoNavegacao() {
+    const rect = dnaSectionBotoes.getBoundingClientRect();
+
+    const dentroDaSection =
+        rect.top <= window.innerHeight &&
+        rect.bottom >= 0;
+
+    if (!dentroDaSection) {
+        botaoSubir.classList.remove("ativo");
+        botaoDescer.classList.remove("ativo");
+        return;
+    }
+
+    const posicaoAtual = window.scrollY;
+
+    if (posicaoAtual < ultimaPosicao) {
+        // Subindo
+        botaoSubir.classList.add("ativo");
+        botaoDescer.classList.remove("ativo");
+    }
+
+    if (posicaoAtual > ultimaPosicao) {
+        // Descendo
+        botaoDescer.classList.add("ativo");
+        botaoSubir.classList.remove("ativo");
+    }
+
+    ultimaPosicao = posicaoAtual;
+}
+
+window.addEventListener("scroll", atualizarBotaoNavegacao);
+
+botaoSubir.addEventListener("click", () => {
+    document.querySelector("#dinossauros-section").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+botaoDescer.addEventListener("click", () => {
+    document.querySelector("#Estadia").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
 //-----------------------------SEÇÃO THREE.JS----------------------------------------------
 import * as THREE from "three";
@@ -231,6 +297,7 @@ const speciesCard = document.querySelector(".species");
 const speciesNumber = document.querySelector(".species-number");
 const speciesName = document.querySelector(".species-text");
 const speciesImage = document.querySelector(".species-img");
+const speciesDescription = document.querySelector(".species-description");
 
 let currentSpecies = -1;
 
@@ -246,6 +313,7 @@ function changeSpecies(index, immediate = false) {
   speciesName.textContent = species.name;
   speciesImage.src = species.image;
   speciesImage.alt = species.name;
+  speciesDescription.textContent = species.description;
 
 
 };

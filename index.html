@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
 
@@ -24,23 +26,21 @@
 <body>
   <div class="page">
 
-
-
     <nav class="nav">
       <div class="logo-container">
-    <img src="./assets/genetis.jpeg" class="logo-img">
-    <a class="logo-text">GENÉTIS</a>
-    </div>
-      
+        <img src="./assets/genetis.jpeg" class="logo-img">
+        <a class="logo-text">GENÉTIS</a>
+      </div>
       <ul class="nav-contents">
         <li class="nav-link"><a href="#A-Ilha">A ILHA</a></li>
         <li class="nav-link"><a href="#trex-eye-point">DINOSSAUROS </a></li>
-        <li class="nav-link"><a href="#Escolha-sua-aventura">EXPERIÊNCIA</a></li>
+        <li class="nav-link"><a href="#Guia-de-Visitante">PLANEJE</a></li>
         <li class="nav-link"><a href="#Estadia">ESTADIA</a></li>
-        <li class="nav-link"><a href="#Sobre-Nos">SOBRE NÓS</a></li>
+        <li class="nav-link"><a href="#App">RESTRITO</a></li>
+        <li class="nav-link"><a href="#Sobre-Nos">SOBRE NOS</a></li>
       </ul>
 
-      <a class="nav-button" href="#">
+      <a class="nav-button" href="#Reservar">
         <p>RESERVE AGORA</p>
       </a>
     </nav>
@@ -82,21 +82,22 @@
     </main>
     <!-------------------------------------------------------------------------------------------------->
     <section id="A-Ilha">
-      <div class="texts-island1">
+      <div class="texts-island">
         <p>01</p>
         <p>•</p>
         <p>A ILHA</p>
       </div>
 
       <article class="section1-texts">
+
         <h1>
           BEM-VINDO(A) <br />
           A ILHA
         </h1>
         <p>
-          Isla Nublar é diferente de qualquer outro destino na Terra — um
-          ecossistema vivo onde a era <br />
-          Mesozoica volta a respirar. Monitorada, administrada e aberta <br />
+          Isla Nublar é diferente de qualquer outro destino na Terra <br> — um
+          ecossistema vivo onde a era Mesozoica volta a <br>
+          respirar. Monitorada, administrada e aberta <br />
           àqueles que ousam chegar até lá.
         </p>
       </article>
@@ -126,13 +127,13 @@
     <div id="trex-eye-point"></div>
     <!-------------------------------------------------------------------------------------------------->
     <section id="dinossauros-section">
-      <div class="texts-island2">
+      <div class="texts-island">
         <p>02</p>
         <p>•</p>
         <p>ESPÉCIES</p>
       </div>
 
-      <article class="section2-texts">
+      <article class="section-texts">
         <h1>
           CONHEÇA <br> AS ESPÉCIES
         </h1>
@@ -145,15 +146,21 @@
         <img class="trex-head" src="./assets/trex-watching.jpeg" alt="Cabeça de T-Rex">
       </div>
 
-
-
     </section>
-
 
     <!-------------------------------------------------------------------------------------------------->
     <section id="dna-section">
       <div class="dna-content">
 
+        <div class="botoes-navegacao">
+          <button class="botao-navegacao botao-subir">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+          </button>
+
+          <button class="botao-navegacao botao-descer">
+            <i class="fa-solid fa-circle-arrow-down"></i>
+          </button>
+        </div>
         <div class="dna-model">
 
         </div>
@@ -162,183 +169,373 @@
 
           <div class="species">
             <img src="./assets/trex.jpg" class="species-img" alt="T-Rex">
-            <p class="species-number">01 • INSIRA O TIPO AQUI</p>
+            <p class="species-number"></p>
             <div class="species-details">
-              <h2 class="species-text">T-REX</h2>
+              <h2 class="species-text"></h2>
               <h3>Descrição:</h3>
-              <p class="species-description">INSIRA A DESCRIÇÃO AQUI.</p>
+              <p class="species-description"></p>
             </div>
-<<<<<<< Updated upstream
-
-           <div class="species-info">
-
-              <div class="species">
-                <span class="species-number">01</span>
-                <h2 class="species-text">T-REX</h2>
-                <img src="./assets/trex.jpg" class="species-img" alt="T-Rex">
-              </div>
-=======
->>>>>>> Stashed changes
           </div>
         </div>
 
       </div>
     </section>
+
     <!-------------------------------------------------------------------------------------------------->
-    <section id="Escolha-sua-aventura">
-      <div class="texts-island3">
-        <p>03</p>
-        <p>•</p>
-        <p>ESCOLHA SUA AVENTURA</p>
-      </div>
 
-      <article class="section3-texts">
-        <h1>
-          ESCOLHA SUA <br />
-          AVENTURA
-        </h1>
-        <p>
-          Escolha sua aventura e viva a experiência de estar frente a frente com os dinossauros. <br />
-        </p>
-      </article>
-
-      <div class="card-container">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-
-        <div class="hero-buttons-container">
-          <a class="hbutton " href="#A-Ilha">
-            <p>PROCURE SUA EXPERIÊNCIA</p>
-          </a>
-        </div>
-
-    </section>
     <!-------------------------------------------------------------------------------------------------->
     <section id="Estadia">
-      <div class="texts-island4">
-        <p>04</p>
+      <div class="texts-island">
+        <p>03</p>
         <p>•</p>
         <p>ESTADIA</p>
       </div>
 
-      <article class="section4-texts">
+      <article class="section-texts">
         <h1>
           SUA ESTADIA <br />
           NA ILHA
         </h1>
         <p>
-          Hospede-se em um dos hotéis da Isla Nublar e viva a adrenalida de dormir próximo aos dinossauros. <br />
+          Hospede-se em um dos hotéis da Isla Nublar <br> e viva a adrenalida de dormir próximo aos dinossauros. <br />
         </p>
-        <div class="card-container">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-        </div>
+      </article>
+      <div class="card-container">
+        <div class="card"> <img src="./assets/oi.jfif" alt=""></div>
+        <div class="card"><img src="./assets/oioi.jfif" alt=""></div>
+        <div class="card"><img src="./assets/oioioi.jfif" alt=""></div>
+      </div>
 
     </section>
     <!-------------------------------------------------------------------------------------------------->
-    <section id="Navegação">
-      <div class="texts-island5">
-        <p>05</p>
+    <section id="Navegacao">
+      <div class="texts-island">
+        <p>04</p>
         <p>•</p>
         <p>NAVEGAÇÃO</p>
       </div>
 
-      <article class="section5-texts">
-        <h1>EXPLORE A <br>ISLA NUBLAR</h1>
-        <p>
-          Navegue pelo nosso mapa da Isla Nublar e descubra os locais da ilha. <br /></p>
+      <article class="section-texts-mapa">
+        <div>
+          <div class="section-texts">
+            <h1>EXPLORE A <br>ISLA NUBLAR</h1>
+          </div>
+          <p>
+            Navegue pelo nosso mapa da Isla Nublar e descubra os locais da ilha. <br />
+          </p>
+          <div class="leg-mapa">
+            <h3>Legenda</h3>
+
+            <table class="leg-mapa-pontos">
+              <tr>
+                <td>1. Centro de Visitantes</td>
+                <td>4. Pântano dos Saurópodes</td>
+              </tr>
+
+              <tr>
+                <td>2. Vale dos Velociraptores</td>
+                <td>5. Território dos Tricerátops</td>
+              </tr>
+
+              <tr>
+                <td>3. Região dos Carnívoros</td>
+                <td>6. Pico dos Pterossauros</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="mapa">
+          <img src="./assets/mapa.png" alt="Mapa da Isla Nublar">
+
+          <button class="ponto ponto-1" popovertarget="modal-1">1</button>
+          <button class="ponto ponto-2" popovertarget="modal-2">2</button>
+          <button class="ponto ponto-3" popovertarget="modal-3">3</button>
+          <button class="ponto ponto-4" popovertarget="modal-4">4</button>
+          <button class="ponto ponto-5" popovertarget="modal-5">5</button>
+          <button class="ponto ponto-6" popovertarget="modal-6">6</button>
+        </div>
+
+        <!-- Modais -->
+        <div id="modal-1" popover class="modal-mapa azul">
+
+          <button class="modal-fechar" popovertarget="modal-1" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            LOCALIZAÇÃO // ISLA NUBLAR
+          </span>
+
+          <span class="modal-numero">01</span>
+
+          <h2 class="modal-titulo">
+            Centro de Visitantes
+          </h2>
+
+          <p class="modal-texto">
+            Principal núcleo administrativo e operacional do Jurassic Park.
+            A região reúne importantes instalações usadas pelos funcionários
+            e visitantes do parque.
+          </p>
+
+        </div>
+
+
+        <div id="modal-2" popover class="modal-mapa laranja">
+
+          <button class="modal-fechar" popovertarget="modal-2" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            LOCALIZAÇÃO // ISLA NUBLAR
+          </span>
+
+          <span class="modal-numero">02</span>
+
+          <h2 class="modal-titulo">
+            Vale dos Velociraptores
+          </h2>
+
+          <p class="modal-texto">
+            Área do parque destinada aos velociraptores.
+            No romance, esses animais são considerados extremamente
+            inteligentes, agressivos e difíceis de controlar.
+          </p>
+
+        </div>
+
+
+        <div id="modal-3" popover class="modal-mapa laranja">
+
+          <button class="modal-fechar" popovertarget="modal-3" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            LOCALIZAÇÃO // ISLA NUBLAR
+          </span>
+
+          <span class="modal-numero">03</span>
+
+          <h2 class="modal-titulo">
+            Região dos Carnívoros
+          </h2>
+
+          <p class="modal-texto">
+            Setor destinado aos grandes dinossauros carnívoros do parque.
+            É uma das regiões que exigem maior segurança e controle.
+          </p>
+
+        </div>
+
+
+        <div id="modal-4" popover class="modal-mapa verde">
+
+          <button class="modal-fechar" popovertarget="modal-4" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            LOCALIZAÇÃO // ISLA NUBLAR
+          </span>
+
+          <span class="modal-numero">04</span>
+
+          <h2 class="modal-titulo">
+            Pântano dos Saurópodes
+          </h2>
+
+          <p class="modal-texto">
+            Região úmida destinada aos grandes saurópodes.
+            Sua vegetação e áreas alagadas compõem um dos ambientes
+            naturais utilizados no parque.
+          </p>
+
+        </div>
+
+
+        <div id="modal-5" popover class="modal-mapa verde">
+
+          <button class="modal-fechar" popovertarget="modal-5" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            LOCALIZAÇÃO // ISLA NUBLAR
+          </span>
+
+          <span class="modal-numero">05</span>
+
+          <h2 class="modal-titulo">
+            Território dos Tricerátops
+          </h2>
+
+          <p class="modal-texto">
+            Área destinada aos tricerátops e planejada para permitir
+            que os visitantes observassem esses grandes herbívoros
+            durante o passeio pelo parque.
+          </p>
+
+        </div>
+
+
+        <div id="modal-6" popover class="modal-mapa verde">
+
+          <button class="modal-fechar" popovertarget="modal-6" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            LOCALIZAÇÃO // ISLA NUBLAR
+          </span>
+
+          <span class="modal-numero">06</span>
+
+          <h2 class="modal-titulo">
+            Pico dos Pterossauros
+          </h2>
+
+          <p class="modal-texto">
+            Região associada aos pterossauros e às instalações destinadas
+            a mantê-los isolados dos visitantes e das demais áreas do parque.
+          </p>
+
+        </div>
       </article>
 
-      <div class="card-container">
-        <div class="card"></div>
     </section>
     <!-------------------------------------------------------------------------------------------------->
     <section id="Guia-de-Visitante">
-      <div class="texts-island6">
-        <p>06</p>
+      <div class="texts-island">
+        <p>05</p>
         <p>•</p>
-        <p>PLANEJE SUA <br> AVENTURA</p>
+        <p>PLANEJE SUA AVENTURA</p>
       </div>
 
-      <article class="section6-texts">
+      <article class="section-texts">
         <h1>PLANEJE SUA <br> AVENTURA PELA ILHA</h1>
       </article>
       <div class="card-container">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+        <div class="card"><img src="./assets/aventura/passeio.jpeg" alt="">
+          <p>Tour automatizado pelo parque.</p>
+        </div>
+        <div class="card"> <img src="./assets/aventura/esqueleto.jfif" alt="">
+          <p>Exposição e demonstração dos dinossauros</p>
+        </div>
+        <div class="card"> <img src="./assets/aventura/lab.jfif" alt="">
+          <p>Labortório de pesquisa e conservação.</p>
+        </div>
+        <div class="card"> <img src="./assets/aventura/herbivoros.jpeg" alt="">
+          <p>Área de alimentação dos herbívoros.</p>
+        </div>
       </div>
 
     </section>
     <!-------------------------------------------------------------------------------------------------->
+    <section id="Restrito">
+      <!--AQUI O FORMULÁRIOOOOOO-->
+    </section>
+    <!-------------------------------------------------------------------------------------------------->
     <section id="Reservar">
-      <div class="texts-island7">
-        <p>07</p>
+      <div class="texts-island">
+        <p>06</p>
         <p>•</p>
         <p>RESERVE SUA AVENTURA</p>
       </div>
 
-      <article class="section7-texts">
+      <article class="section-texts">
         <h1> RESERVE SUA AVENTURA <br>PELA ISLA NUBLAR</h1>
-        <p>
-          Navegue pelo nosso mapa da Isla Nublar e descubra os locais da ilha. <br /></p>
+
       </article>
 
       <div class="card-container">
-        <div class="card"></div>
-        <div class="card"></div>
+        <div class="card"> <img src="./assets/aventura/casa.jpeg" alt="">
+          <p>O ponto de entrada para uma experiência única, onde tecnologia e natureza se encontram no coração da Ilha
+            Nublar.</p>
+        </div>
+        <div class="card"> <img src="./assets/aventura/interior.jpeg" alt="">
+          <p>Um espaço dedicado à descoberta dos dinossauros e à tecnologia por trás de sua recriação.</p>
+        </div>
     </section>
 
-  </div>
+    <!-- ------------------------------------------------------------- -->
+    <section id="Sobre-Nos">
+      <div class="texts-left">
+        <!-- <div class="texts-island8">
+          <span>07</span>
+          <span>•</span>
+          <span>Sobre Nós</span>
+        </div> -->
+        <div class="section8-texts">
 
-  <!-------------------------------------------------------------------------------------------------->
-<section id="Sobre-Nos">
-  <div class="texts-left"> 
-
-    <div class="texts-island8">
-      <span>08</span>
-      <span>•</span>
-      <span>Sobre Nós</span>
-    </div>
-
-    
-
-    <div class="section8-texts">
-            
           <h1>A CIÊNCIA POR TRÁS<br> <span>DO PARQUE</span></h1>
           <p>
-            Por trás de cada espécie, existe um trabalho <br> de anos, tecnologia de ponta e uma equipe de <br> cientistas dedicados a tornar tudo isso possível.
+            Por trás de cada espécie, existe um trabalho <br> de anos, tecnologia de ponta e uma equipe de <br>
+            cientistas dedicados a tornar tudo isso possível.
           </p>
-        
 
-        <div class="hero-buttons-container sobreNos-Btn-sct8">
-          <a class="hbutton" href="sobreNos.html">
-            <span>SAIBA MAIS</span>
-          </a>
-        </div>
-    </div>
-  </div>  
-        <div class="card-container cardCtn-sobreNos">
-          <div class="card card-sobreNos">
-            <img src="./assets/laboratorio-sobreNos.jpeg" alt="laboratorio-InGenuos">
-            <p>Técnologia Avançada</p>
-            <p>Pesquisas que tornam o impossível, possível</p>
+
+          <div class="hero-buttons-container sobreNos-Btn-sct8">
+            <a class="hbutton" href="sobreNos.html">
+              <span>SAIBA MAIS</span>
+            </a>
           </div>
         </div>
-  
-</section>
+      </div>
+      <div class="card-container cardCtn-sobreNos">
+        <div class="card card-sobreNos">
+          <img src="./assets/laboratorio-sobreNos.jpeg" alt="laboratorio-InGenuos">
+          <p>Técnologia Avançada</p>
+          <p>Pesquisas que tornam o impossível, possível</p>
+        </div>
+      </div>
 
+    </section>
+    <!-------------------------------------------------------------------------------------------------->
+    <footer>
+      <section class="main">
+        <div class="rodape-logos">
+          <img src="./assets/logo.png" alt="">
+        </div>
+
+        <div class="rodape-informacoes">
+          <nav class="nav-footer">
+            <p>Biblioteca</p>
+            <a class="nav-link-a" href=".//app.html">Baixar aplicativos</a>
+            <a class="nav-link-a" href="#">Suporte ao usuário</a>
+          </nav>
+          <nav class="nav-footer">
+            <p>Quem somos</p>
+            <a class="nav-link-a" href="# ">Clientes</a>
+            <a class="nav-link-a" href="#">Benefícios</a>
+          </nav>
+          <p>Siga nas redes sociais</p>
+          <nav class="rodape-icones">
+            <a href="#facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <span></span>
+
+      <section class="footer-inferior">
+        <p>&copy; Genétis</p>
+        <nav class="footer">
+          <a class="nav-link-a" href="#">Politica de Privacidade</a>
+          <a class="nav-link-a" href="#">Termos e condições</a>
+        </nav>
+      </section>
+    </footer>
+
+
+  </div>
 
   <!-------------------------------------------------------------------------------------------------->
 
