@@ -14,6 +14,16 @@ html,body{
     position: relative;
 }
 
+.logo-text{
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--destaque);
+    font-weight: 500;
+}
+
+
+
 
 :root{
 
