@@ -1040,10 +1040,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-} 
-.botao-subir {
-    display: grid;
-    justify-content: center;
 
     width: 50px;
     height: 50px;
@@ -1081,7 +1077,6 @@
     transform: translateY(-1px);
     cursor: pointer;
 }
-
 .species-art {
     position: absolute;
     width: 55vw;
@@ -1117,8 +1112,8 @@
     position: relative;
     height: fit-content;
     width: 100%;
-    background-color: #111f11;
     
+    background: linear-gradient(to bottom, black,#111f11 );
 }
 /*------------------------------------------------------------------------------------------------------------------------*/
 #Navegacao{
