@@ -510,8 +510,6 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(dnaSection);
 //---------------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------------
 // Área restrita
 const modalRestrito = document.getElementById("Restrito");
 
