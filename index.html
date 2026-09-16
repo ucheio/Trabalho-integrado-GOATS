@@ -36,7 +36,7 @@
         <li class="nav-link"><a href="#trex-eye-point">DINOSSAUROS </a></li>
         <li class="nav-link"><a href="#Guia-de-Visitante">PLANEJE</a></li>
         <li class="nav-link"><a href="#Estadia">ESTADIA</a></li>
-        <li class="nav-link"><a href="#App">RESTRITO</a></li>
+        <li class="nav-link"><a href="#Restrito" id="link-restrito">RESTRITO</a></li>
         <li class="nav-link"><a href="#Sobre-Nos">SOBRE NOS</a></li>
       </ul>
 
@@ -438,8 +438,65 @@
 
     </section>
     <!-------------------------------------------------------------------------------------------------->
-    <section id="Restrito">
-      <!--AQUI O FORMULÁRIOOOOOO-->
+     <section id="Restrito" popover class="modal-restrito">
+
+      <button class="modal-fechar" popovertarget="Restrito" popovertargetaction="hide">
+        ×
+      </button>
+
+      <span class="modal-local">
+        ACESSO // ISLA NUBLAR
+      </span>
+
+      <h2 class="modal-titulo">
+        ÁREA RESTRITA
+      </h2>
+
+      <div class="restrito-abas">
+        <button type="button" class="aba ativa" data-aba="login">LOGIN</button>
+        <button type="button" class="aba" data-aba="cadastro">CADASTRO</button>
+        <button type="button" class="aba" data-aba="codigo">COM CÓDIGO</button>
+      </div>
+
+      <form class="restrito-form ativa" id="form-login">
+        <label>E-MAIL
+          <input type="email" name="email" required>
+        </label>
+        <label>SENHA
+          <input type="password" name="senha" required>
+        </label>
+        <button class="restrito-submit" type="submit">ENTRAR</button>
+      </form>
+
+      <form class="restrito-form" id="form-cadastro">
+        <label>E-MAIL
+          <input type="email" name="email" required>
+        </label>
+        <label>SENHA
+          <input type="password" name="senha" required>
+        </label>
+        <label>CONFIRMAR SENHA
+          <input type="password" name="confirmar" required>
+        </label>
+        <button class="restrito-submit" type="submit">CADASTRAR</button>
+      </form>
+
+      <form class="restrito-form" id="form-codigo">
+        <label>E-MAIL
+          <input type="email" name="email" required>
+        </label>
+        <label>SENHA
+          <input type="password" name="senha" required>
+        </label>
+        <label>CONFIRMAR SENHA
+          <input type="password" name="confirmar" required>
+        </label>
+        <label>CÓDIGO DE AUTORIZAÇÃO
+          <input type="text" name="codigo" required>
+        </label>
+        <button class="restrito-submit" type="submit">LIBERAR ACESSO</button>
+      </form>
+
     </section>
     <!-------------------------------------------------------------------------------------------------->
     <section id="Reservar">

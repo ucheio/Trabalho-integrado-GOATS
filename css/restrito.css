@@ -1,0 +1,1077 @@
+.nav {
+    box-sizing: border-box;
+    pointer-events: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    height: 9vh;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: transparent;
+
+    transition:
+        background-color 500ms ease,
+        backdrop-filter 500ms ease,
+        -webkit-backdrop-filter 500ms ease;
+}
+
+.nav.scrolled {
+    background: rgb(10 20 10 / 90%);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+.nav-contents{
+    text-decoration: none;
+    font-size: 0.9rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: var(--preto);
+    gap: 3rem;
+    align-items: center;
+}
+.nav-link a {
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--cinza); 
+    padding: 5px;
+}
+.nav-link{
+    align-items: center;
+}
+
+.nav-link a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: var(--destaque);
+    height: 1px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.nav-link a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+    filter: brightness(1), blur(50px);
+}
+.nav-link a:hover{
+    color: var(--texto-hover-amarelinho);
+}
+/*=======================================================*/
+
+/* =======================================================
+   DESAFIO / GRID
+======================================================= */
+
+.desafio-5 {
+    margin-top: 6rem;
+}
+
+.desafio-5 p {
+    margin-bottom: 15px;
+}
+
+.grade-modular-desafio {
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(160px, 18vw);
+
+    gap: 15px;
+}
+
+/* CARDS */
+
+.grade-modular-desafio .filme {
+    min-width: 0;
+    min-height: 0;
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    overflow: hidden;
+}
+
+.grade-modular-desafio .filme img {
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* PRIMEIRO CARD MAIOR */
+
+.grade-modular-desafio .filme:nth-child(1) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+/* TÍTULO */
+
+.grade-modular-desafio h3 {
+    margin: 0.5rem 0 0;
+
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* =======================================================
+   TABLET
+======================================================= */
+
+@media (max-width: 1000px) {
+
+    .grade-modular-desafio {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: minmax(150px, 22vw);
+
+        gap: 12px;
+    }
+
+}
+
+
+/* =======================================================
+   TABLET MENOR
+======================================================= */
+
+@media (max-width: 750px) {
+
+    .grade-modular-desafio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: minmax(150px, 30vw);
+
+        gap: 12px;
+    }
+
+    .grade-modular-desafio .filme:nth-child(1) {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .grade-modular-desafio h3 {
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+    }
+
+}
+
+
+/* =======================================================
+   CELULAR
+======================================================= */
+
+@media (max-width: 480px) {
+
+    .desafio-5 {
+        margin-top: 4rem;
+    }
+
+    .grade-modular-desafio {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+
+        gap: 18px;
+    }
+
+    /* no celular cada card ocupa a largura inteira */
+
+    .grade-modular-desafio .filme,
+    .grade-modular-desafio .filme:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grade-modular-desafio .filme img {
+        width: 100%;
+        height: 55vw;
+        min-height: 180px;
+        max-height: 280px;
+
+        object-fit: cover;
+    }
+
+    .grade-modular-desafio h3 {
+        margin-top: 0.6rem;
+
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+    }
+
+}
+/*================================================================*/
+
+/*========================= OPERAÇÂO =============================*/
+
+/* =========================
+   ÁREA DO MAPA
+========================= */
+
+.section-texts-mapa {
+    display: flex;
+    justify-content: space-around;
+    color: var(--branco);
+}
+
+.section-texts-mapa p {
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 1rem;
+    color: var(--texto-verdinho);
+    text-align: start;
+}
+
+
+/* =========================
+   LEGENDA
+========================= */
+
+.leg-mapa {
+    border: 0.2em solid var(--destaque);
+    border-radius: 5px;
+}
+
+.leg-mapa h3 {
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+}
+
+.leg-mapa-pontos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leg-mapa-pontos td {
+    padding: 0.5em 1em;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   IMAGEM DO MAPA
+========================= */
+
+.mapa {
+    position: relative;
+    width: 40%;
+}
+
+.mapa img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   BOLINHAS
+========================= */
+
+.ponto {
+    z-index: 2;
+    position: absolute;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    border: 1px solid white;
+
+    color: white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* =========================
+   HOVER DAS BOLINHAS
+========================= */
+
+.ponto-1:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(116, 166, 226);
+
+    box-shadow:
+        0 0 0 5px rgba(90, 129, 179, 0.2),
+        0 0 15px rgba(90, 129, 179, 0.8);
+}
+
+.ponto-2:hover,
+.ponto-3:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(206, 131, 70);
+
+    box-shadow:
+        0 0 0 5px rgba(199, 116, 49, 0.2),
+        0 0 15px rgba(199, 116, 49, 0.8);
+}
+
+.ponto-4:hover,
+.ponto-5:hover,
+.ponto-6:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(100, 204, 108);
+
+    box-shadow:
+        0 0 0 5px rgba(78, 177, 86, 0.2),
+        0 0 15px rgba(61, 143, 68, 0.8);
+}
+
+.ponto-7:hover,
+.ponto-8:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    background-color: rgb(116, 166, 226);
+
+    box-shadow:
+        0 0 0 5px rgba(90, 129, 179, 0.2),
+        0 0 15px rgba(90, 129, 179, 0.8);
+}
+
+
+/* =========================
+   POSIÇÕES
+========================= */
+
+.ponto-1 {
+    left: 50%;
+    top: 52%;
+    background-color: rgb(90, 129, 179);
+}
+
+.ponto-2 {
+    left: 55%;
+    top: 38%;
+    background-color: rgb(199, 116, 49);
+}
+
+.ponto-3 {
+    left: 27%;
+    top: 37%;
+    background-color: rgb(199, 116, 49);
+}
+
+.ponto-4 {
+    left: 67%;
+    top: 45%;
+    background-color: rgb(78, 177, 86);
+}
+
+.ponto-5 {
+    left: 39%;
+    top: 45%;
+    background-color: rgb(78, 177, 86);
+}
+
+.ponto-6 {
+    left: 78%;
+    top: 25%;
+    background-color: rgb(78, 177, 86);
+}
+
+.ponto-7 {
+    left: 79%;
+    top: 59%;
+    background-color: rgb(90, 129, 179);
+}
+
+.ponto-8 {
+    left: 59%;
+    top: 48%;
+    background-color: rgb(90, 129, 179);
+}
+
+
+/* =========================
+   MODAIS
+========================= */
+
+.modal-mapa {
+    width: 320px;
+    padding: 25px;
+
+    margin: 10px 0 0 65px;
+
+    border-radius: 8px;
+
+    color: white;
+}
+
+
+/* AZUL */
+
+.azul {
+    border: 2px solid rgb(90, 129, 179);
+    background-color: rgb(11, 31, 39);
+}
+
+.azul .modal-numero {
+    color: rgb(90, 129, 179);
+}
+
+.azul .modal-titulo {
+    color: rgb(140, 190, 230);
+}
+
+
+/* LARANJA */
+
+.laranja {
+    border: 2px solid rgb(199, 116, 49);
+    background-color: rgb(46, 29, 17);
+}
+
+.laranja .modal-numero {
+    color: rgb(199, 116, 49);
+}
+
+.laranja .modal-titulo {
+    color: rgb(206, 131, 70);
+}
+
+
+/* VERDE */
+
+.verde {
+    border: 2px solid rgb(78, 177, 86);
+    background-color: rgb(16, 42, 24);
+}
+
+.verde .modal-numero {
+    color: rgb(78, 177, 86);
+}
+
+.verde .modal-titulo {
+    color: rgb(100, 204, 108);
+}
+
+
+/* FUNDO ESCURO DO MODAL */
+
+.modal-mapa::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* CONTEÚDO DO MODAL */
+
+.modal-local {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.7rem;
+    color: #aaa;
+
+    letter-spacing: 2px;
+}
+
+.modal-numero {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.modal-titulo {
+    margin: 0 0 15px 0;
+
+    font-size: 1.4rem;
+}
+
+.modal-texto {
+    margin: 0 0 15px 0;
+
+    line-height: 1.5;
+}
+
+.modal-fechar {
+    float: right;
+
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 1.4rem;
+
+    cursor: pointer;
+}
+
+.radar {
+    position: absolute;
+
+    width: 90%;
+    aspect-ratio: 1;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    /* círculo externo */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    pointer-events: none;
+    z-index: 1;
+
+    background:
+        /* linha vertical */
+        linear-gradient(
+            to right,
+            transparent 49.8%,
+            rgba(255,255,255,0.18) 50%,
+            transparent 50.2%
+        ),
+
+        /* linha horizontal */
+        linear-gradient(
+            to bottom,
+            transparent 49.8%,
+            rgba(255,255,255,0.18) 50%,
+            transparent 50.2%
+        ),
+
+        /* círculo menor */
+        radial-gradient(
+            circle at center,
+            transparent 0 20%,
+            rgba(255,255,255,0.18) 20.2%,
+            transparent 20.5%
+        ),
+
+        /* círculo médio */
+        radial-gradient(
+            circle at center,
+            transparent 0 34%,
+            rgba(255,255,255,0.18) 34.2%,
+            transparent 34.5%
+        );
+}
+
+.radar-sweep {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    transform-origin: center center;
+
+    animation: radar-girar 4s linear infinite;
+}
+
+
+/* BRILHO QUE FICA ATRÁS */
+
+.radar-sweep::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        from 0deg,
+
+        transparent 0deg,
+        transparent 305deg,
+
+        rgba(255,255,255,0.01) 310deg,
+        rgba(255,255,255,0.04) 325deg,
+        rgba(255,255,255,0.10) 340deg,
+        rgba(255,255,255,0.20) 352deg,
+        rgba(255,255,255,0.35) 359deg,
+
+        transparent 360deg
+    );
+}
+
+
+/* PALITO BRANCO */
+
+.radar-sweep::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 2px;
+    height: 50%;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to top,
+        rgba(255,255,255,0.95),
+        rgba(255,255,255,0.2)
+    );
+
+    box-shadow:
+        0 0 5px white,
+        0 0 12px rgba(255,255,255,0.7);
+}
+
+@keyframes radar-girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*================================================================*/
+
+/*============================ MANEJO ============================*/
+
+.conteudo {
+    padding: 12vh 4rem 4rem;
+}
+
+.texts-island {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    display: flex;
+    color: var(--destaque);
+    gap: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.6rem;
+    padding-left: 3.5rem;
+    padding-top: 2rem;
+}
+
+
+.section-texts h1 {
+    margin: 1rem 0 2.5rem;
+
+    /* font-family: var(--fonte-principal); */
+    /* font-size: 2.5rem; */
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: flex;
+    margin: 3rem;
+    justify-content: space-around;
+    color: var(--branco);
+    font-family: var(--fonte-principal),serif;
+    font-size: 64px;
+    
+}
+
+.creditos {
+    margin-top: 1.5rem;
+
+    color: var(--cinza);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.7rem;
+}
+
+.em-construcao,
+.desafio-5 {
+    margin-top: 6rem;
+}
+
+/*--------------------------- CARROSSEL --------------------------*/
+
+.carrossel {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.carrossel-janela {
+    flex: 1;
+    overflow: hidden;
+
+    border: 1px solid var(--destaque);
+}
+
+.carrossel-trilha {
+    display: flex;
+
+    transition: transform 0.5s ease;
+}
+
+.carrossel-pagina {
+    position: relative;
+    flex: 0 0 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
+
+    border: none;
+    background-color: var(--verde-escuro);
+    background-position: center;
+    background-size: cover;
+
+    cursor: pointer;
+
+    transition: background-size 0.4s ease;
+}
+
+.carrossel-pagina::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to bottom, rgba(9, 13, 9, 0.35), rgba(9, 13, 9, 0.8));
+
+    transition: background 0.3s ease;
+}
+
+.carrossel-pagina:hover::before {
+    background: linear-gradient(to bottom, rgba(9, 13, 9, 0.2), rgba(9, 13, 9, 0.65));
+}
+
+.carrossel-numero,
+.carrossel-titulo {
+    position: relative;
+    z-index: 1;
+}
+
+.carrossel-numero {
+    color: var(--destaque);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+}
+
+.carrossel-titulo {
+    margin: 0;
+
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-align: center;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.carrossel-pagina:hover .carrossel-titulo {
+    color: var(--destaque);
+}
+
+.carrossel-seta {
+    flex-shrink: 0;
+
+    width: 3rem;
+    height: 3rem;
+
+    border: 1px solid var(--destaque);
+    border-radius: 50%;
+    background: rgba(9, 13, 9, 0.6);
+
+    color: var(--destaque);
+    font-size: 1.6rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.carrossel-seta:hover {
+    background: var(--destaque);
+    color: var(--preto);
+}
+
+.carrossel-bolinhas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    margin-top: 1.5rem;
+}
+
+.bolinha {
+    width: 10px;
+    height: 10px;
+
+    border: none;
+    border-radius: 50%;
+    background: var(--cinza);
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.bolinha.ativa {
+    background: var(--destaque);
+    transform: scale(1.3);
+}
+
+/*------------------------ MODAL DO MANEJO -----------------------*/
+
+.modal-manejo {
+    width: min(1100px, 92vw);
+    height: 88vh;
+
+    margin: auto;
+    padding: 0;
+    overflow-y: auto;
+
+    border: 2px solid var(--destaque);
+    background: var(--verde-escuro);
+
+    color: var(--branco);
+}
+
+.modal-manejo::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal-manejo .modal-fechar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    float: right;
+
+    margin: 0.5rem;
+
+    border: none;
+    background: rgba(9, 13, 9, 0.7);
+
+    color: var(--branco);
+    font-size: 1.6rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.modal-manejo-topo {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 30vh;
+    padding: 2rem 3rem;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.modal-manejo-topo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to bottom, rgba(9, 13, 9, 0.25), rgba(10, 22, 10, 0.92));
+}
+
+.modal-manejo-topo > * {
+    position: relative;
+    z-index: 1;
+}
+
+.modal-manejo-topo .modal-local {
+    color: #aaa;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.modal-manejo-topo .modal-numero {
+    margin-top: 0.5rem;
+
+    color: var(--destaque);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.modal-manejo-topo .modal-titulo {
+    margin: 0.3rem 0 0;
+
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+}
+
+.modal-manejo-corpo {
+    max-width: 75ch;
+    padding: 2.5rem 3rem 4rem;
+
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.modal-manejo-corpo h3 {
+    margin: 2rem 0 0.8rem;
+    padding-bottom: 0.4rem;
+
+    border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+
+    color: var(--destaque);
+    font-family: var(--fonte-principal);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.modal-manejo-corpo h3:first-child {
+    margin-top: 0;
+}
+
+.modal-manejo-corpo p {
+    margin-bottom: 0.8rem;
+
+    color: #d5d5d5;
+}
+
+.modal-manejo-corpo ul {
+    padding-left: 1.2rem;
+}
+
+.modal-manejo-corpo ul + p {
+    margin-top: 0.8rem;
+}
+
+.modal-manejo-corpo li {
+    margin-bottom: 0.5rem;
+
+    color: #d5d5d5;
+}
+
+.modal-manejo-corpo li::marker {
+    color: var(--destaque);
+}
+
+.modal-alerta {
+    margin: 1rem 0;
+    padding: 0.9rem 1.2rem;
+
+    border-left: 4px solid #a33;
+    background: rgba(120, 30, 30, 0.2);
+
+    color: #f0c8c8;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/*---------------------------- MOBILE ----------------------------*/
+
+@media (max-width: 768px) {
+    .nav {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .nav-contents {
+        gap: 1.2rem;
+        font-size: 0.75rem;
+    }
+
+    .conteudo {
+        padding: 12vh 1.5rem 3rem;
+    }
+
+    .section-texts h1 {
+        font-size: 1.8rem;
+    }
+
+    .carrossel {
+        gap: 0.5rem;
+    }
+
+    .carrossel-pagina {
+        height: 40vh;
+    }
+
+    .carrossel-titulo {
+        font-size: 1.4rem;
+        letter-spacing: 0.2em;
+    }
+
+    .carrossel-seta {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 1.2rem;
+    }
+
+    .modal-manejo {
+        width: 96vw;
+        height: 92vh;
+    }
+
+    .modal-manejo-topo {
+        height: 22vh;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .modal-manejo-topo .modal-titulo {
+        font-size: 1.4rem;
+    }
+
+    .modal-manejo-corpo {
+        padding: 1.5rem;
+    }
+
+}

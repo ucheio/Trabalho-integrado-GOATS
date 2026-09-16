@@ -510,3 +510,53 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(dnaSection);
 //---------------------------------------------------------------------------------
+// Área restrita
+const modalRestrito = document.getElementById("Restrito");
+
+document.getElementById("link-restrito").addEventListener("click", (evento) => {
+    evento.preventDefault();
+    modalRestrito.showPopover();
+});
+
+// Abas: mostra um formulário por vez
+modalRestrito.querySelectorAll(".aba").forEach((aba) => {
+    aba.addEventListener("click", () => {
+        modalRestrito.querySelectorAll(".aba")
+            .forEach((botao) => botao.classList.toggle("ativa", botao === aba));
+
+        modalRestrito.querySelectorAll(".restrito-form")
+            .forEach((form) => form.classList.toggle("ativa", form.id === "form-" + aba.dataset.aba));
+    });
+});
+
+function senhasConferem(form) {
+    if (form.senha.value !== form.confirmar.value) {
+        alert("As senhas não coincidem.");
+        return false;
+    }
+    return true;
+}
+
+const acessoNegado = "Acesso negado. Apenas funcionários com código de autorização.";
+
+document.getElementById("form-login").addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    alert(acessoNegado);
+});
+
+document.getElementById("form-cadastro").addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    if (senhasConferem(evento.target)) alert(acessoNegado);
+});
+
+document.getElementById("form-codigo").addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    if (!senhasConferem(evento.target)) return;
+
+    if (evento.target.codigo.value.trim().toLowerCase() === "abacaxi") {
+        window.location.href = "./restrito.html";
+    } else {
+        alert("Código de autorização inválido.");
+    }
+});
+//---------------------------------------------------------------------------------

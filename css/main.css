@@ -2026,3 +2026,121 @@ footer span {
     font-weight: 500;
 }
 /*------------------------------------------------------------------------------------------------------------------------*/
+
+.modal-restrito {
+    width: 360px;
+    padding: 25px;
+
+    margin: auto;
+
+    border: 2px solid var(--destaque);
+    border-radius: 8px;
+    background-color: var(--verde-escuro);
+
+    color: var(--branco);
+}
+
+.modal-restrito::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-restrito .modal-titulo {
+    font-family: var(--fonte-principal);
+    color: var(--destaque);
+}
+
+.restrito-abas {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid var(--cinza);
+}
+
+.aba {
+    padding: 8px 4px;
+
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+
+    color: var(--cinza);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.aba:hover {
+    color: var(--texto-hover-amarelinho);
+}
+
+.aba.ativa {
+    border-bottom-color: var(--destaque);
+    color: var(--destaque);
+}
+
+.restrito-form {
+    display: none;
+}
+
+.restrito-form.ativa {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.restrito-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    font-family: var(--fonte-secundaria);
+    font-size: 0.7rem;
+    color: #aaa;
+
+    letter-spacing: 2px;
+}
+
+.restrito-form input {
+    padding: 10px;
+
+    border: 1px solid var(--cinza);
+    background: transparent;
+
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+
+    transition: border-color 0.2s ease;
+}
+
+.restrito-form input:focus {
+    outline: none;
+    border-color: var(--destaque);
+}
+
+.restrito-submit {
+    height: 2.5rem;
+
+    margin-top: 8px;
+
+    border: none;
+    background-color: var(--destaque);
+
+    color: var(--preto);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.restrito-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+    background-color: var(--destaque-claro);
+}
