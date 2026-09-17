@@ -76,6 +76,7 @@
 }
 
 .nav-button{
+    border: transparent;
     display: flex;
     background-color: var(--destaque);
     color: var(--preto);
@@ -728,7 +729,7 @@
     border-color: var(--destaque);
 }
 
-.restrito-submit {
+/* .restrito-submit {
     height: 2.5rem;
 
     margin-top: 8px;
@@ -742,7 +743,7 @@
 
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
+} */
 
 .restrito-submit:hover {
     transform: translateY(-2px);
@@ -1141,7 +1142,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #0a160a;
+  background-color: var(--verde-medio);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2547,4 +2548,444 @@ footer span {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
     background-color: var(--destaque-claro);
+}
+/*================================MODAL RESERVAR========================================*/
+.modal-reservar {
+    width: 600px;
+    height: 500px;
+    padding: 30px 25px;
+    margin: auto;
+
+    border: 2px solid var(--destaque);
+    border-radius: 8px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+
+    box-sizing: border-box;
+}
+.modal-reservar [type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(70%) sepia(50%) saturate(500%) hue-rotate(5deg);
+}
+
+.modal-reservar .modal-titulo {
+    font-family: var(--fonte-principal);
+    color: var(--destaque);
+    text-align: left;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 27px;
+}
+
+.modal-reservar label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    width: 100%;
+
+    font-family: "Cinzel", serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--destaque);
+}
+
+.modal-reservar input {
+    width: 100%;
+    height: 3rem;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    border: 1px solid var(--destaque);
+    background: transparent;
+
+    color: var(--cinza);
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+}
+
+
+.select-icon {
+    position: relative;
+    width: 100%;
+}
+
+.select-icon i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--cinza);
+    z-index: 2;
+}
+
+.select-icon select {
+    padding-left: 2.8rem;
+}
+
+.modal-reservar select {
+    width: 100%;
+    height: 47px;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    font-family: var(--fonte-secundaria);
+    font-size: 0.9rem;
+    color: var(--cinza);
+
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--destaque);
+
+    outline: none;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+
+.modal-reservar .restrito-submit {
+    width: 100%;
+    margin-top: 15px;
+}
+/* ==================================
+   RESPONSIVIDADE DO MODAL RESERVAR
+==================================== */
+
+@media (max-width: 650px) {
+
+    .modal-reservar {
+        width: calc(100% - 30px);
+        height: auto;
+        min-height: 500px;
+
+        padding: 25px 20px;
+    }
+
+    .inputs {
+        gap: 1rem;
+    }
+
+    .modal-reservar .modal-titulo {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .modal-reservar {
+        width: calc(100% - 20px);
+        padding: 25px 18px;
+    }
+
+    /* CHECK-IN E CHECK-OUT ficam um embaixo do outro */
+    .inputs {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .modal-reservar label {
+        font-size: 0.75rem;
+    }
+
+    .modal-reservar input {
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .modal-reservar select {
+        height: 45px;
+        font-size: 0.85rem;
+    }
+
+    .modal-reservar .modal-titulo {
+        font-size: 1.3rem;
+    }
+
+    .modal-local {
+        font-size: 0.75rem;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    .modal-reservar {
+        width: calc(100% - 10px);
+        padding: 20px 15px;
+    }
+
+    .modal-reservar .modal-titulo {
+        font-size: 1.1rem;
+    }
+
+    .modal-reservar label {
+        font-size: 0.7rem;
+    }
+
+    .modal-reservar input,
+    .modal-reservar select {
+        height: 42px;
+    }
+}
+/* =======================================================
+   MENU MOBILE
+======================================================= */
+
+.menu-mobile {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+
+    border: 1px solid var(--destaque);
+    border-radius: 4px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    z-index: 103;
+}
+
+.menu-mobile span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background-color: var(--branco);
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =======================================================
+   SIDEBAR
+======================================================= */
+
+@media (max-width: 480px) {
+
+    .nav {
+        height: 70px;
+
+        padding: 0 1.2rem;
+
+        justify-content: space-between;
+    }
+
+
+    /* LOGO FICA FORA DA SIDEBAR */
+
+    .logo-container {
+        position: relative;
+        z-index: 103;
+
+        gap: 7px;
+    }
+
+    .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+    }
+
+
+    /* BOTÃO */
+
+    .menu-mobile {
+        display: flex;
+    }
+
+
+    /* SIDEBAR */
+
+    .nav-contents {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: min(82vw, 330px);
+        height: 100vh;
+
+        margin: 0;
+        padding: 100px 2rem 2rem;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        background: rgba(5, 15, 10, 0.97);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border-left: 1px solid rgba(201, 168, 76, 0.25);
+
+        transform: translateX(100%);
+
+        transition:
+            transform 0.4s cubic-bezier(.77, 0, .18, 1);
+
+        z-index: 102;
+    }
+
+
+    /* SIDEBAR ABERTA */
+
+    .nav-contents.aberta {
+        transform: translateX(0);
+    }
+
+
+    /* LINKS */
+
+    .nav-link {
+        width: 100%;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-link a {
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 1.2rem 0;
+
+        color: var(--cinza);
+
+        font-size: 0.85rem;
+
+        letter-spacing: 0.15em;
+    }
+
+
+    /* TIRA A LINHA DE HOVER DESKTOP */
+
+    .nav-link a::after {
+        display: none;
+    }
+
+    .nav-link a:hover {
+        color: var(--destaque);
+    }
+
+
+    /* ===================================================
+       HAMBURGUER → X
+    =================================================== */
+
+    .menu-mobile.aberta span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-mobile.aberta span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-mobile.aberta span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .logo-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .nav-contents {
+        width: 85vw;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .nav-link a {
+        font-size: 0.8rem;
+        padding: 1rem 0;
+    }
+
+}
+@media (max-width: 320px) {
+
+    .nav {
+        padding: 0 0.8rem;
+    }
+
+    .logo-img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-text {
+        font-size: 1.15rem;
+    }
+
+    .menu-mobile {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-mobile span {
+        width: 20px;
+    }
+
+    .nav-contents {
+        width: 88vw;
+
+        padding: 90px 1.2rem 1.5rem;
+    }
+
+    .nav-link a {
+        font-size: 0.75rem;
+        padding: 0.9rem 0;
+    }
+
 }

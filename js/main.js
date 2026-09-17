@@ -560,3 +560,26 @@ document.getElementById("form-codigo").addEventListener("submit", (evento) => {
     }
 });
 //---------------------------------------------------------------------------------
+
+//--------------Menu hamburguer----------------------
+const menuMobile = document.getElementById("menu-mobile");
+const navSidebar = document.getElementById("nav-sidebar");
+const linksMobile = navSidebar.querySelectorAll("a");
+
+menuMobile.addEventListener("click", () => {
+
+    menuMobile.classList.toggle("aberta");
+    navSidebar.classList.toggle("aberta");
+
+});
+
+linksMobile.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menuMobile.classList.remove("aberta");
+        navSidebar.classList.remove("aberta");
+
+    });
+
+});

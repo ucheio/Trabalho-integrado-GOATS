@@ -10,7 +10,7 @@
 
 .linha {
     position: absolute;
-    top: 28px;
+    top: 20px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -25,7 +25,7 @@
     align-items: center;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
 }
@@ -35,16 +35,31 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    height: 18px;
+    position: relative;
 }
+
 .ponto-container .ponto {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
+    bottom: 0.3rem;
     border-radius: 50%;
     background-color: var(--ponto-inativo);
     border: 3px solid rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
+
+    transform: scale(0.8);
+    transform-origin: center center;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+    
 }
 
+.ponto-container:hover .ponto {
+    transform: scale(1.2);
+}
 .ponto-container .ano {
     margin-top: 15px;
     font-size: 1.1rem;
@@ -53,17 +68,16 @@
     transition: color 0.3s ease;
 }
 .ponto-container.ativo .ponto {
-    width: 18px;
-    height: 18px;
     background-color: var(--ponto-ativo);
-    box-shadow: 0 0 12px var(--ponto-ativo), 
-                0 0 0 4px rgba(229, 205, 150, 0.25);
-    border: none;
+    border: 3px solid transparent;
+
+    box-shadow:
+        0 0 12px var(--ponto-ativo),
+        0 0 0 4px rgba(229, 205, 150, 0.25);
+    
 }
 
-.ponto-container:hover .ponto {
-    transform: scale(1.2);
-}
+
 
 .page {
     position: relative;
@@ -183,3 +197,345 @@
     font-weight: 500;
 }
 /*------------------------------------------------------------------------------------------------------------------------*/
+
+/* =========================================================
+   RESPONSIVIDADE - SOBRE NÓS
+========================================================= */
+
+/* =========================================================
+   MOBILE — TIMELINE LATERAL
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .page {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    /* =====================================================
+       CONTEÚDO
+       ===================================================== */
+
+    .slideshow {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: calc(100% - 85px);
+
+        margin: 0;
+        margin-left: 85px;
+
+        padding: 105px 20px 50px 0;
+
+        box-sizing: border-box;
+    }
+
+    .texto-slideshow {
+        width: 100%;
+        margin: 0;
+        gap: 15px;
+    }
+
+    .texto-slideshow h1 {
+        margin: 0;
+
+        font-size: 2.8rem;
+        line-height: 1;
+
+        color: var(--branco);
+    }
+
+    .texto-slideshow p {
+        width: 100%;
+        margin: 0;
+
+        font-size: 1rem;
+        line-height: 1.6;
+
+        text-align: left;
+    }
+
+    /*
+     * O ano já aparece na timeline.
+     * Não precisamos mostrar o "1983" novamente
+     * dentro do conteúdo no mobile.
+     */
+    .slideshow-tema {
+        display: none;
+    }
+
+
+    /* =====================================================
+       IMAGEM
+       ===================================================== */
+
+    .imagem-slideshow {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .card-container {
+        width: 100%;
+    }
+
+    .slideshow-imagem {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       TIMELINE LATERAL
+       ===================================================== */
+
+    .linha-tempo {
+        position: absolute;
+
+        top: 100px;
+        left: 0;
+
+        width: 85px;
+        height: calc(100% - 100px);
+
+        margin: 0;
+        padding: 25px 0 40px;
+
+        box-sizing: border-box;
+
+        z-index: 10;
+    }
+
+
+    /* Linha vertical */
+
+    .linha {
+        position: absolute;
+
+        top: 25px;
+        bottom: 40px;
+
+        left: 34px;
+
+        width: 1px;
+        height: auto;
+
+        background-color: var(--linha-cor);
+
+        z-index: 1;
+    }
+
+
+    /* =====================================================
+       PONTOS
+       ===================================================== */
+
+    .pontos-linha {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 55px;
+
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        position: relative;
+        z-index: 2;
+    }
+
+
+    .ponto-container {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: 100%;
+        height: 25px;
+
+        margin: 0;
+        padding: 0;
+
+        cursor: pointer;
+    }
+
+
+    /* Bolinha */
+
+    .ponto-container .ponto {
+        position: absolute;
+
+        left: 25px;
+        top: 50%;
+
+        width: 18px;
+        height: 18px;
+
+        margin: 0;
+
+        transform: translateY(-50%) scale(0.8);
+
+        border-radius: 50%;
+
+        box-sizing: border-box;
+
+        background-color: var(--ponto-inativo);
+        border: 3px solid rgba(0, 0, 0, 0.4);
+
+        transition:
+            transform 0.3s ease,
+            background-color 0.3s ease,
+            box-shadow 0.3s ease;
+
+        z-index: 3;
+    }
+
+
+    .ponto-container:hover .ponto {
+        transform: translateY(-50%) scale(1.1);
+    }
+
+
+    /* Bolinha ativa */
+
+    .ponto-container.ativo .ponto {
+        background-color: var(--ponto-ativo);
+
+        border: 3px solid transparent;
+
+        transform: translateY(-50%) scale(1);
+
+        box-shadow:
+            0 0 12px var(--ponto-ativo),
+            0 0 0 4px rgba(229, 205, 150, 0.25);
+    }
+
+
+    /* =====================================================
+       ANOS
+       ===================================================== */
+
+    .ponto-container .ano {
+        position: absolute;
+
+        left: 50px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        margin: 0;
+
+        font-size: 0.75rem;
+
+        white-space: nowrap;
+
+        color: var(--texto-verdinho);
+
+        font-family: var(--fonte-principal);
+
+        transition: color 0.3s ease;
+
+        z-index: 4;
+    }
+}
+/* document.documentElement.clientWidth */
+@media (max-width: 375px) {
+
+    .slideshow {
+        width: calc(100% - 75px);
+        margin-left: 75px;
+
+        padding: 100px 15px 40px 0;
+    }
+
+    .texto-slideshow h1 {
+        font-size: 2.5rem;
+    }
+
+    .texto-slideshow p {
+        font-size: 0.95rem;
+    }
+
+    .linha-tempo {
+        width: 75px;
+    }
+
+    .linha {
+        left: 30px;
+    }
+
+    .ponto-container .ponto {
+        left: 21px;
+
+        width: 17px;
+        height: 17px;
+    }
+
+    .ponto-container .ano {
+        left: 45px;
+        font-size: 0.7rem;
+    }
+
+    .pontos-linha {
+        gap: 50px;
+    }
+}
+@media (max-width: 320px) {
+
+    .slideshow {
+        width: calc(100% - 65px);
+        margin-left: 65px;
+
+        padding: 95px 12px 35px 0;
+    }
+
+    .texto-slideshow h1 {
+        font-size: 2.2rem;
+    }
+
+    .texto-slideshow p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    .linha-tempo {
+        width: 65px;
+    }
+
+    .linha {
+        left: 27px;
+    }
+
+    .ponto-container .ponto {
+        left: 19px;
+
+        width: 16px;
+        height: 16px;
+    }
+
+    .ponto-container .ano {
+        left: 42px;
+        font-size: 0.65rem;
+    }
+
+    .pontos-linha {
+        gap: 45px;
+    }
+}

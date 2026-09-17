@@ -22,6 +22,26 @@
         backdrop-filter 500ms ease,
         -webkit-backdrop-filter 500ms ease;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--destaque);
+    font-weight: 500;
+}
 
 .nav.scrolled {
     background: rgb(10 20 10 / 90%);
@@ -29,7 +49,6 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
-
 
 .nav-contents{
     text-decoration: none;
@@ -41,6 +60,7 @@
     gap: 3rem;
     align-items: center;
 }
+
 .nav-link a {
     position: relative;
     transition: color 0.3s ease;
@@ -48,6 +68,7 @@
     color: var(--cinza); 
     padding: 5px;
 }
+
 .nav-link{
     align-items: center;
 }
@@ -70,6 +91,7 @@
     transform: scaleX(1);
     filter: brightness(1), blur(50px);
 }
+
 .nav-link a:hover{
     color: var(--texto-hover-amarelinho);
 }
@@ -140,96 +162,6 @@
 
     letter-spacing: 0.1em;
 }
-
-
-/* =======================================================
-   TABLET
-======================================================= */
-
-@media (max-width: 1000px) {
-
-    .grade-modular-desafio {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-auto-rows: minmax(150px, 22vw);
-
-        gap: 12px;
-    }
-
-}
-
-
-/* =======================================================
-   TABLET MENOR
-======================================================= */
-
-@media (max-width: 750px) {
-
-    .grade-modular-desafio {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-auto-rows: minmax(150px, 30vw);
-
-        gap: 12px;
-    }
-
-    .grade-modular-desafio .filme:nth-child(1) {
-        grid-row: span 2;
-        grid-column: span 2;
-    }
-
-    .grade-modular-desafio h3 {
-        font-size: 0.7rem;
-        letter-spacing: 0.08em;
-    }
-
-}
-
-
-/* =======================================================
-   CELULAR
-======================================================= */
-
-@media (max-width: 480px) {
-
-    .desafio-5 {
-        margin-top: 4rem;
-    }
-
-    .grade-modular-desafio {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-
-        gap: 18px;
-    }
-
-    /* no celular cada card ocupa a largura inteira */
-
-    .grade-modular-desafio .filme,
-    .grade-modular-desafio .filme:nth-child(1) {
-        grid-column: span 1;
-        grid-row: span 1;
-
-        display: flex;
-        flex-direction: column;
-    }
-
-    .grade-modular-desafio .filme img {
-        width: 100%;
-        height: 55vw;
-        min-height: 180px;
-        max-height: 280px;
-
-        object-fit: cover;
-    }
-
-    .grade-modular-desafio h3 {
-        margin-top: 0.6rem;
-
-        font-size: 0.7rem;
-        letter-spacing: 0.08em;
-    }
-
-}
-/*================================================================*/
 
 /*========================= OPERAÇÂO =============================*/
 
@@ -1016,7 +948,133 @@
     text-transform: uppercase;
 }
 
-/*---------------------------- MOBILE ----------------------------*/
+.painel-mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+}
+
+
+/* PAINEL */
+
+.legenda-operacao {
+    width: 380px;
+
+    height: fit-content;
+    align-self: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+
+    background-color: rgba(5, 15, 10, 0.9);
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+/* CABEÇALHO */
+
+.legenda-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.8rem 1rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.12rem;
+
+    color: #aaa;
+}
+
+.legenda-status {
+    color: rgb(78, 177, 86);
+}
+
+
+/* TABELA */
+
+.tabela-mapa {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.tabela-mapa th {
+    padding: 0.8rem 1rem;
+
+    text-align: left;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+
+    color: #888;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tabela-mapa td {
+    padding: 0.75rem 1rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 0.85rem;
+}
+
+.tabela-mapa td:first-child {
+    width: 45px;
+
+    color: rgb(90, 129, 179);
+
+    font-family: monospace;
+}
+
+.tabela-mapa tr:last-child td {
+    border-bottom: none;
+}
+
+/* =======================================================
+   TABLET
+======================================================= */
+
+@media (max-width: 1000px) {
+
+    .grade-modular-desafio {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: minmax(150px, 22vw);
+
+        gap: 12px;
+    }
+
+    .section-texts-mapa {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .mapa {
+        width: 50%;
+    }
+
+    .ponto {
+        width: 26px;
+        height: 26px;
+
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* =======================================================
+   TABLET MENOR
+======================================================= */
 
 @media (max-width: 768px) {
     .nav {
@@ -1072,6 +1130,346 @@
 
     .modal-manejo-corpo {
         padding: 1.5rem;
+    }
+
+    .grade-modular-desafio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: minmax(150px, 30vw);
+
+        gap: 12px;
+    }
+
+    .grade-modular-desafio .filme:nth-child(1) {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .grade-modular-desafio h3 {
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+    }
+
+    .mapa {
+        width: 70%;
+    }
+
+    .ponto {
+        width: 22px;
+        height: 22px;
+
+        font-size: 0.7rem;
+    }
+}
+
+
+/* =======================================================
+   CELULAR
+======================================================= */
+
+@media (max-width: 480px) {
+
+    .desafio-5 {
+        margin-top: 4rem;
+    }
+
+    .grade-modular-desafio {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+
+        gap: 18px;
+    }
+
+    /* no celular cada card ocupa a largura inteira */
+
+    .grade-modular-desafio .filme,
+    .grade-modular-desafio .filme:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grade-modular-desafio .filme img {
+        width: 100%;
+        height: 55vw;
+        min-height: 180px;
+        max-height: 280px;
+
+        object-fit: cover;
+    }
+
+    .grade-modular-desafio h3 {
+        margin-top: 0.6rem;
+
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+    }
+
+    .mapa {
+        width: 90%;
+    }
+
+    .ponto {
+        width: 18px;
+        height: 18px;
+
+        font-size: 0.6rem;
+    }
+
+    .legenda-operacao {
+        width: 90%;
+    }
+}
+
+/*================================================================*/
+
+/* =======================================================
+   MENU MOBILE
+======================================================= */
+
+.menu-mobile {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+
+    border: 1px solid var(--destaque);
+    border-radius: 4px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    z-index: 103;
+}
+
+.menu-mobile span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background-color: var(--branco);
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =======================================================
+   SIDEBAR
+======================================================= */
+
+@media (max-width: 480px) {
+
+    .nav {
+        height: 70px;
+
+        padding: 0 1.2rem;
+
+        justify-content: space-between;
+    }
+
+
+    /* LOGO FICA FORA DA SIDEBAR */
+
+    .logo-container {
+        position: relative;
+        z-index: 103;
+
+        gap: 7px;
+    }
+
+    .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+    }
+
+
+    /* BOTÃO */
+
+    .menu-mobile {
+        display: flex;
+    }
+
+
+    /* SIDEBAR */
+
+    .nav-contents {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: min(82vw, 330px);
+        height: 100vh;
+
+        margin: 0;
+        padding: 100px 2rem 2rem;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        background: rgba(5, 15, 10, 0.97);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border-left: 1px solid rgba(201, 168, 76, 0.25);
+
+        transform: translateX(100%);
+
+        transition:
+            transform 0.4s cubic-bezier(.77, 0, .18, 1);
+
+        z-index: 102;
+    }
+
+
+    /* SIDEBAR ABERTA */
+
+    .nav-contents.aberta {
+        transform: translateX(0);
+    }
+
+
+    /* LINKS */
+
+    .nav-link {
+        width: 100%;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-link a {
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 1.2rem 0;
+
+        color: var(--cinza);
+
+        font-size: 0.85rem;
+
+        letter-spacing: 0.15em;
+    }
+
+
+    /* TIRA A LINHA DE HOVER DESKTOP */
+
+    .nav-link a::after {
+        display: none;
+    }
+
+    .nav-link a:hover {
+        color: var(--destaque);
+    }
+
+
+    /* ===================================================
+       HAMBURGUER → X
+    =================================================== */
+
+    .menu-mobile.aberta span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-mobile.aberta span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-mobile.aberta span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .logo-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .nav-contents {
+        width: 85vw;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .nav-link a {
+        font-size: 0.8rem;
+        padding: 1rem 0;
+    }
+
+}
+@media (max-width: 320px) {
+
+    .nav {
+        padding: 0 0.8rem;
+    }
+
+    .logo-img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-text {
+        font-size: 1.15rem;
+    }
+
+    .menu-mobile {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-mobile span {
+        width: 20px;
+    }
+
+    .nav-contents {
+        width: 88vw;
+
+        padding: 90px 1.2rem 1.5rem;
+    }
+
+    .nav-link a {
+        font-size: 0.75rem;
+        padding: 0.9rem 0;
     }
 
 }

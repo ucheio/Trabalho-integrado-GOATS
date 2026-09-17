@@ -3,7 +3,7 @@ const slides = [
         tema: "1983",
         titulo: "A IDEIA",
         descricao: "Tudo começou quando o Dr. John Hammond fundou a InGen. O projeto nasceu com a ambiciosa proposta de unir ciência, turismo e educação em um único conceito inovador.",
-        imagem: "./assets/johnHammond.jpg"
+        imagem: "./assets/zé-negro.jpeg"
     },
 
     {
@@ -47,9 +47,25 @@ pontos.forEach((ponto, i) => {
     });
 });
 
-// Primeiro pra esclarecer
-// apartir desse "pontos.forEach((ponto, i) => {" usei gpt memo.
+//--------------Menu hamburguer----------------------
+const menuMobile = document.getElementById("menu-mobile");
+const navSidebar = document.getElementById("nav-sidebar");
+const linksMobile = navSidebar.querySelectorAll("a");
 
-// A primeira seção de blocos de código é os dados como: titulo, tema, descrição, etc.A
-//logo dps essa seção dos const....  são as variaveis pra pegar os elementos no html
-//e o forEach mt provavelmente eu conseguiria fazer se eu estivesse hiper focado, com 10 copos de café, memoria boa de js e não tivesse parado de programar em java por causa de uma gripe, aí pedi pro gpt
+menuMobile.addEventListener("click", () => {
+
+    menuMobile.classList.toggle("aberta");
+    navSidebar.classList.toggle("aberta");
+
+});
+
+linksMobile.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menuMobile.classList.remove("aberta");
+        navSidebar.classList.remove("aberta");
+
+    });
+
+});

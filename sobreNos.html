@@ -17,21 +17,29 @@
 
 <body>
     <nav class="nav">
-        <div class="logo-container">
-    <img src="./assets/genetis.jpeg" class="logo-img">
-    <a class="logo-text">GENÉTIS</a>
-    </div>
-        <ul class="nav-contents">
-            <li class="nav-link"><a href="index.html">A ILHA</a></li>
-            <li class="nav-link"><a href="index.html">DINOSSAUROS </a></li>
-            <li class="nav-link"><a href="index.html">EXPERIÊNCIA</a></li>
-            <li class="nav-link"><a href="index.html">ESTADIA</a></li>
-            <li class="nav-link"><a href="index.html">SOBRE NÓS</a></li>
-        </ul>
+        
+      <div class="logo-container">
+        <img src="./assets/genetis.jpeg" class="logo-img">
+        <a href="index.html" class="logo-text">GENÉTIS</a>
+      </div>
 
-        <a class="nav-button" href="#">
-            <p>RESERVE AGORA</p>
-        </a>
+        <button class="menu-mobile" id="menu-mobile" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    
+        <ul id="nav-sidebar" class="nav-contents">
+            <li class="nav-link"><a href="index.html#A-Ilha">A ILHA</a></li>
+            <li class="nav-link"><a href="index.html#trex-eye-point">DINOSSAUROS </a></li>
+            <li class="nav-link"><a href="index.html#Guia-de-Visitante">EXPERIÊNCIA</a></li>
+            <li class="nav-link"><a href="index.html#Estadia">ESTADIA</a></li>
+            <li class="nav-link"><a href="#">SOBRE NÓS</a></li>
+            
+            <button class="nav-button" popovertarget="modal-reservar">
+                <p>RESERVE AGORA</p>
+            </button>
+        </ul>
     </nav>
 <main>
    <div class="page">
@@ -82,8 +90,67 @@
         </section>
     </div>
 
+     <!-------------------Modaaaaaallll---------------->
+        <section id="modal-reservar" popover class="modal-reservar">
+
+          <button class="modal-fechar" popovertarget="Reservar" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            RESERVAR
+          </span>
+
+          <h2 class="modal-titulo">
+            FAÇA SUA RESERVA AQUI
+          </h2>
+
+          <div class="inputs">
+            <label>
+              CHECK-IN
+              <input type="date" name="checkin" required>
+            </label>
+
+            <label>
+              CHECK-OUT
+              <input type="date" name="checkout" required>
+            </label>
+          </div>
+
+          <label>
+            QUANTIDADE DE PESSOAS
+
+            <div class="select-icon">
+              <i class="fa-solid fa-users"></i>
+
+              <select name="quantidade" required>
+                <option value="">Selecione</option>
+                <option>1 pessoa</option>
+                <option>2 pessoas</option>
+                <option>3 pessoas</option>
+                <option>4 pessoas</option>
+              </select>
+            </div>
+          </label>
+
+          <label>
+            TIPO DE ACOMODAÇÃO
+            <select name="acomodacao" required>
+              <option value="">Selecione</option>
+              <option>Suíte Luxo</option>
+              <option>Suíte Master</option>
+              <option>Suíte Presidencial</option>
+            </select>
+          </label>
+
+          <button class="restrito-submit" type="submit">RESERVAR</button>
+          </form>
+
+        </section>
+    </section>
+
     
+</main>
     <script src="/js/sobreNos.js"></script>
 </body>
-</main>
 </html>

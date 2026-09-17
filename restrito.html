@@ -7,6 +7,7 @@
     <title>Restrito</title>
     <link rel="stylesheet" href="./css/restrito.css" />
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="icon" type="image/jpeg" href="./assets/genetis.jpeg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,11 +21,23 @@
 <body>
     <div class="page">
         <nav class="nav">
-            <a class="logo-text" href="./index.html">JURASSIC PARK</a>
-            <ul class="nav-contents">
+
+            <div class="logo-container">
+                <img src="./assets/genetis.jpeg" class="logo-img">
+                <a href="index.html" class="logo-text">GENÉTIS</a>
+            </div>
+
+            <button class="menu-mobile" id="menu-mobile" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-sidebar" class="nav-contents">
                 <li class="nav-link"><a href="#Manejo">MANEJO</a></li>
                 <li class="nav-link"><a href="#Cameras">CÂMERAS</a></li>
                 <li class="nav-link"><a href="#Operacao">OPERAÇÃO</a></li>
+                <li class="nav-link"><a href="./assets/restrito/Auditoria de Infraestrutura e Redundância de Automação do Parque Genétis.pdf">DOCUMENTO</a></li>
             </ul>
         </nav>
 
@@ -162,33 +175,84 @@
 
             <!-- OPERAÇÃO -->
             <section id="Operacao" class="em-construcao">
+                
                 <div class="texts-island">
                     <p>03</p>
                     <p>•</p>
-                    <p>ROTINA DO PARQUE</p>
-                </div>
-
-                <article class="section-texts">
-                    <h1>OPERAÇÃO</h1>
-                </article>
-
-                <article class="section-texts-mapa">
-
-                    <div class="mapa">
-                        <img src="./assets/mapa.png" alt="Mapa da Isla Nublar">
-
-                        <div class="radar">
-                            <div class="radar-sweep"></div>
+                        <p>ROTINA DO PARQUE</p>
+                    </div>
+                    
+                    <article class="section-texts">
+                        <h1>OPERAÇÃO</h1>
+                    </article>
+                    
+                    <article class="section-texts-mapa">
+                        
+                        <div class="mapa">
+                            <img src="./assets/mapa.png" alt="Mapa da Isla Nublar">
+    
+                            <div class="radar">
+                                <div class="radar-sweep"></div>
+                            </div>
+    
+                            <button class="ponto ponto-1" popovertarget="modal-1">1</button>
+                            <button class="ponto ponto-2" popovertarget="modal-2">2</button>
+                            <button class="ponto ponto-3" popovertarget="modal-3">3</button>
+                            <button class="ponto ponto-4" popovertarget="modal-4">4</button>
+                            <button class="ponto ponto-5" popovertarget="modal-5">5</button>
+                            <button class="ponto ponto-6" popovertarget="modal-6">6</button>
+                            <button class="ponto ponto-7" popovertarget="modal-7">7</button>
+                            <button class="ponto ponto-8" popovertarget="modal-8">8</button>
                         </div>
-
-                        <button class="ponto ponto-1" popovertarget="modal-1">1</button>
-                        <button class="ponto ponto-2" popovertarget="modal-2">2</button>
-                        <button class="ponto ponto-3" popovertarget="modal-3">3</button>
-                        <button class="ponto ponto-4" popovertarget="modal-4">4</button>
-                        <button class="ponto ponto-5" popovertarget="modal-5">5</button>
-                        <button class="ponto ponto-6" popovertarget="modal-6">6</button>
-                        <button class="ponto ponto-7" popovertarget="modal-7">7</button>
-                        <button class="ponto ponto-8" popovertarget="modal-8">8</button>
+    
+                        <div class="legenda-operacao">
+                            <div class="legenda-topo">
+                                <span>SETORES // ISLA NUBLAR</span>
+                                <span class="legenda-status">● ONLINE</span>
+                            </div>
+    
+                            <table class="tabela-mapa">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>LOCALIZAÇÃO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>Centro de Visitantes</td>
+                                </tr>
+                                <tr>
+                                    <td>02</td>
+                                    <td>Vale dos Velociraptores</td>
+                                </tr>
+                                <tr>
+                                    <td>03</td>
+                                    <td>Região dos Carnívoros</td>
+                                </tr>
+                                <tr>
+                                    <td>04</td>
+                                    <td>Pântano dos Saurópodes</td>
+                                </tr>
+                                <tr>
+                                    <td>05</td>
+                                    <td>Território dos Tricerátops</td>
+                                </tr>
+                                <tr>
+                                    <td>06</td>
+                                    <td>Pico dos Pterossauros</td>
+                                </tr>
+                                <tr>
+                                    <td>07</td>
+                                    <td>Porto Leste</td>
+                                </tr>
+                                <tr>
+                                    <td>08</td>
+                                    <td>Abrigo dos Saurópodes</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <!-- Modais -->

@@ -27,22 +27,31 @@
   <div class="page">
 
     <nav class="nav">
+
       <div class="logo-container">
         <img src="./assets/genetis.jpeg" class="logo-img">
         <a href="#hero" class="logo-text">GENÉTIS</a>
       </div>
-      <ul class="nav-contents">
+
+      <button class="menu-mobile" id="menu-mobile" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="nav-sidebar" class="nav-contents">
         <li class="nav-link"><a href="#A-Ilha">A ILHA</a></li>
         <li class="nav-link"><a href="#trex-eye-point">DINOSSAUROS </a></li>
         <li class="nav-link"><a href="#Guia-de-Visitante">PLANEJE</a></li>
         <li class="nav-link"><a href="#Estadia">ESTADIA</a></li>
         <li class="nav-link"><a href="#Restrito" id="link-restrito">RESTRITO</a></li>
         <li class="nav-link"><a href="#Sobre-Nos">SOBRE NOS</a></li>
-      </ul>
 
-      <a class="nav-button" href="#Reservar">
-        <p>RESERVE AGORA</p>
-      </a>
+
+        <button class="nav-button" popovertarget="modal-reservar">
+          <p>RESERVE AGORA</p>
+        </button>
+      </ul>
     </nav>
 
 
@@ -67,7 +76,7 @@
         </div>
 
         <div class="hero-buttons-container">
-          <a class="hbutton" href="">
+          <a class="hbutton" href="#modal-reservar">
             <p>RESERVE SUA VISITA</p>
           </a>
 
@@ -150,9 +159,9 @@
 
     <!-------------------------------------------------------------------------------------------------->
     <section id="dna-section">
-  <div class="dna-content">
+      <div class="dna-content">
 
-    <div class="botoes-navegacao">
+        <div class="botoes-navegacao">
           <button class="botao-navegacao botao-subir">
             <i class="fa-solid fa-circle-arrow-up"></i>
           </button>
@@ -162,28 +171,28 @@
           </button>
         </div>
 
-    <img class="species-art" src="./assets/trex-lineart.png" alt="">
+        <img class="species-art" src="./assets/trex-lineart.png" alt="">
 
-    <div class="dna-model"></div>
+        <div class="dna-model"></div>
 
-    <div class="species-info">
-      <div class="species">
+        <div class="species-info">
+          <div class="species">
 
-        <img src="./assets/trex.jpg" class="species-img" alt="T-Rex">
+            <img src="./assets/trex.jpg" class="species-img" alt="T-Rex">
 
-        <p class="species-number"></p>
+            <p class="species-number"></p>
 
-        <div class="species-details">
-          <h2 class="species-text"></h2>
-          <h3>Descrição:</h3>
-          <p class="species-description"></p>
+            <div class="species-details">
+              <h2 class="species-text"></h2>
+              <h3>Descrição:</h3>
+              <p class="species-description"></p>
+            </div>
+
+          </div>
         </div>
 
       </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-------------------------------------------------------------------------------------------------->
 
@@ -205,9 +214,18 @@
         </p>
       </article>
       <div class="card-container">
-        <div class="card"> <img src="./assets/oi.jfif" alt=""></div>
-        <div class="card"><img src="./assets/oioi.jfif" alt=""></div>
-        <div class="card"><img src="./assets/oioioi.jfif" alt=""></div>
+        <div class="card"> <img src="./assets/oi.jfif" alt="">
+          <p> O equilíbrio perfeito entre luxo e proteção. Um refúgio exclusivo no coração da ilha, projetado para
+            manter sua família confortável e segura durante toda a estadia. </p>
+        </div>
+        <div class="card"><img src="./assets/oioi.jfif" alt="">
+          <p>Acomodações com varandas privativas e vista ampla para o complexo. Relaxe à beira da piscina enquanto
+            contempla a paisagem exuberante e a vida pré-histórica ao redor.</p>
+        </div>
+        <div class="card"><img src="./assets/oioioi.jfif" alt="">
+          <p>Uma experiência imersiva inesquecível. Suítes de alto padrão com claraboia estilizada para você admirar o
+            céu da ilha no conforto de uma cama king-size.</p>
+        </div>
       </div>
 
     </section>
@@ -438,7 +456,7 @@
 
     </section>
     <!-------------------------------------------------------------------------------------------------->
-     <section id="Restrito" popover class="modal-restrito">
+    <section id="Restrito" popover class="modal-restrito">
 
       <button class="modal-fechar" popovertarget="Restrito" popovertargetaction="hide">
         ×
@@ -519,16 +537,81 @@
         <div class="card"> <img src="./assets/aventura/interior.jpeg" alt="">
           <p>Um espaço dedicado à descoberta dos dinossauros e à tecnologia por trás de sua recriação.</p>
         </div>
-    </section>
 
+        <!-------------------Modaaaaaallll---------------->
+        <section id="modal-reservar" popover class="modal-reservar">
+
+          <button class="modal-fechar" popovertarget="Reservar" popovertargetaction="hide">
+            ×
+          </button>
+
+          <span class="modal-local">
+            RESERVAR
+          </span>
+
+          <h2 class="modal-titulo">
+            FAÇA SUA RESERVA AQUI
+          </h2>
+
+          <form class="restrito-form ativa" id="form-login">
+
+          <div class="inputs">
+            <label>
+              CHECK-IN
+              <input type="date" name="checkin" required>
+            </label>
+
+            <label>
+              CHECK-OUT
+              <input type="date" name="checkout" required>
+            </label>
+          </div>
+
+          <label>
+            QUANTIDADE DE PESSOAS
+
+            <div class="select-icon">
+              <i class="fa-solid fa-users"></i>
+
+              <select name="quantidade" required>
+                <option value="">Selecione</option>
+                <option>1 pessoa</option>
+                <option>2 pessoas</option>
+                <option>3 pessoas</option>
+                <option>4 pessoas</option>
+                <option>5 pessoas</option>
+              </select>
+            </div>
+          </label>
+
+          <label>
+            TIPO DE ACOMODAÇÃO
+            <div class="select-icon">
+              <i class="fa-solid fa-bed"></i>
+            
+            <select name="acomodacao" required>
+              <option value="">Selecione</option>
+              <option>Suíte Luxo</option>
+              <option>Suíte Master</option>
+              <option>Suíte Presidencial</option>
+            </select>
+            </div>
+          </label>
+
+          <button class="restrito-submit" type="submit">RESERVAR</button>
+          </form>
+
+        </section>
+    </section>
+    <!-------------------------------------------------------------------->
     <!-- ------------------------------------------------------------- -->
     <section id="Sobre-Nos">
       <div class="texts-left">
-        <!-- <div class="texts-island8">
-          <span>07</span>
-          <span>•</span>
-          <span>Sobre Nós</span>
-        </div> -->
+        <!-- <div class="texts-island">
+        <p>07</p>
+        <p>•</p>
+        <p>SOBRE NÓS </p>
+      </div> -->
         <div class="section8-texts">
 
           <h1>A CIÊNCIA POR TRÁS<br> <span>DO PARQUE</span></h1>
