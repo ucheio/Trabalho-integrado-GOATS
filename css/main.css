@@ -818,6 +818,8 @@
     transform: translateY(0);
 }
 
+
+
 /*------------------------------------------------------------------------------------------------------------------------*/
 #dinossauros-section{
     position: relative;
@@ -1008,8 +1010,45 @@
     box-shadow: 10px 5px 18px rgba(0, 0, 0, 0.65);
 }
 
-.species:hover .species-details { opacity: 1; }
-.species:hover .species-img { filter: blur(7px); transform: scale(1.08); }
+@media (hover: hover) and (pointer: fine) {
+
+    .species:hover .species-img {
+        filter: blur(8px);
+    }
+
+    .species:hover .species-details {
+        opacity: 1;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+    .species {
+        cursor: pointer;
+    }
+
+    .species .species-img {
+        filter: none;
+        transition: filter 0.3s ease;
+    }
+
+    .species .species-details {
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity 0.3s ease;
+    }
+
+    /* CARD CLICADO */
+
+    .species.ativo .species-img {
+        filter: blur(8px);
+    }
+
+    .species.ativo .species-details {
+        opacity: 1;
+    }
+}
 
 @media (hover: none) {
     .species-details { opacity: 1; }

@@ -559,8 +559,16 @@ document.getElementById("form-codigo").addEventListener("submit", (evento) => {
         alert("Código de autorização inválido.");
     }
 });
-//---------------------------------------------------------------------------------
+//-------------------------Card das especies de dino--------------------------------------------------------
 
+
+speciesCard.addEventListener("click", () => {
+
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+        speciesCard.classList.toggle("ativo");
+    }
+
+});
 //--------------Menu hamburguer----------------------
 const menuMobile = document.getElementById("menu-mobile");
 const navSidebar = document.getElementById("nav-sidebar");
@@ -582,4 +590,17 @@ linksMobile.forEach(link => {
 
     });
 
+});
+//------------------------Cards normais pra mobile-----------------------------------
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+
+        // Só aplica esse comportamento em dispositivos touch
+        if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+            card.classList.toggle("ativo");
+        }
+
+    });
 });

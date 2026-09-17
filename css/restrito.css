@@ -362,14 +362,30 @@
 ========================= */
 
 .modal-mapa {
-    width: 320px;
+    position: fixed;
+
+    /* Centraliza o popover na viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Tamanho responsivo */
+    width: min(320px, calc(100vw - 2rem));
+    max-width: calc(100vw - 2rem);
+
+    /* Impede padding de aumentar a largura */
+    box-sizing: border-box;
+
     padding: 25px;
 
-    margin: 10px 0 0 65px;
+    /* IMPORTANTE: remove o antigo deslocamento */
+    margin: 0;
 
     border-radius: 8px;
-
     color: white;
+
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
 }
 
 
@@ -1407,7 +1423,12 @@
         transform: translateY(-7px) rotate(-45deg);
     }
 
+
+
+
 }
+
+
 
 @media (max-width: 375px) {
 
